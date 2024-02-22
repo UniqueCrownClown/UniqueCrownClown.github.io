@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.loli.net/css?family=Noto+Serif+SC:300,300italic,400,400italic,700,700italic%7CRoboto+Mono:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="https://unpkg.com/@fortawesome/fontawesome-free@5.15.4/css/all.min.css" integrity="sha256-mUZM63G8m73Mcidfrv5E+Y61y7a12O5mW4ezU3bxqW4=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://unpkg.com/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://unpkg.com/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"uniquecrownclown.github.io","root":"/","images":"/images","scheme":"Mist","darkmode":false,"version":"8.8.0","exturl":false,"sidebar":{"position":"left","display":"hide","padding":18,"offset":12,"width":240},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"giscus","storage":true,"lazyload":false,"nav":null,"activeClass":"giscus"},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+<meta name="description" content="dialy record…">
+<meta property="og:type" content="article">
+<meta property="og:title" content="record">
+<meta property="og:url" content="https://uniquecrownclown.github.io/2019/03/04/knowledge/js/record/index.html">
+<meta property="og:site_name" content="uniquecrownclown">
+<meta property="og:description" content="dialy record…">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2019-03-04T11:20:32.000Z">
+<meta property="article:modified_time" content="2024-02-22T09:31:27.807Z">
+<meta property="article:author" content="clown">
+<meta property="article:tag" content="js杂烩">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://uniquecrownclown.github.io/2019/03/04/knowledge/js/record/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://uniquecrownclown.github.io/2019/03/04/knowledge/js/record/","path":"2019/03/04/knowledge/js/record/","title":"record"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>record | uniquecrownclown</title>
+  
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">uniquecrownclown</h1>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">clown的笔记</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li>
+        <li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li>
+        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li>
+        <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+        <li class="menu-item menu-item-collection"><a href="/test/" rel="section"><i class="fa fa-cubes fa-fw"></i>collection</a></li>
+        <li class="menu-item menu-item-留言板"><a href="/guestbook/" rel="section"><i class="fa fa-book fa-fw"></i>留言板</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#node-%E8%87%AA%E5%8A%A8%E5%8F%91%E9%82%AE%E4%BB%B6%E7%9A%84%E5%AE%9E%E7%8E%B0"><span class="nav-number">1.</span> <span class="nav-text">node 自动发邮件的实现</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#npm-run-all"><span class="nav-number">2.</span> <span class="nav-text">npm-run-all</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#express-mongo-vue-node-%E5%8D%9A%E5%AE%A2%E7%B3%BB%E7%BB%9F"><span class="nav-number">3.</span> <span class="nav-text">express+mongo+vue+node&#x3D;博客系统</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#mongo"><span class="nav-number">3.1.</span> <span class="nav-text">mongo</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%B8%B8%E8%A7%81%E5%91%BD%E4%BB%A4%E8%A1%8C"><span class="nav-number">3.2.</span> <span class="nav-text">常见命令行</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#express"><span class="nav-number">3.3.</span> <span class="nav-text">express</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#nodejs-websocket-stomp"><span class="nav-number">4.</span> <span class="nav-text">nodejs+websocket+stomp</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#forEach-%E5%88%B0%E5%BA%95%E5%8F%AF%E4%BB%A5%E6%94%B9%E5%8F%98%E5%8E%9F%E6%95%B0%E7%BB%84%E5%90%97"><span class="nav-number">5.</span> <span class="nav-text">forEach 到底可以改变原数组吗</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81%E7%A4%BA%E4%BE%8B"><span class="nav-number">5.1.</span> <span class="nav-text">代码示例</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%80%BB%E7%BB%93"><span class="nav-number">5.2.</span> <span class="nav-text">总结</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#js-%E7%9A%84-class-%E5%B0%8F%E8%A7%A3"><span class="nav-number">6.</span> <span class="nav-text">js 的 class 小解</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#map-%E5%92%8C-object-%E7%9A%84%E5%8C%BA%E5%88%86%E4%BD%BF%E7%94%A8"><span class="nav-number">7.</span> <span class="nav-text">map 和 object 的区分使用</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="clown"
+      src="/images/avatar.jpg">
+  <p class="site-author-name" itemprop="name">clown</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">77</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">21</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">63</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/UniqueCrownClown" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;UniqueCrownClown" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="/1129986876@qq.com" title="E-Mail → 1129986876@qq.com"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://weibo.com/u/2143916663" title="Weibo → https:&#x2F;&#x2F;weibo.com&#x2F;u&#x2F;2143916663" rel="noopener" target="_blank"><i class="fab fa-weibo fa-fw"></i>Weibo</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://twitter.com/CrownClown7777" title="Twitter → https:&#x2F;&#x2F;twitter.com&#x2F;CrownClown7777" rel="noopener" target="_blank"><i class="fab fa-twitter fa-fw"></i>Twitter</a>
+      </span>
+  </div>
+
+
+
+
+    <span id="jinrishici-sentence">正在加载今日诗词....</span>
+    <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+  <a href="https://github.com/UniqueCrownClown" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub" rel="noopener" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://uniquecrownclown.github.io/2019/03/04/knowledge/js/record/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="clown">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="uniquecrownclown">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          record
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2019-03-04 11:20:32" itemprop="dateCreated datePublished" datetime="2019-03-04T11:20:32+00:00">2019-03-04</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2024-02-22 09:31:27" itemprop="dateModified" datetime="2024-02-22T09:31:27+00:00">2024-02-22</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/js/" itemprop="url" rel="index"><span itemprop="name">js</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <p>dialy record…</p>
+<span id="more"></span>
+
+<h3 id="node-自动发邮件的实现"><a href="#node-自动发邮件的实现" class="headerlink" title="node 自动发邮件的实现"></a>node 自动发邮件的实现</h3><ul>
+<li>决定使用 node 上的一个插件叫 cheerio,配合 superagent 能够很方便地爬取网页上的信息。</li>
+<li>发送邮件的 Node 插件 nodemailer,兼容主流的 Email 厂商，只需要配置好邮箱账号和 smtp 授权码，便可以用你的邮箱账号在 node 脚本上发文件</li>
+</ul>
+<h3 id="npm-run-all"><a href="#npm-run-all" class="headerlink" title="npm-run-all"></a>npm-run-all</h3><p>在根上定义安装多个子模块的 package 和执行多个子模块的 script</p>
+<h3 id="express-mongo-vue-node-博客系统"><a href="#express-mongo-vue-node-博客系统" class="headerlink" title="express+mongo+vue+node=博客系统"></a>express+mongo+vue+node=博客系统</h3><p>mongodb+nosql(not only sql)<br>非关系型的数据存储</p>
+<h4 id="mongo"><a href="#mongo" class="headerlink" title="mongo"></a>mongo</h4><pre><code>mongod --config &quot;D:\Mongo\mongo.conf&quot;  --auth --install --serviceName &quot;MongoDB&quot;
+net start MongoDB
+mongod.exe --remove --serviceName &quot;MongoDB&quot;
+
+把mongoose理解为是用来操作mongoDB。 安装完后，我们在项目中引用mongoose，并连接数据库
+
+mongo默认端口-27017
+</code></pre>
+<h4 id="常见命令行"><a href="#常见命令行" class="headerlink" title="常见命令行"></a>常见命令行</h4><pre><code>net start MongoDB
+mongo起应用
+use blog(创建数据库blog)
+db.users.insert(&#123;&quot;name&quot;:&quot;taotao&quot;,&quot;email&quot;:&quot;taotao163.com&quot;,&quot;age&quot;:&quot;24&quot;&#125;);(user表里插入一条数据)
+db.users.find();(查users表)
+show dbs;(显示所有数据库)
+</code></pre>
+<p>MongoDB 缺省是没有设置权限的，也就是说，没有设置访问权限。上面的启动方式就是没有设置权限的启动，所以，登录数据库，是不需要验证用户名和密码的。<br>要知道 MongoDB 服务器的端口，任何能访问到这台服务器的人都可以查询和操作 MongoDB 数据库的内容<br>加上 –auth 这样以后就可以使用用户名和密码后才能进行 MongoDB 的相关操作</p>
+<p>数据库用户有两种，一种是管理员，用来管理用户，一种是普通用户，用来访问数据。</p>
+<h4 id="express"><a href="#express" class="headerlink" title="express"></a>express</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">//全局安装express</span><br><span class="line">npm install express -g</span><br><span class="line"></span><br><span class="line">//安装express全局生成器，可以自动生成项目文件</span><br><span class="line">npm install express-generator -g</span><br></pre></td></tr></table></figure>
+
+<p>在当前工作目录生成一个叫做 blog 的项目，并采用 ejs 模版</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">// 默认是jade模版， -e就是采用ejs模版</span><br><span class="line">express -e blog</span><br></pre></td></tr></table></figure>
+
+<p>然后安装所有依赖：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">// 默认是jade模版， -e就是采用ejs模版</span><br><span class="line">express -e blog</span><br><span class="line"></span><br><span class="line">//进入项目文件夹</span><br><span class="line">cd blog</span><br><span class="line"></span><br><span class="line">//安装所有依赖</span><br><span class="line">npm install</span><br><span class="line"></span><br><span class="line">//官方的方法，因该是调试模式,没深究</span><br><span class="line">set DEBUG=blog $ npm start</span><br><span class="line"></span><br><span class="line">//直接启动</span><br><span class="line">npm start</span><br><span class="line"></span><br><span class="line">//安装Mongoose,   --save把Mongoose模块加入到项目依赖</span><br><span class="line">npm install mongoose --save</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="nodejs-websocket-stomp"><a href="#nodejs-websocket-stomp" class="headerlink" title="nodejs+websocket+stomp"></a>nodejs+websocket+stomp</h3><p>WebSocket 为我们提供了 Web 双向通信的通道，但对于消息的交互协议还需要我们来自己实现</p>
+<p>stomp 文本传输协议，借助 Stomp 协议，可以很方便的实现一种”订阅-发布”的通用机制，这个就是非常具有竞争力的一个特性了。</p>
+<p>activeMQ(JMS 规范的具体实现)(非常流行的开源消息服务器)<br>Broker 是 ActiveMQ 的一个实例。<br>放开端口号<br>web 控制台 8186 <a target="_blank" rel="noopener" href="http://localhost:8161/">http://localhost:8161</a> 默认登录账号 admin 密码 admin<br>消息服务 broker 连接端口：61616<br>消息传送模式<br>点对点(Point-to-Point)<br>客户端发消息到服务端，服务端处理后返回消息给原客户端（或者发送消息给指定客户端）<br>发布/订阅(Publish/Subscribe)<br>生产者发布基于某主题 topic<br>publisher.publish(topic, message);<br>所有订阅 topic 的消费者<br>subscriberA.subscribe(topic, function(message, headers) {<br>console.log(‘subscriberA From Topic:’, message);<br>});<br>stompjs<br>//构建 Stomp 对象<br>publisher = new Stomp(‘127.0.0.1’, 61613, ‘’, ‘’)<br>subscriberA = new Stomp(…)<br>Broker 的消息转发 1. 服务的位置透明性。 2. 组件的可变性及扩展性。由于 Server 是注册到 Broker 上的，所以 Server 可以动态的增加、删除、改变。 3. Broker 之间可交互。 4. 可重用性。 5. 由于组件的耦合度较小，调试和测试的工作也是可控的。</p>
+<h3 id="forEach-到底可以改变原数组吗"><a href="#forEach-到底可以改变原数组吗" class="headerlink" title="forEach 到底可以改变原数组吗"></a>forEach 到底可以改变原数组吗</h3><p>一般在项目中数组操作的都是对象数组，而不是数字字符串数组,而 forEach 可以改变对象数组</p>
+<h4 id="代码示例"><a href="#代码示例" class="headerlink" title="代码示例"></a>代码示例</h4><ol>
+<li>数字字符串数组的循环重赋值不生效</li>
+</ol>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> array = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>];</span><br><span class="line">array.forEach(<span class="function">(<span class="params">ele</span>) =&gt;</span> &#123;</span><br><span class="line">  ele = ele * <span class="number">3</span>;</span><br><span class="line">&#125;);</span><br><span class="line"><span class="built_in">console</span>.log(array); <span class="comment">// [1,2,3,4]</span></span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>对象数组的循环赋值 1</li>
+</ol>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> objArr = [</span><br><span class="line">  &#123;</span><br><span class="line">    <span class="attr">name</span>: <span class="string">&quot;wxw&quot;</span>,</span><br><span class="line">    <span class="attr">age</span>: <span class="number">22</span>,</span><br><span class="line">  &#125;,</span><br><span class="line">  &#123;</span><br><span class="line">    <span class="attr">name</span>: <span class="string">&quot;wxw2&quot;</span>,</span><br><span class="line">    <span class="attr">age</span>: <span class="number">33</span>,</span><br><span class="line">  &#125;,</span><br><span class="line">];</span><br><span class="line">objArr.forEach(<span class="function">(<span class="params">ele</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">if</span> (ele.name === <span class="string">&quot;wxw2&quot;</span>) &#123;</span><br><span class="line">    ele.age = <span class="number">88</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;);</span><br><span class="line"><span class="built_in">console</span>.log(objArr); <span class="comment">// [&#123;name: &quot;wxw&quot;, age: 22&#125;,&#123;name: &quot;wxw2&quot;, age: 88&#125;]</span></span><br></pre></td></tr></table></figure>
+
+<ol start="3">
+<li>对象数组的循环赋值 2</li>
+</ol>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> changeItemArr = [</span><br><span class="line">  &#123;</span><br><span class="line">    <span class="attr">name</span>: <span class="string">&quot;wxw&quot;</span>,</span><br><span class="line">    <span class="attr">age</span>: <span class="number">22</span>,</span><br><span class="line">  &#125;,</span><br><span class="line">  &#123;</span><br><span class="line">    <span class="attr">name</span>: <span class="string">&quot;wxw2&quot;</span>,</span><br><span class="line">    <span class="attr">age</span>: <span class="number">33</span>,</span><br><span class="line">  &#125;,</span><br><span class="line">];</span><br><span class="line">changeItemArr.forEach(<span class="function">(<span class="params">ele</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">if</span> (ele.name === <span class="string">&quot;wxw2&quot;</span>) &#123;</span><br><span class="line">    ele = &#123;</span><br><span class="line">      <span class="attr">name</span>: <span class="string">&quot;change&quot;</span>,</span><br><span class="line">      <span class="attr">age</span>: <span class="number">77</span>,</span><br><span class="line">    &#125;;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;);</span><br><span class="line"><span class="built_in">console</span>.log(changeItemArr); <span class="comment">// [&#123;name: &quot;wxw&quot;, age: 22&#125;,&#123;name: &quot;wxw2&quot;, age: 33&#125;]</span></span><br></pre></td></tr></table></figure>
+
+<ol start="4">
+<li>用索引实现数组子项修改</li>
+</ol>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 基本类型可以欧~</span></span><br><span class="line"><span class="keyword">const</span> numArr = [<span class="number">33</span>, <span class="number">4</span>, <span class="number">55</span>];</span><br><span class="line">numArr.forEach(<span class="function">(<span class="params">ele, index, arr</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">if</span> (ele === <span class="number">33</span>) &#123;</span><br><span class="line">    arr[index] = <span class="number">999</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;);</span><br><span class="line"><span class="built_in">console</span>.log(numArr); <span class="comment">// [999, 4, 55]</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 引用类型也可以欧~</span></span><br><span class="line"><span class="keyword">const</span> allChangeArr = [</span><br><span class="line">  &#123;</span><br><span class="line">    <span class="attr">name</span>: <span class="string">&quot;wxw&quot;</span>,</span><br><span class="line">    <span class="attr">age</span>: <span class="number">22</span>,</span><br><span class="line">  &#125;,</span><br><span class="line">  &#123;</span><br><span class="line">    <span class="attr">name</span>: <span class="string">&quot;wxw2&quot;</span>,</span><br><span class="line">    <span class="attr">age</span>: <span class="number">33</span>,</span><br><span class="line">  &#125;,</span><br><span class="line">];</span><br><span class="line">allChangeArr.forEach(<span class="function">(<span class="params">ele, index, arr</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">if</span> (ele.name === <span class="string">&quot;wxw2&quot;</span>) &#123;</span><br><span class="line">    arr[index] = &#123;</span><br><span class="line">      <span class="attr">name</span>: <span class="string">&quot;change&quot;</span>,</span><br><span class="line">      <span class="attr">age</span>: <span class="number">77</span>,</span><br><span class="line">    &#125;;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;);</span><br><span class="line"><span class="built_in">console</span>.log(allChangeArr); <span class="comment">// // [&#123;name: &quot;wxw&quot;, age: 22&#125;,&#123;name: &quot;change&quot;, age: 77&#125;]</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h4><p>堆的特点是完全二叉树</p>
+<p>基本类型我们当次循环拿到的 ele，只是 forEach 给我们在另一个地方复制创建新元素，是和原数组这个元素没有半毛钱联系的！所以，我们使命给循环拿到的 ele 赋值都是无用功<br>JavaScript 是有基本数据类型与引用数据类型之分的。对于基本数据类型：number,string,Boolean,null,undefined 它们在栈内存中直接存储变量与值。而 Object 对象的真正的数据是保存在堆内存，栈内只保存了对象的变量以及对应的堆的地址，所以操作 Object 其实就是直接操作了原数组对象本身。</p>
+<p>forEach 的基本原理也是 for 循环，使用 arr[index]的形式赋值改变，无论什么就都可以改变了。</p>
+<h3 id="js-的-class-小解"><a href="#js-的-class-小解" class="headerlink" title="js 的 class 小解"></a>js 的 class 小解</h3><p>class 类本质上就是一个函数,自身指向的就是构造函数<br>class 类是构造函数的另一种写法,仍然存在 prototype 方法<br>可以通过原型 prototype 修改类方法和新增方法<br>可以通过 Object.assign 放大为对象动态增加方法<br>可以使用实例对象的__proto__属性新增类的方法<br>constructor 里的属性为实例属性,即定义在 this 对象上<br>除去实例属性都称为原型属性,即定义在 class 上<br>hasOwnProperty 判断属性是否实例属性<br>通过 in 操作符判断属性是否存在</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Cat</span> </span>&#123;</span><br><span class="line">  <span class="function"><span class="title">constructor</span>(<span class="params">name, age</span>)</span> &#123;</span><br><span class="line">    <span class="built_in">this</span>.name = name;</span><br><span class="line">    <span class="built_in">this</span>.age = age;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="function"><span class="title">Say</span>(<span class="params"></span>)</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="string">&quot;my name is&quot;</span> + <span class="built_in">this</span>.name;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> cat1 = <span class="keyword">new</span> Cat(<span class="string">&quot;有鱼&quot;</span>, <span class="number">2</span>);</span><br><span class="line"><span class="built_in">console</span>.log(cat1.Say());</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> Cat); <span class="comment">// function</span></span><br><span class="line"><span class="built_in">console</span>.log(Cat.prototype.constructor === Cat); <span class="comment">// true</span></span><br><span class="line"></span><br><span class="line">Cat.prototype.Say = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="string">&#x27;我的名字是&#x27;</span> + <span class="built_in">this</span>.name+<span class="string">&#x27;,我是原型prototype声明同样的Say方法，把原有Say方法覆盖了&#x27;</span>;</span><br><span class="line">&#125;</span><br><span class="line">cat2 = <span class="keyword">new</span> Cat(<span class="string">&#x27;年年&#x27;</span>,<span class="number">5</span>);</span><br><span class="line"><span class="built_in">console</span>.log(cat2.Say());<span class="comment">//我的名字是年年，我是原型prototype声明同样的Say方法，把原有Say方法覆盖了</span></span><br><span class="line">Cat.prototype.Go = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">return</span> <span class="string">&#x27;我的年龄是&#x27;</span> + <span class="built_in">this</span>.age;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">console</span>.log(cat2.Go());<span class="comment">//我的年龄是5</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">Object</span>.assign(Cat.prototype,&#123;</span><br><span class="line">  <span class="attr">Eat</span>: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">this</span>.name</span><br><span class="line">  &#125;</span><br><span class="line">&#125;);</span><br><span class="line">cat3 =<span class="keyword">new</span> Cat(<span class="string">&#x27;卡卡&#x27;</span>,<span class="number">4</span>);</span><br><span class="line"><span class="built_in">console</span>.log(cat3.Eat());<span class="comment">//卡卡</span></span><br><span class="line"></span><br><span class="line">cat3.__proto__.Play = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">this</span>.name;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">console</span>.log(cat3.Play());<span class="comment">//卡卡</span></span><br></pre></td></tr></table></figure>
+
+<p>(没有 class 前 javascript 定义 class 的三种方法)[<a target="_blank" rel="noopener" href="http://www.ruanyifeng.com/blog/2012/07/three_ways_to_define_a_javascript_class.html]">http://www.ruanyifeng.com/blog/2012/07/three_ways_to_define_a_javascript_class.html]</a></p>
+<h3 id="map-和-object-的区分使用"><a href="#map-和-object-的区分使用" class="headerlink" title="map 和 object 的区分使用"></a>map 和 object 的区分使用</h3><p>object 的 Key 只能是字符串,Map 可以使用任何 JavaScript 数据类型作为键,Map 可以确保遍历的顺序和插入的顺序一致</p>
+<p>性能差异:</p>
+<ul>
+<li>给定固定大小的内存，Map 大约可以比 Object 多存储 50% 的键/值对。</li>
+<li>Map 插入性能略快，如果涉及大量操作，建议使用 Map。</li>
+<li>如果代码涉及大量的删除操作，建议选择 Map。</li>
+<li>查找速度的性能差异极小，但如果只包含少量键/值对，则 Object 有时候速度更快。Object 作为数组使用时浏览器会进行优化。如果涉及大量查找操作，选择 Object 会更好一些</li>
+</ul>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/js%E6%9D%82%E7%83%A9/" rel="tag"># js杂烩</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2018/09/16/knowledge/js/cli/" rel="prev" title="web构建cli">
+                  <i class="fa fa-chevron-left"></i> web构建cli
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2019/03/05/knowledge/basic/csstrick/" rel="next" title="csstrick">
+                  csstrick <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    
+  
+  <div class="comments">
+    <script src="https://giscus.app/client.js"
+        data-repo="UniqueCrownClown/UniqueCrownClown.github.io" 
+        data-repo-id="MDEwOlJlcG9zaXRvcnkxMDQyODk2MzU=" 
+        data-category="General"
+        data-category-id="DIC_kwDOBjdVY84CQXdS"
+        data-mapping="pathname" 
+        data-reactions-enabled="1" 
+        data-emit-metadata="1" 
+        data-theme="light"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        data-input-position="bottom"
+        data-loading="lazy"
+        async>
+    </script>
+  </div>
+  
+  
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2024</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">clown</span>
+</div>
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_uv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+    </div>
+  </footer>
+
+  
+  <script size="90" alpha="0.6" zIndex="-1" src="https://unpkg.com/ribbon.js@1.0.2/dist/ribbon.min.js"></script>
+  <script src="https://unpkg.com/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/jquery@3.6.0/dist/jquery.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script>
+
+  
+<script src="https://unpkg.com/hexo-generator-searchdb@1.4.0/dist/search.js" integrity="sha256-vXZMYLEqsROAXkEw93GGIvaB2ab+QW6w3+1ahD9nXXA=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
+
+
+
+  <script src="/js/third-party/fancybox.js"></script>
+
+
+  
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.loli.net/css?family=Noto+Serif+SC:300,300italic,400,400italic,700,700italic%7CRoboto+Mono:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="https://unpkg.com/@fortawesome/fontawesome-free@5.15.4/css/all.min.css" integrity="sha256-mUZM63G8m73Mcidfrv5E+Y61y7a12O5mW4ezU3bxqW4=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://unpkg.com/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://unpkg.com/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"uniquecrownclown.github.io","root":"/","images":"/images","scheme":"Mist","darkmode":false,"version":"8.8.0","exturl":false,"sidebar":{"position":"left","display":"hide","padding":18,"offset":12,"width":240},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"giscus","storage":true,"lazyload":false,"nav":null,"activeClass":"giscus"},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+<meta name="description" content="linux shell…">
+<meta property="og:type" content="article">
+<meta property="og:title" content="linux命令">
+<meta property="og:url" content="https://uniquecrownclown.github.io/2017/07/21/knowledge/os/linux/index.html">
+<meta property="og:site_name" content="uniquecrownclown">
+<meta property="og:description" content="linux shell…">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://s1.ax1x.com/2022/05/23/XpB8hj.png">
+<meta property="og:image" content="https://s1.ax1x.com/2022/05/23/XpB3NQ.png">
+<meta property="og:image" content="https://img.hellogithub.com/article/dGc4t91uqSls3Bp_1652843793.png">
+<meta property="article:published_time" content="2017-07-21T11:23:51.000Z">
+<meta property="article:modified_time" content="2024-02-22T09:31:27.807Z">
+<meta property="article:author" content="clown">
+<meta property="article:tag" content="linux">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://s1.ax1x.com/2022/05/23/XpB8hj.png">
+
+
+<link rel="canonical" href="https://uniquecrownclown.github.io/2017/07/21/knowledge/os/linux/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://uniquecrownclown.github.io/2017/07/21/knowledge/os/linux/","path":"2017/07/21/knowledge/os/linux/","title":"linux命令"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>linux命令 | uniquecrownclown</title>
+  
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">uniquecrownclown</h1>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">clown的笔记</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li>
+        <li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li>
+        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li>
+        <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+        <li class="menu-item menu-item-collection"><a href="/test/" rel="section"><i class="fa fa-cubes fa-fw"></i>collection</a></li>
+        <li class="menu-item menu-item-留言板"><a href="/guestbook/" rel="section"><i class="fa fa-book fa-fw"></i>留言板</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#deepin-%E5%B0%9D%E8%AF%95"><span class="nav-number">1.</span> <span class="nav-text">deepin 尝试</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#linux-%E5%B8%B8%E8%A7%81"><span class="nav-number">2.</span> <span class="nav-text">linux 常见</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%B8%B8%E8%A7%81-shell"><span class="nav-number">2.1.</span> <span class="nav-text">常见 shell</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#ubuntu-%E9%9D%99%E6%80%81-dns-%E8%A7%A3%E6%9E%90"><span class="nav-number">2.2.</span> <span class="nav-text">ubuntu 静态 dns 解析</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#host-%E6%B7%BB%E5%8A%A0"><span class="nav-number">2.3.</span> <span class="nav-text">host 添加</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#find-%E5%91%BD%E4%BB%A4"><span class="nav-number">2.4.</span> <span class="nav-text">find 命令</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#grep-%E5%B8%B8%E8%A7%81%E5%91%BD%E4%BB%A4"><span class="nav-number">2.5.</span> <span class="nav-text">grep 常见命令</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#vim-%E5%91%BD%E4%BB%A4"><span class="nav-number">3.</span> <span class="nav-text">vim 命令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#nginx-%E9%85%8D%E7%BD%AE%E5%9F%BA%E7%A1%80"><span class="nav-number">4.</span> <span class="nav-text">nginx 配置基础</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BC%96%E8%AF%91%E5%99%A8"><span class="nav-number">5.</span> <span class="nav-text">编译器</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80%E7%9A%84%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86"><span class="nav-number">5.1.</span> <span class="nav-text">汇编语言的基础知识</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#unicode-%E5%92%8C-ascii-%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="nav-number">5.2.</span> <span class="nav-text">unicode 和 ascii 的区别</span></a></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="clown"
+      src="/images/avatar.jpg">
+  <p class="site-author-name" itemprop="name">clown</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">77</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">21</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">63</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/UniqueCrownClown" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;UniqueCrownClown" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="/1129986876@qq.com" title="E-Mail → 1129986876@qq.com"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://weibo.com/u/2143916663" title="Weibo → https:&#x2F;&#x2F;weibo.com&#x2F;u&#x2F;2143916663" rel="noopener" target="_blank"><i class="fab fa-weibo fa-fw"></i>Weibo</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://twitter.com/CrownClown7777" title="Twitter → https:&#x2F;&#x2F;twitter.com&#x2F;CrownClown7777" rel="noopener" target="_blank"><i class="fab fa-twitter fa-fw"></i>Twitter</a>
+      </span>
+  </div>
+
+
+
+
+    <span id="jinrishici-sentence">正在加载今日诗词....</span>
+    <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+  <a href="https://github.com/UniqueCrownClown" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub" rel="noopener" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://uniquecrownclown.github.io/2017/07/21/knowledge/os/linux/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="clown">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="uniquecrownclown">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          linux命令
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2017-07-21 11:23:51" itemprop="dateCreated datePublished" datetime="2017-07-21T11:23:51+00:00">2017-07-21</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2024-02-22 09:31:27" itemprop="dateModified" datetime="2024-02-22T09:31:27+00:00">2024-02-22</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E8%BF%90%E7%BB%B4/" itemprop="url" rel="index"><span itemprop="name">运维</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <p>linux shell…</p>
+<span id="more"></span>
+
+<h3 id="deepin-尝试"><a href="#deepin-尝试" class="headerlink" title="deepin 尝试"></a>deepin 尝试</h3><pre><code>sudo
+curl or wget should be installed
+yum -y install wget
+systemctl stop nginx.service
+systemctl start nginx.service
+netstat -antp | grep :80
+netstat -ano|findstr 8080
+</code></pre>
+<h3 id="linux-常见"><a href="#linux-常见" class="headerlink" title="linux 常见"></a>linux 常见</h3><!-- ![](https://cdn.jsdelivr.net/gh/UniqueCrownClown/pic-bed/hexo/knowledge/linuxPic/order.png) -->
+
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/XpB8hj"><img src="https://s1.ax1x.com/2022/05/23/XpB8hj.png" alt="XpB8hj.png"></a></p>
+<h4 id="常见-shell"><a href="#常见-shell" class="headerlink" title="常见 shell"></a>常见 shell</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">netstat -ano  | findstr 8080</span><br><span class="line">taskkill /?</span><br><span class="line">whereis xxx</span><br><span class="line">lsb_release -a <span class="comment"># 查看版本</span></span><br><span class="line">sudo apt-get update <span class="comment"># 更新软件</span></span><br><span class="line"><span class="comment"># systemd 是 Linux 下的一款系统和服务管理器，兼容 SysV 和 LSB 的启动脚本</span></span><br><span class="line"><span class="comment"># 检视和控制systemd的主要命令是systemctl</span></span><br><span class="line"></span><br><span class="line">zip -r xxx.zip ./* <span class="comment">#压缩服务器上当前目录的内容为xxx.zip文件</span></span><br><span class="line"></span><br><span class="line">unzip filename.zip <span class="comment"># 解压zip文件到当前目录</span></span><br><span class="line"></span><br><span class="line">tar -czvf 压缩文件名.tar.gz 要压缩的文件或目录 <span class="comment">#压缩文件</span></span><br><span class="line"></span><br><span class="line">tar -xzvf 压缩文件名.tar.gz <span class="comment">#解压缩,z表示用gzip解压缩,v表示显示详细的提取过程</span></span><br><span class="line"></span><br><span class="line">tar -xf 压缩文件名.tar <span class="comment">#解压tar文件</span></span><br><span class="line"></span><br><span class="line">chmod -R 775 &lt;directory-name&gt; <span class="comment">#给递归目录的群组赋予权限</span></span><br><span class="line">chmod g+w &lt;directory-name&gt; <span class="comment">#给目录的群组赋予权限</span></span><br><span class="line">ls -l &lt;directory-name&gt; <span class="comment"># 查看所有者和权限</span></span><br><span class="line">sudo chown user1:group1 &lt;directory-name&gt; <span class="comment">#设置目录的所有者和群组</span></span><br><span class="line">sudo chown -R user1:group1 &lt;directory-name&gt; <span class="comment">#递归设置目录的所有者和群组</span></span><br><span class="line"></span><br><span class="line">touch test.txt</span><br><span class="line">mkdir <span class="built_in">test</span></span><br><span class="line">ls -a <span class="comment"># 显示隐藏文件</span></span><br><span class="line">ls -l <span class="comment"># 长列表模式</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 输入的内容写入文件</span></span><br><span class="line">cat &lt;&lt; <span class="string">EOF &gt; a.txt </span></span><br><span class="line"><span class="string"></span></span><br></pre></td></tr></table></figure>
+
+<h4 id="ubuntu-静态-dns-解析"><a href="#ubuntu-静态-dns-解析" class="headerlink" title="ubuntu 静态 dns 解析"></a>ubuntu 静态 dns 解析</h4><pre><code>1. /etc/network/interfaces (dns-nameservers 114.114.114.114 8.8.8.8)
+2. /etc/NetworkManager/NetworkManager.conf (dns=119.29.29.29)
+3. /etc/resolvconf/resolv.conf.d/tail (nameserver=223.5.5.5)
+</code></pre>
+<h4 id="host-添加"><a href="#host-添加" class="headerlink" title="host 添加"></a>host 添加</h4><p>Linux 系统下 hosts 文件位置：/etc/hosts<br>如果是单条可以直接执行命令行：<br>echo “10.13.83.43 yun.xiong.cn”&gt;&gt; /etc/hosts</p>
+<h4 id="find-命令"><a href="#find-命令" class="headerlink" title="find 命令"></a>find 命令</h4><p>grep 是查找匹配条件的行，find 是搜索匹配条件的文件</p>
+<p>语法：find 起始目录 寻找条件 操作<br>说明：find 命令从指定的起始目录开始，递归地搜索其各个子目录，查找满足寻找条件的文件并对之采取相关的操作。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">find / -name httpd.conf　　#在根目录下查找文件httpd.conf，表示在整个硬盘查找</span><br><span class="line"></span><br><span class="line">find /etc -name httpd.conf 　　#在/etc 目录下文件 httpd.conf</span><br><span class="line">find /etc -name &#x27;_srm_&#x27;　　#使用通配符*(0 或者任意多个)。表示在/etc 目录下查找文件名中含有字符串‘srm’的文件</span><br><span class="line">find . -name &#x27;srm*&#x27; 　　#表示当前目录下查找文件名开头是字符串‘srm’的文件</span><br><span class="line">find /tmp -size +10000c -and -mtime +2 　　#在/tmp 目录下查找大于 10000 字节并在最后 2 分钟内修改的文件</span><br><span class="line">find / -user fred -or -user george 　　#在/目录下查找用户是 fred 或者 george 的文件文件</span><br><span class="line">find /tmp ! -user panda 　　#在/tmp 目录中查找所有不属于 panda 用户的文件</span><br></pre></td></tr></table></figure>
+
+<h4 id="grep-常见命令"><a href="#grep-常见命令" class="headerlink" title="grep 常见命令"></a>grep 常见命令</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">grep &#x27;test&#x27; d\*　　#显示所有以 d 开头的文件中包含 test 的行</span><br><span class="line">grep ‘test’ aa bb cc 　　 #显示在 aa，bb，cc 文件中包含 test 的行</span><br><span class="line">grep ‘[a-z]\&#123;5\&#125;’ aa 　　#显示所有包含每行字符串至少有 5 个连续小写字符的字符串的行</span><br><span class="line">grep magic /usr/src 　　#显示/usr/src 目录下的文件(不含子目录)包含 magic 的行</span><br><span class="line">grep -r magic /usr/src 　　#显示/usr/src 目录下的文件(包含子目录)包含 magic 的行</span><br></pre></td></tr></table></figure>
+
+<h3 id="vim-命令"><a href="#vim-命令" class="headerlink" title="vim 命令"></a>vim 命令</h3><p>vimtutor</p>
+<pre><code>hjkl左下上有
+0是跳到行首
+dd删除整行
+:r(replace)
+ 使用v选择高亮的部分
+ 使用esc进入正常模式
+ 使用操作符 y 复制文本，使用 p 粘贴文本
+ 使用操作符 i 插入文本，使用 u 撤销操作
+w     保存不退出
+w!    强制保存
+wq    保存退出
+wq!
+q     退出
+q!    强制退出
+</code></pre>
+<!-- ![](https://cdn.jsdelivr.net/gh/UniqueCrownClown/pic-bed/hexo/knowledge/linuxPic/vim.png) -->
+
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/XpB3NQ"><img src="https://s1.ax1x.com/2022/05/23/XpB3NQ.png" alt="XpB3NQ.png"></a></p>
+<h3 id="nginx-配置基础"><a href="#nginx-配置基础" class="headerlink" title="nginx 配置基础"></a>nginx 配置基础</h3><p><a target="_blank" rel="noopener" href="https://juejin.cn/post/7007346707767754765">nginx 内容</a></p>
+<p>有时会出现bind() to 0.0.0.0:20990 failed (13: Permission denied)的问题</p>
+<p>可能是SELinux的问题</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">getenfoce</span><br><span class="line">setforece 0</span><br><span class="line">setforece 1</span><br></pre></td></tr></table></figure>
+
+<h3 id="编译器"><a href="#编译器" class="headerlink" title="编译器"></a>编译器</h3><p><img src="https://img.hellogithub.com/article/dGc4t91uqSls3Bp_1652843793.png"><br>CPU 架构支持把二进制操作映射作为一种更容易阅读的语言——汇编语言。<br>虽然汇编语言非常低级，但是它可以转换为二进制代码，这种转换主要靠的是“汇编器”</p>
+<p>高级语言–&gt;编译器–&gt;汇编语言–&gt;汇编器–&gt;机器代码(二进制代码)</p>
+<h4 id="汇编语言的基础知识"><a href="#汇编语言的基础知识" class="headerlink" title="汇编语言的基础知识"></a>汇编语言的基础知识</h4><p>特点</p>
+<ul>
+<li>与硬件相关，每一种处理器都有相应的汇编语言</li>
+<li>与机器码相关，指令通常与机器码一一对应</li>
+<li>家用电脑使用 intel/amd 处理器，对应 x86-x64 汇编语言</li>
+</ul>
+<p>作用</p>
+<ul>
+<li>深入理解硬件工作原理；</li>
+<li>充分利用计算机特性（如 SIMD，即单指令多数据）；</li>
+<li>开发操作系统内核、驱动程序等；</li>
+<li>优化程序</li>
+</ul>
+<h4 id="unicode-和-ascii-的区别"><a href="#unicode-和-ascii-的区别" class="headerlink" title="unicode 和 ascii 的区别"></a>unicode 和 ascii 的区别</h4><ol>
+<li>ASCII 编码是 1 个字节，而 Unicode 编码通常是 2 个字节</li>
+<li>ASCII 是单字节编码，无法用来表示中文；而 Unicode 可以表示所有语言</li>
+<li>用 Unicode 编码比 ASCII 编码需要多一倍的存储空间</li>
+</ol>
+<ul>
+<li><p>“可变长编码”的 UTF-8 编码</p>
+</li>
+<li><p>ASCII 编码实际上可以被看成是 UTF-8 编码的一部分，所以，大量只支持 ASCII 编码的历史遗留软件可以在 UTF-8 编码下继续工作</p>
+</li>
+<li><p>在计算机内存中，统一使用 Unicode 编码，当需要保存到硬盘或者需要传输的时候，就转换为 UTF-8 编码。</p>
+</li>
+<li><p>用记事本编辑的时候，从文件读取的 UTF-8 字符被转换为 Unicode 字符到内存里，编辑完成后，保存的时候再把 Unicode 转换为 UTF-8 保存到文件</p>
+</li>
+</ul>
+<p>ASCII 码使用指定的 7 位或 8 位二进制数组合来表示 128 或 256 种可能的字符。标准 ASCII 码也叫基础 ASCII 码，使用 7 位二进制数（剩下的 1 位二进制为 0）来表示所有的大写和小写字母，数字 0 到 9、标点符号， 以及在美式英语中使用的特殊控制字符。其中最后一位用于奇偶校验。</p>
+<p>Unicode 把所有语言都统一到一套编码里，这样就不会再有乱码问题了。<br>Unicode 最常用的是用两个字节表示一个字符（如果要用到非常偏僻的字符，就需要 4 个字节）。现代操作系统和大多数编程语言都直接支持 Unicode。</p>
+<p>UTF-8 是 Unicode 的实现方式之一</p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/linux/" rel="tag"># linux</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2017/06/24/knowledge/frame/react/" rel="prev" title="react学习笔记">
+                  <i class="fa fa-chevron-left"></i> react学习笔记
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2017/07/22/knowledge/os/docker/" rel="next" title="docker基础">
+                  docker基础 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    
+  
+  <div class="comments">
+    <script src="https://giscus.app/client.js"
+        data-repo="UniqueCrownClown/UniqueCrownClown.github.io" 
+        data-repo-id="MDEwOlJlcG9zaXRvcnkxMDQyODk2MzU=" 
+        data-category="General"
+        data-category-id="DIC_kwDOBjdVY84CQXdS"
+        data-mapping="pathname" 
+        data-reactions-enabled="1" 
+        data-emit-metadata="1" 
+        data-theme="light"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        data-input-position="bottom"
+        data-loading="lazy"
+        async>
+    </script>
+  </div>
+  
+  
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2024</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">clown</span>
+</div>
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_uv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+    </div>
+  </footer>
+
+  
+  <script size="90" alpha="0.6" zIndex="-1" src="https://unpkg.com/ribbon.js@1.0.2/dist/ribbon.min.js"></script>
+  <script src="https://unpkg.com/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/jquery@3.6.0/dist/jquery.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script>
+
+  
+<script src="https://unpkg.com/hexo-generator-searchdb@1.4.0/dist/search.js" integrity="sha256-vXZMYLEqsROAXkEw93GGIvaB2ab+QW6w3+1ahD9nXXA=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
+
+
+
+  <script src="/js/third-party/fancybox.js"></script>
+
+
+  
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+
+</body>
+</html>

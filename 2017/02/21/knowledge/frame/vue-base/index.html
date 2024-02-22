@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.loli.net/css?family=Noto+Serif+SC:300,300italic,400,400italic,700,700italic%7CRoboto+Mono:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="https://unpkg.com/@fortawesome/fontawesome-free@5.15.4/css/all.min.css" integrity="sha256-mUZM63G8m73Mcidfrv5E+Y61y7a12O5mW4ezU3bxqW4=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://unpkg.com/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://unpkg.com/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"uniquecrownclown.github.io","root":"/","images":"/images","scheme":"Mist","darkmode":false,"version":"8.8.0","exturl":false,"sidebar":{"position":"left","display":"hide","padding":18,"offset":12,"width":240},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"giscus","storage":true,"lazyload":false,"nav":null,"activeClass":"giscus"},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+<meta name="description" content="vue 基础…">
+<meta property="og:type" content="article">
+<meta property="og:title" content="vue基础">
+<meta property="og:url" content="https://uniquecrownclown.github.io/2017/02/21/knowledge/frame/vue-base/index.html">
+<meta property="og:site_name" content="uniquecrownclown">
+<meta property="og:description" content="vue 基础…">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2017-02-21T11:23:51.000Z">
+<meta property="article:modified_time" content="2024-02-22T09:31:27.799Z">
+<meta property="article:author" content="clown">
+<meta property="article:tag" content="vue基础">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://uniquecrownclown.github.io/2017/02/21/knowledge/frame/vue-base/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://uniquecrownclown.github.io/2017/02/21/knowledge/frame/vue-base/","path":"2017/02/21/knowledge/frame/vue-base/","title":"vue基础"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>vue基础 | uniquecrownclown</title>
+  
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">uniquecrownclown</h1>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">clown的笔记</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li>
+        <li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li>
+        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li>
+        <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+        <li class="menu-item menu-item-collection"><a href="/test/" rel="section"><i class="fa fa-cubes fa-fw"></i>collection</a></li>
+        <li class="menu-item menu-item-留言板"><a href="/guestbook/" rel="section"><i class="fa fa-book fa-fw"></i>留言板</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9B%B4%E6%96%B0%E5%AE%89%E8%A3%85-vue-%E8%84%9A%E6%89%8B%E6%9E%B6"><span class="nav-number">1.</span> <span class="nav-text">更新安装 vue 脚手架</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%89%93%E5%8C%85%E6%A8%A1%E5%BC%8F"><span class="nav-number">1.1.</span> <span class="nav-text">打包模式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%89%93%E5%8C%85%E4%BC%98%E5%8C%96"><span class="nav-number">1.2.</span> <span class="nav-text">打包优化</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%97%AE%E9%A2%98-1%EF%BC%9Avue-%E8%BF%87%E6%B8%A1%E9%92%A9%E5%AD%90%E5%87%BD%E6%95%B0%E5%AE%9E%E7%8E%B0%E5%8A%A8%E7%94%BB%E6%95%88%E6%9E%9C"><span class="nav-number">1.3.</span> <span class="nav-text">问题 1：vue 过渡钩子函数实现动画效果</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%97%AE%E9%A2%98-2-vue-router-%E7%9A%84%E9%92%A9%E5%AD%90%E5%87%BD%E6%95%B0"><span class="nav-number">1.4.</span> <span class="nav-text">问题 2: vue-router 的钩子函数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%97%AE%E9%A2%98-3-vue-%E7%9A%84-method-watch-%E5%92%8C-computed-%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="nav-number">1.5.</span> <span class="nav-text">问题 3: vue 的 method,watch 和 computed 的区别</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%97%AE%E9%A2%98-4-vue-%E7%9A%84-prop-%E7%9A%84%E7%B1%BB%E5%9E%8B%E6%94%AF%E6%8C%81%E8%81%94%E5%90%88%E5%A3%B0%E6%98%8E"><span class="nav-number">1.6.</span> <span class="nav-text">问题 4: vue 的 prop 的类型支持联合声明??</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%97%AE%E9%A2%98-5-provide-inject-%E6%9B%BF%E6%8D%A2-eventBus-%E5%AE%9E%E7%8E%B0%E7%A5%96%E5%AD%99%E9%80%9A%E4%BF%A1"><span class="nav-number">1.7.</span> <span class="nav-text">问题 5: provide&#x2F;inject 替换 eventBus 实现祖孙通信</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#hook-mounted-%E2%80%9DdoSomething%E2%80%9D"><span class="nav-number">1.8.</span> <span class="nav-text">@hook:mounted&#x3D;”doSomething”</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%BB%84%E4%BB%B6%E4%B8%AD%E7%9A%84-data-%E4%B8%BA%E4%BB%80%E4%B9%88%E6%98%AF%E4%B8%AA-function"><span class="nav-number">1.9.</span> <span class="nav-text">组件中的 data 为什么是个 function</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%BB%84%E4%BB%B6%E5%B5%8C%E5%A5%97"><span class="nav-number">1.10.</span> <span class="nav-text">组件嵌套</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#vue-%E7%9A%84%E8%B7%AF%E7%94%B1%E5%92%8C-express-%E7%9A%84%E8%B7%AF%E7%94%B1%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="nav-number">1.11.</span> <span class="nav-text">vue 的路由和 express 的路由的区别</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#index-%E5%81%9A%E4%B8%BA-v-for-%E7%9A%84-key"><span class="nav-number">1.12.</span> <span class="nav-text">index 做为 v-for 的 key</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#vue-router"><span class="nav-number">2.</span> <span class="nav-text">vue-router</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#vuex"><span class="nav-number">3.</span> <span class="nav-text">vuex</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B8%B8%E8%A7%81%E5%B8%B8%E7%94%A8%E7%82%B9"><span class="nav-number">4.</span> <span class="nav-text">常见常用点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#vue-%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96"><span class="nav-number">5.</span> <span class="nav-text">vue 性能优化</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#vue-%E9%92%A9%E5%AD%90%E5%87%BD%E6%95%B0"><span class="nav-number">5.1.</span> <span class="nav-text">vue 钩子函数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%9C%A8%E5%93%AA%E4%B8%AA%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E5%86%85%E8%B0%83%E7%94%A8%E5%BC%82%E6%AD%A5%E8%AF%B7%E6%B1%82%EF%BC%9F"><span class="nav-number">5.2.</span> <span class="nav-text">在哪个生命周期内调用异步请求？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%9C%A8-mounted-%E4%B8%AD%E5%8F%AF%E4%BB%A5%E8%AE%BF%E9%97%AE%E6%93%8D%E4%BD%9C-DOM"><span class="nav-number">5.3.</span> <span class="nav-text">在 mounted 中可以访问操作 DOM</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#vue-extends-%E5%92%8C-mixin-%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="nav-number">5.4.</span> <span class="nav-text">vue extends 和 mixin 的区别</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AF%B9%E8%B1%A1%E6%96%B9%E6%B3%95%E4%BC%98%E5%8C%96"><span class="nav-number">5.5.</span> <span class="nav-text">对象方法优化</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#vm-nextTick-callback-%E4%BD%BF%E7%94%A8%E5%9C%BA%E6%99%AF"><span class="nav-number">5.6.</span> <span class="nav-text">vm.$nextTick( [callback] )使用场景</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%BB%84%E4%BB%B6%E7%9A%84%E5%B5%8C%E5%A5%97"><span class="nav-number">5.7.</span> <span class="nav-text">组件的嵌套</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Vue-%E7%9A%84%E8%BF%87%E6%BB%A4%E5%99%A8"><span class="nav-number">5.8.</span> <span class="nav-text">Vue 的过滤器</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#jest"><span class="nav-number">5.9.</span> <span class="nav-text">jest</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#elementui-%E8%87%AA%E5%AE%9A%E4%B9%89%E6%8C%87%E4%BB%A4"><span class="nav-number">5.10.</span> <span class="nav-text">elementui 自定义指令</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#babel-plugin-component"><span class="nav-number">5.11.</span> <span class="nav-text">babel-plugin-component</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%B5%84%E6%96%99"><span class="nav-number">6.</span> <span class="nav-text">资料</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="clown"
+      src="/images/avatar.jpg">
+  <p class="site-author-name" itemprop="name">clown</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">77</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">21</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">63</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/UniqueCrownClown" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;UniqueCrownClown" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="/1129986876@qq.com" title="E-Mail → 1129986876@qq.com"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://weibo.com/u/2143916663" title="Weibo → https:&#x2F;&#x2F;weibo.com&#x2F;u&#x2F;2143916663" rel="noopener" target="_blank"><i class="fab fa-weibo fa-fw"></i>Weibo</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://twitter.com/CrownClown7777" title="Twitter → https:&#x2F;&#x2F;twitter.com&#x2F;CrownClown7777" rel="noopener" target="_blank"><i class="fab fa-twitter fa-fw"></i>Twitter</a>
+      </span>
+  </div>
+
+
+
+
+    <span id="jinrishici-sentence">正在加载今日诗词....</span>
+    <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+  <a href="https://github.com/UniqueCrownClown" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub" rel="noopener" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://uniquecrownclown.github.io/2017/02/21/knowledge/frame/vue-base/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="clown">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="uniquecrownclown">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          vue基础
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2017-02-21 11:23:51" itemprop="dateCreated datePublished" datetime="2017-02-21T11:23:51+00:00">2017-02-21</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2024-02-22 09:31:27" itemprop="dateModified" datetime="2024-02-22T09:31:27+00:00">2024-02-22</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E5%89%8D%E7%AB%AF%E6%A1%86%E6%9E%B6/" itemprop="url" rel="index"><span itemprop="name">前端框架</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <p>vue 基础…</p>
+<span id="more"></span>
+
+<h3 id="更新安装-vue-脚手架"><a href="#更新安装-vue-脚手架" class="headerlink" title="更新安装 vue 脚手架"></a>更新安装 vue 脚手架</h3><p>vue-cli 中集成了一个小型的 express,都出到 5 了</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install --global @vue/cli</span><br></pre></td></tr></table></figure>
+
+<h4 id="打包模式"><a href="#打包模式" class="headerlink" title="打包模式"></a>打包模式</h4><p>应用模式是默认的模式。在这个模式中：</p>
+<ul>
+<li>index.html 会带有注入的资源和 resource hint</li>
+<li>第三方库会被分到一个独立包以便更好的缓存</li>
+<li>小于 8KiB 的静态资源会被内联在 JavaScript 中</li>
+<li>public 中的静态资源会被复制到输出目录中</li>
+</ul>
+<h4 id="打包优化"><a href="#打包优化" class="headerlink" title="打包优化"></a>打包优化</h4><ol>
+<li>懒加载</li>
+<li>不常改变的库在 index.html 上用 cdn 引入</li>
+<li>webpack.DllPlugin</li>
+<li>SplitChunksPlugin</li>
+<li>CommonsChunkPlugin</li>
+</ol>
+<ul>
+<li>差量包???<br>通过对 output.filename 和 output.chunkFilename 的配置，利用[contenthash]占位符，为 js 文件名加上根据其内容生成的唯一 hash 值，轻松实现资源的长效缓存。也就是说，无论是第几次打包，内容没有变化的资源 (如 js、css) 文件名永远不会变，而那些有修改的文件就会生成新的文件名 (hash 值) 。</li>
+</ul>
+<p>因为 webpack 内部维护了一个自增的数字 id，每个 module 都有一个 id。当增加或删除 module 的时候，id 就会变化，导致其它 module 虽然内容没有变化，但由于 id 被强占，只能自增或者自减，导致整个项目的 module id 的顺序都错乱了。<br>也就是说，如果引入了一个新模块或删掉一个模块，都可能导致其它文件的 moduleId 发生改变，相应地文件内容也就改变，缓存便失效了。<br>同样地，chunk 的新增/减少也会导致 chunk id 顺序发生错乱，那么原本的缓存就不作数了。</p>
+<h4 id="问题-1：vue-过渡钩子函数实现动画效果"><a href="#问题-1：vue-过渡钩子函数实现动画效果" class="headerlink" title="问题 1：vue 过渡钩子函数实现动画效果"></a>问题 1：vue 过渡钩子函数实现动画效果</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">&lt;transition</span><br><span class="line">  v-on:before-enter=<span class="string">&quot;beforeEnter&quot;</span></span><br><span class="line">  v-on:enter=<span class="string">&quot;enter&quot;</span></span><br><span class="line">  v-on:leave=<span class="string">&quot;leave&quot;</span></span><br><span class="line">  v-bind:css=<span class="string">&quot;false&quot;</span>&gt;</span><br><span class="line">  <span class="xml"><span class="tag">&lt;<span class="name">p</span> <span class="attr">v-if</span>=<span class="string">&quot;show&quot;</span>&gt;</span></span></span><br><span class="line"><span class="xml">    Imgss</span></span><br><span class="line"><span class="xml">  <span class="tag">&lt;/<span class="name">p</span>&gt;</span></span></span><br><span class="line">&lt;/transition&gt;</span><br><span class="line">vue实现methods</span><br><span class="line"><span class="attr">methods</span>: &#123;</span><br><span class="line">  <span class="attr">beforeEnter</span>: <span class="function"><span class="keyword">function</span> (<span class="params">el</span>) </span>&#123;</span><br><span class="line">    el.style.opacity = <span class="number">0</span></span><br><span class="line">    el.style.transformOrigin = <span class="string">&#x27;50% 50%&#x27;</span></span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="attr">enter</span>: <span class="function"><span class="keyword">function</span> (<span class="params">el, done</span>) </span>&#123;</span><br><span class="line">    Velocity(el, &#123; <span class="attr">opacity</span>: <span class="number">1</span>,<span class="attr">translateX</span>:<span class="string">&#x27;20px&#x27;</span>, <span class="attr">fontSize</span>: <span class="string">&#x27;2em&#x27;</span> &#125;, &#123; <span class="attr">duration</span>: <span class="number">300</span> &#125;);</span><br><span class="line">    Velocity(el, &#123; <span class="attr">translateX</span>:<span class="string">&#x27;0px&#x27;</span>,<span class="attr">fontSize</span>: <span class="string">&#x27;1em&#x27;</span> &#125;, &#123; <span class="attr">complete</span>: done &#125;)</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="attr">leave</span>: <span class="function"><span class="keyword">function</span> (<span class="params">el, done</span>) </span>&#123;</span><br><span class="line">    Velocity(el, &#123; <span class="attr">rotateZ</span>: <span class="string">&#x27;1080deg&#x27;</span>,<span class="attr">scale</span>:<span class="string">&#x27;0.1&#x27;</span> ,<span class="attr">opacity</span>: <span class="number">0</span>&#125;,&#123;<span class="attr">duration</span>:<span class="number">3000</span>&#125;, &#123; <span class="attr">complete</span>: done &#125;);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="问题-2-vue-router-的钩子函数"><a href="#问题-2-vue-router-的钩子函数" class="headerlink" title="问题 2: vue-router 的钩子函数"></a>问题 2: vue-router 的钩子函数</h4><ol>
+<li>全局路由钩子</li>
+</ol>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">router.beforeEach(<span class="function">(<span class="params">to, <span class="keyword">from</span>, next</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="comment">//会在任意路由跳转前执行，next一定要记着执行，不然路由不能跳转了</span></span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">&quot;beforeEach&quot;</span>);</span><br><span class="line">  <span class="built_in">console</span>.log(to, <span class="keyword">from</span>);</span><br><span class="line">  <span class="comment">//</span></span><br><span class="line">  next();</span><br><span class="line">&#125;);</span><br><span class="line"><span class="comment">//</span></span><br><span class="line">router.afterEach(<span class="function">(<span class="params">to, <span class="keyword">from</span></span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="comment">//会在任意路由跳转后执行</span></span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">&quot;afterEach&quot;</span>);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>单个路由钩子</li>
+</ol>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">beforeRouteEnter (to, <span class="keyword">from</span>, next) &#123;</span><br><span class="line">  <span class="comment">// 在渲染该组件的对应路由被 confirm 前调用</span></span><br><span class="line">  <span class="comment">// 不！能！获取组件实例 `this`</span></span><br><span class="line">  <span class="comment">// 因为当守卫执行前，组件实例还没被创建</span></span><br><span class="line">&#125;,</span><br><span class="line">beforeRouteUpdate (to, <span class="keyword">from</span>, next) &#123;</span><br><span class="line">  <span class="comment">// 在当前路由改变，但是该组件被复用时调用</span></span><br><span class="line">  <span class="comment">// 举例来说，对于一个带有动态参数的路径 /foo/:id，在 /foo/1 和 /foo/2 之间跳转的时候，</span></span><br><span class="line">  <span class="comment">// 由于会渲染同样的 Foo 组件，因此组件实例会被复用。而这个钩子就会在这个情况下被调用。</span></span><br><span class="line">  <span class="comment">// 可以访问组件实例 `this`</span></span><br><span class="line">&#125;,</span><br><span class="line">beforeRouteLeave (to, <span class="keyword">from</span>, next) &#123;</span><br><span class="line">  <span class="comment">// 导航离开该组件的对应路由时调用</span></span><br><span class="line">  <span class="comment">// 可以访问组件实例 `this`</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="问题-3-vue-的-method-watch-和-computed-的区别"><a href="#问题-3-vue-的-method-watch-和-computed-的区别" class="headerlink" title="问题 3: vue 的 method,watch 和 computed 的区别"></a>问题 3: vue 的 method,watch 和 computed 的区别</h4><pre><code>三者都是函数型驱动，，methods不处理数据逻辑关系，只提供可调用的函数,,是需要主动调用的..
+watch和computed能够“自动执行”预先定义的函数
+</code></pre>
+<h4 id="问题-4-vue-的-prop-的类型支持联合声明"><a href="#问题-4-vue-的-prop-的类型支持联合声明" class="headerlink" title="问题 4: vue 的 prop 的类型支持联合声明??"></a>问题 4: vue 的 prop 的类型支持联合声明??</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">props:&#123;</span><br><span class="line">    <span class="attr">time</span>: &#123;</span><br><span class="line">      <span class="attr">type</span>: [<span class="built_in">Number</span>, <span class="built_in">String</span>],</span><br><span class="line">      <span class="attr">default</span>: <span class="function">() =&gt;</span> <span class="number">0</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="问题-5-provide-inject-替换-eventBus-实现祖孙通信"><a href="#问题-5-provide-inject-替换-eventBus-实现祖孙通信" class="headerlink" title="问题 5: provide/inject 替换 eventBus 实现祖孙通信"></a>问题 5: provide/inject 替换 eventBus 实现祖孙通信</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 父级组件提供 &#x27;foo&#x27;</span></span><br><span class="line"><span class="keyword">var</span> Provider = &#123;</span><br><span class="line">  <span class="attr">provide</span>: &#123;</span><br><span class="line">    <span class="attr">foo</span>: <span class="string">&quot;bar&quot;</span>,</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="comment">// ...</span></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 子组件注入 &#x27;foo&#x27;</span></span><br><span class="line"><span class="keyword">var</span> Child = &#123;</span><br><span class="line">  <span class="attr">inject</span>: [<span class="string">&quot;foo&quot;</span>],</span><br><span class="line">  <span class="function"><span class="title">created</span>(<span class="params"></span>)</span> &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="built_in">this</span>.foo); <span class="comment">// =&gt; &quot;bar&quot;</span></span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="comment">// ...</span></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// watch和computed的区别</span></span><br><span class="line"><span class="attr">computed</span>:&#123;</span><br><span class="line">  <span class="attr">fullName</span>: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">this</span>.firstName + <span class="built_in">this</span>.lastName</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="attr">watch</span>: &#123; <span class="attr">firstName</span>: <span class="function"><span class="keyword">function</span> (<span class="params">val</span>) </span>&#123; <span class="built_in">this</span>.fullName = val + <span class="built_in">this</span>.lastName &#125; &#125;</span><br><span class="line"><span class="keyword">new</span> Vue(&#123;</span><br><span class="line">  <span class="attr">el</span>: <span class="string">&#x27;#app&#x27;</span>,</span><br><span class="line">  <span class="attr">data</span>: &#123; <span class="attr">fullName</span>: <span class="string">&#x27;彭湖湾&#x27;</span>, <span class="attr">firstName</span>: <span class="string">&#x27;彭&#x27;</span>, <span class="attr">secName</span>: <span class="string">&#x27;湖&#x27;</span>,<span class="attr">thirdName</span>: <span class="string">&#x27;湾&#x27;</span> &#125;,</span><br><span class="line">  <span class="comment">// watch中的代码显然是同类型，重复的，它并不简洁，也不优雅</span></span><br><span class="line">  <span class="attr">watch</span>: &#123;</span><br><span class="line">    <span class="attr">firstName</span>: <span class="function"><span class="keyword">function</span> (<span class="params">newValue</span>) </span>&#123;</span><br><span class="line">      <span class="built_in">this</span>.fullName = newValue + <span class="built_in">this</span>.secName + <span class="built_in">this</span>.thirdName</span><br><span class="line">      <span class="built_in">console</span>.log(<span class="built_in">this</span>.fullName)</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="attr">secName</span>: <span class="function"><span class="keyword">function</span> (<span class="params">newValue</span>) </span>&#123;</span><br><span class="line">      <span class="built_in">this</span>.fullName = <span class="built_in">this</span>.firstName + newValue + <span class="built_in">this</span>.thirdName</span><br><span class="line">      <span class="built_in">console</span>.log(<span class="built_in">this</span>.fullName)</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="attr">thirdName</span>: <span class="function"><span class="keyword">function</span> (<span class="params">newValue</span>) </span>&#123;</span><br><span class="line">      <span class="built_in">this</span>.fullName = <span class="built_in">this</span>.firstName + <span class="built_in">this</span>.secName + newValue</span><br><span class="line">      <span class="built_in">console</span>.log(<span class="built_in">this</span>.fullName)</span><br><span class="line">    &#125;</span><br><span class="line">&#125; &#125;)</span><br></pre></td></tr></table></figure>
+
+<pre><code>数据触发条件不同，watch是firstName改变时触发fullName做出相应的更改
+                  computed是firstname和latName改变时触发fullName的改变
+所以两者处理的场景不太一样
+                computed擅长处理的场景：一个数据受多个数据影响
+                watch擅长处理的场景：一个数据影响多个数据
+
+method和computed
+    1.存在依赖型数据 2.依赖型数据发生改变这两个条件,computed才会重新计算。
+    2.methods下的数据，是每次触发都会进行计算的
+</code></pre>
+<h4 id="hook-mounted-”doSomething”"><a href="#hook-mounted-”doSomething”" class="headerlink" title="@hook:mounted=”doSomething”"></a>@hook:mounted=”doSomething”</h4><p>父组件引用子组件的时候通过@hook 来监听</p>
+<h4 id="组件中的-data-为什么是个-function"><a href="#组件中的-data-为什么是个-function" class="headerlink" title="组件中的 data 为什么是个 function"></a>组件中的 data 为什么是个 function</h4><p>因为组件存在复用的情况，且 JS 里对象是引用关系，如果组件中 data 是一个对象，那么这样作用域没有隔离，子组件中的 data 属性值会相互影响，如果组件中 data 选项是一个函数，那么每个实例可以维护一份被返回对象的独立的拷贝，组件实例之间的 data 属性值不会互相影响；而 new Vue 的实例，是不会被复用的，因此不存在引用对象的问题。</p>
+<h4 id="组件嵌套"><a href="#组件嵌套" class="headerlink" title="组件嵌套"></a>组件嵌套</h4><p>组件的嵌套，solt 实现组件嵌套和直接用标签名标记嵌套，solt 可以实现组件的多态<br>slot 就是外部调用时，标签中的内容。如果外部调用时没有提供内容的话，那么它就会使用自己默认提供的内容，非常方便</p>
+<h4 id="vue-的路由和-express-的路由的区别"><a href="#vue-的路由和-express-的路由的区别" class="headerlink" title="vue 的路由和 express 的路由的区别"></a>vue 的路由和 express 的路由的区别</h4><p>占坑</p>
+<h4 id="index-做为-v-for-的-key"><a href="#index-做为-v-for-的-key" class="headerlink" title="index 做为 v-for 的 key"></a>index 做为 v-for 的 key</h4><p>使用 index 做 key，破坏顺序操作的时候， 因为每一个节点都找不到对应的 key，导致部分节点不能复用,所有的新 vnode 都需要重新创建。</p>
+<p>解决方案:</p>
+<ol>
+<li><p>在开发中最好每条数据使用唯一标识固定的数据作为 key，比如后台返回的 ID，手机号，身份证号等唯一值</p>
+</li>
+<li><p>可以采用 Symbol 作为 key，Symbol 是 ES6 引入了一种新的原始数据类型 Symbol ，表示独一无二的值，最大的用法是用来定义对象的唯一属性名。</p>
+</li>
+<li><p>可以采用 uuid 作为 key ，uuid 是 Universally Unique Identifier 的缩写，它是在一定的范围内（从特定的名字空间到全球）唯一的机器生成的标识符</p>
+</li>
+<li><p>在某些情况下用 index 作为 key 进行强制重用, 可以极大的优化性能.. 比如说虚拟列表, 如果是 key 每次都不一样的话, 就需要反复创建销毁, 但强制重用的话就只需要替换 data 然后重渲染就行了</p>
+</li>
+<li><p>如果不对数据进行逆序添加 逆序删除破坏顺序的操作， 只用于列表展示的话 使用 index 作为 Key 没有毛病</p>
+</li>
+</ol>
+<h3 id="vue-router"><a href="#vue-router" class="headerlink" title="vue-router"></a>vue-router</h3><p>vue-router 默认的 hash 模式和 history 模式的区别<br>用 history 模式没有#,会和后台的接口耦合在一起<br>充分利用了 history.pushState API 来完成 URL 的跳转<br>服务端增加一个覆盖所有情况的候选资源：如果 URL 匹配不到任何静态资源，则应该返回同一个 index.html 页面<br>这么做以后，你的服务器就不再返回 404 错误页面，因为对于所有路径都会返回 index.html 文件。为了避免这种情况，你应该在 Vue 应用里面覆盖所有的路由情况，然后在给出一个 404 页面。</p>
+<h3 id="vuex"><a href="#vuex" class="headerlink" title="vuex"></a>vuex</h3><p>专为 Vue.js 应用程序开发的状态管理模式<br>组件的共享状态抽取出来,以一个全局单例模式管理, 能在全局往所有的组件注入数据</p>
+<p>single 组件可以抽出来，多个不同组件用同一个数据源(集中式状态管理)<br>SPA（单页应用程序）<br>vuex：规范组件中数据流动，主要用于异步的 http 请求后数据的刷新。通过官方的 vue-devtools 可以无缝对接</p>
+<ul>
+<li>state:</li>
+<li>mutations: mutation 必须同步执行</li>
+<li>getters: 在获取数据之前进行的一种再编辑,相当于对数据的一个过滤和加工</li>
+<li>actions: 可以异步执行</li>
+<li>module:<ol>
+<li> 由于使用单一状态树，应用的所有状态会集中到一个比较大的对象。当应用变得非常复杂时，store 对象就有可能变得相当臃肿。</li>
+<li> 为了解决以上问题，Vuex 允许我们将 store 分割成模块（module）。每个模块拥有自己的 state、mutation、action、getter、甚至是嵌套子模块——从上至下进行同样方式的分割</li>
+</ol>
+</li>
+</ul>
+<p>dispatch –&gt; actions<br>commit –&gt; mutations</p>
+<p>Getter 就是把组件中共有的对 state 的操作进行了提取，它就相当于 对 state 的 computed. 所以它会获得 state 作为第一个参数。(也可以不用 getter，那么在每個組件需要的 state 的加工后操作返回值時，都需要在各自的 computed 中进行处理，这不就重复么)</p>
+<h3 id="常见常用点"><a href="#常见常用点" class="headerlink" title="常见常用点"></a>常见常用点</h3><ol>
+<li><p>如果是得到 state 还需要进一步操作 filter，在 getter 中完成，，减少 view 或者是 component 的代码量</p>
+</li>
+<li><p>mutation 保证是纯函数，，在 action 中用 commit 的方式去添加处理逻辑</p>
+</li>
+<li><p>keepAlive 很轻松的就能够实现组件之间的缓存，主要还是返回其 DOM 不让数据重新刷新。当使用了 keepAlive 之后，页面第一次进入，钩子的触发顺序 created-&gt;mounted-&gt;activated，退出时触发 deactivated。再次进入（前进或者后退）时，只触发 actived。</p>
+</li>
+<li><p>vuex 表单字段映射工具 vuex-map-fields</p>
+</li>
+<li><p>vm.$emit( event, […args] )<br>参数：{string} event[…args]<br>触发当前实例上的事件。附加参数都会传给监听器回调。<br>例子：可以实现在子组件的实例中调用父组件的方法</p>
+</li>
+</ol>
+<h3 id="vue-性能优化"><a href="#vue-性能优化" class="headerlink" title="vue 性能优化"></a>vue 性能优化</h3><p>JSON 数据规范化（normalize）<br>数据持久化， vuex-persistedstate<br>如果你的应用存在非常长或者无限滚动的列表，那么采用 窗口化 的技术来优化性能，只需要渲染少部分区域的内容，减少重新渲染组件和创建 dom 节点的时间。<br>vue-virtual-scroll-list 和 vue-virtual-scroller<br>可以参考 Google 工程师的文章 Complexities of an Infinite Scroller 来尝试自己实现一个虚拟的滚动列表来优化性能，<br>主要使用到的技术是 DOM 回收、墓碑元素和滚动锚定。<br>组件懒加载(异步组件)</p>
+<h4 id="vue-钩子函数"><a href="#vue-钩子函数" class="headerlink" title="vue 钩子函数"></a>vue 钩子函数</h4><p>beforeCreate<br>created<br>beforeMount<br>mounted<br><strong>beforeUpdate</strong><br><strong>updated</strong><br>keep-alive<br>actived(keep-alive 组件激活时调用)<br>deactivated(keep-alive 组件停用时调用)<br>errorCaptured(err: Error, vm: Component, info: string) =&gt; ?boolean 2.5.0 新增<br><keep-alive> 包裹动态组件时，会缓存不活动的组件实例，而不是销毁它们<br>当组件在 <keep-alive> 内被切换，它的 activated 和 deactivated 这两个生命周期钩子函数将会被对应执行。</p>
+<h4 id="在哪个生命周期内调用异步请求？"><a href="#在哪个生命周期内调用异步请求？" class="headerlink" title="在哪个生命周期内调用异步请求？"></a>在哪个生命周期内调用异步请求？</h4><p>可以在钩子函数 created、beforeMount、mounted 中进行调用，因为在这三个钩子函数中，data 已经创建，可以将服务端端返回的数据进行赋值。推荐在 created 钩子函数中调用异步请求，因为在 <strong>created</strong> 钩子函数中调用异步请求有以下优点：</p>
+<ul>
+<li>能更快获取到服务端数据，减少页面  loading 时间；</li>
+<li>ssr  不支持 beforeMount 、mounted 钩子函数，所以放在 created 中有助于一致性；</li>
+</ul>
+<h4 id="在-mounted-中可以访问操作-DOM"><a href="#在-mounted-中可以访问操作-DOM" class="headerlink" title="在 mounted 中可以访问操作 DOM"></a>在 mounted 中可以访问操作 DOM</h4><h4 id="vue-extends-和-mixin-的区别"><a href="#vue-extends-和-mixin-的区别" class="headerlink" title="vue extends 和 mixin 的区别"></a>vue extends 和 mixin 的区别</h4><pre><code>extends继承单组件
+minxin可以继承数组
+让子类拥有一些通用成员变量，然而子类也可以重写父类的成员变量。这样的整个编程思想就很面向对象，也就是继承性
+结论: 优先调用mixins和extends继承的父类，extends触发的优先级更高，相对于是队列
+</code></pre>
+<h4 id="对象方法优化"><a href="#对象方法优化" class="headerlink" title="对象方法优化"></a>对象方法优化</h4><p>Object.defineProperty (getter/setter,v-model 原理)</p>
+<ol>
+<li>proxy 有多达 13 种拦截方法，不限于 apply、ownKeys、deleteProperty、has 等是 object.defineProperty 不具备的。</li>
+<li>proxy 可以<strong>直接监听数组的变化</strong>，proxy 可以<strong>直接监听对象而非属性</strong>。<br>vue2.0 中，比如 vm.arr.length–或者 vm.arr[0]=100 均不能触发视图更新；<br>如果想更新索引可以使用</li>
+</ol>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">vm.$set(vm.arr, <span class="number">0</span>, <span class="number">100</span>);</span><br><span class="line">vm.$delete(vm.arr, <span class="number">0</span>);</span><br></pre></td></tr></table></figure>
+
+<ol start="3">
+<li><strong>proxy 返回的是一个新对象，我们可以只操作新对象达到目的，不需要深度遍历监听，性能高于 Object.defineProperty；而 Object.defineProperty 只能遍历对象属性直接修改</strong></li>
+</ol>
+<p>Object.freeze()<br>Object.freeze() 会把对象冻结，所以比较适合展示类的场景，<br>如果你的数据属性需要改变，可以重新替换成一个新的 Object.freeze()的对象。<br>判断空对象<br>Object.keys({}).length === 0</p>
+<ol start="4">
+<li>Object.defineProperty 只能<strong>劫持对象的属性</strong>,因此我们需要对每个对象的每个属性进行遍历。Vue 2.x 里，是通过 递归 + 遍历 data 对象来实现对数据的监控的，如果属性值也是对象那么需要深度遍历,显然如果能劫持一个完整的对象是才是更好的选择。所以 vue3 用了 proxy</li>
+</ol>
+<h4 id="vm-nextTick-callback-使用场景"><a href="#vm-nextTick-callback-使用场景" class="headerlink" title="vm.$nextTick( [callback] )使用场景"></a>vm.$nextTick( [callback] )使用场景</h4><pre><code>渲染更新视图后的dom结构的获取调用方法
+</code></pre>
+<p>示例场景<br>1、点击按钮显示原本以 v-show = false 隐藏起来的输入框，并获取焦点。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="title">showsou</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line"><span class="built_in">this</span>.showit = <span class="literal">true</span></span><br><span class="line"><span class="built_in">this</span>.\$nextTick(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line"><span class="comment">// DOM 更新了</span></span><br><span class="line"><span class="built_in">document</span>.getElementById(<span class="string">&quot;keywords&quot;</span>).focus()</span><br><span class="line">&#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="组件的嵌套"><a href="#组件的嵌套" class="headerlink" title="组件的嵌套"></a>组件的嵌套</h4><p>solt 实现组件嵌套和直接用标签名标记嵌套<br>solt 可以实现组件的多态<br>slot 就是外部调用时，标签中的内容。如果外部调用时没有提供内容的话，那么它就会使用自己默认提供的内容，非常方便</p>
+<h4 id="Vue-的过滤器"><a href="#Vue-的过滤器" class="headerlink" title="Vue 的过滤器"></a>Vue 的过滤器</h4><p>2.0 中已经废弃了过滤器，需要我们自定义</p>
+<p>过滤器现在只能用在两个地方：mustache 插值和 v-bind 表达式。在 v-model 、v-on 、v-for 等指令时 Vue 还是推荐我们将该逻辑通过 computed 来计算属性。</p>
+<p>v-html 和 v-text 实现内容插入，动态绑定<br>template 花括号也支持表达式，但不能 var 和 if，有时可用三目运算符实现 if 运算</p>
+<p>v-for 和 v-bind:key<br>当我们在使用 v-for 进行渲染时，尽可能使用渲染元素自身属性的 id 给渲染的元素绑定一个 key 值，这样在当前渲染元素的 DOM 结构发生变化时，能够单独响应该元素而不触发所有元素的渲染。</p>
+<h4 id="jest"><a href="#jest" class="headerlink" title="jest"></a>jest</h4><p><a target="_blank" rel="noopener" href="https://vue-test-utils.vuejs.org/zh/api/shallowMount.html">Vue Test Utils 官方文档</a></p>
+<ol>
+<li>@vue/cli-plugin-unit-jest</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> vue-jest-demo</span><br><span class="line">vue add @vue/cli-plugin-unit-jest</span><br><span class="line"></span><br><span class="line">yarn add vue-jest</span><br><span class="line">yarn <span class="built_in">test</span>:unit</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>使用@vue/test-utils</li>
+</ol>
+<ul>
+<li>Vue Test Utils 是 Vue.js 官方的单元测试实用工具库，更多语法</li>
+<li>describe: 定义一个测试集</li>
+<li>it: 每个 it 包含单元测试的最小集</li>
+<li>shallowMount：浅渲染，只渲染 HelloWorld 组件，里面的子组件不渲染</li>
+<li>mount: 正常的渲染，子组件也会渲染</li>
+<li>npm run test – –watchAll, 加了 watchAll 参数，单元测试代码保存的时候会自动运行</li>
+</ul>
+<ol start="3">
+<li>cli</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vue add unit-jest</span><br></pre></td></tr></table></figure>
+
+<ol start="4">
+<li>Jest 单元测试的几个指标</li>
+</ol>
+<p>%stmts 是语句覆盖率（statement coverage）：是不是每个语句都执行了？<br>%Branch 分支覆盖率（branch coverage）：是不是每个 if 代码块都执行了？<br>%Funcs 函数覆盖率（function coverage）：是不是每个函数都调用了？<br>%Lines 行覆盖率（line coverage）：是不是每一行都执行了？</p>
+<ol start="5">
+<li>jest 单元测试术语<br>describe 描述, decribe 会形成一个作用域<br>it 断言<br>expect 期望<br>test 测试，类似 it</li>
+</ol>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">describe(<span class="string">&quot;number test&quot;</span>, <span class="function">() =&gt;</span> &#123;</span><br><span class="line">  it(<span class="string">&quot;1 is true&quot;</span>, <span class="function">() =&gt;</span> &#123;</span><br><span class="line">    expect(<span class="number">1</span>).toBeTruthy();</span><br><span class="line">  &#125;);</span><br><span class="line">  test(<span class="string">&quot;2 is true&quot;</span>, <span class="function">() =&gt;</span> &#123;</span><br><span class="line">    expect(<span class="number">2</span>).toBeTruthy();</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> Vue <span class="keyword">from</span> <span class="string">&quot;vue&quot;</span>;</span><br><span class="line"><span class="keyword">import</span> HelloWorld <span class="keyword">from</span> <span class="string">&quot;@/components/HelloWorld.vue&quot;</span>;</span><br><span class="line"></span><br><span class="line">describe(<span class="string">&quot;HelloWorld.vue&quot;</span>, <span class="function">() =&gt;</span> &#123;</span><br><span class="line">  it(<span class="string">&quot;renders props.msg when passed&quot;</span>, <span class="function">() =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">const</span> root = <span class="built_in">document</span>.createElement(<span class="string">&quot;div&quot;</span>);</span><br><span class="line">    root.className = <span class="string">&quot;root&quot;</span>;</span><br><span class="line">    <span class="built_in">document</span>.body.appendChild(root);</span><br><span class="line">    <span class="keyword">new</span> Vue(&#123;</span><br><span class="line">      <span class="attr">render</span>: <span class="function">(<span class="params">h</span>) =&gt;</span></span><br><span class="line">        h(HelloWorld, &#123;</span><br><span class="line">          <span class="attr">props</span>: &#123;</span><br><span class="line">            <span class="attr">msg</span>: <span class="string">&quot;dell lee&quot;</span>,</span><br><span class="line">          &#125;,</span><br><span class="line">        &#125;),</span><br><span class="line">    &#125;).$mount(<span class="string">&quot;.root&quot;</span>);</span><br><span class="line">    expect(<span class="built_in">document</span>.getElementsByClassName(<span class="string">&quot;hello&quot;</span>).length).toBe(<span class="number">1</span>);</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; shallowMount &#125; <span class="keyword">from</span> <span class="string">&quot;@vue/test-utils&quot;</span>;</span><br><span class="line"><span class="keyword">import</span> HelloWorld <span class="keyword">from</span> <span class="string">&quot;@/components/HelloWorld.vue&quot;</span>;</span><br><span class="line"></span><br><span class="line">it(<span class="string">&quot;renders props.msg when passed&quot;</span>, <span class="function">() =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">const</span> msg = <span class="string">&quot;dell lee&quot;</span>;</span><br><span class="line">  <span class="keyword">const</span> wrapper = shallowMount(HelloWorld, &#123;</span><br><span class="line">    <span class="attr">propsData</span>: &#123; msg &#125;,</span><br><span class="line">  &#125;);</span><br><span class="line">  expect(wrapper.props(<span class="string">&quot;msg&quot;</span>)).toEqual(msg);</span><br><span class="line">  expect(wrapper.text()).toMatch(msg);</span><br><span class="line">  expect(wrapper.findAll(<span class="string">&quot;.mm&quot;</span>).length).toBe(<span class="number">1</span>);</span><br><span class="line">  expect(wrapper.setProps(&#123; <span class="attr">msg</span>: <span class="string">&quot;hello&quot;</span> &#125;));</span><br><span class="line">  expect(wrapper.props(<span class="string">&quot;msg&quot;</span>)).toEqual(<span class="string">&quot;hello&quot;</span>);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">it(<span class="string">&quot;组件渲染正常&quot;</span>, <span class="function">() =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">const</span> wrapper = shallowMount(HelloWorld, &#123;</span><br><span class="line">    <span class="attr">propsData</span>: &#123; <span class="attr">msg</span>: <span class="string">&quot;dell lee&quot;</span> &#125;,</span><br><span class="line">  &#125;);</span><br><span class="line">  expect(wrapper).toMatchSnapshot();</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<p>Sinon 是用来辅助我们进行前端测试的，在我们的代码需要与其他系统或者函数对接时，它可以模拟这些场景，从而使我们测试的时候不再依赖这些场景。</p>
+<h4 id="elementui-自定义指令"><a href="#elementui-自定义指令" class="headerlink" title="elementui 自定义指令"></a>elementui 自定义指令</h4><p>clickoutside 是 Element-ui 实现的一个自定义指令，顾名思义，该指令用来处理目标节点之外的点击事件，常用来处理下拉菜单等展开内容的关闭，在 Element-ui 的 Select 选择器、Dropdown 下拉菜单、Popover 弹出框等组件中都用到了该指令，所以这个指令在实现一些自定义组件的时候非常有用。</p>
+<h4 id="babel-plugin-component"><a href="#babel-plugin-component" class="headerlink" title="babel-plugin-component"></a>babel-plugin-component</h4><p>借助 babel-plugin-component，我们可以只引入需要的组件，以达到减小项目体积的目的。</p>
+<h3 id="资料"><a href="#资料" class="headerlink" title="资料"></a>资料</h3><p><a target="_blank" rel="noopener" href="https://juejin.cn/post/6844903913410314247#heading-26">Vue 项目性能优化 — 实践指南</a></p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/vue%E5%9F%BA%E7%A1%80/" rel="tag"># vue基础</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2016/09/21/knowledge/hexo/" rel="prev" title="Hello Hexo!">
+                  <i class="fa fa-chevron-left"></i> Hello Hexo!
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2017/02/21/knowledge/os/use-git/" rel="next" title="git使用">
+                  git使用 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    
+  
+  <div class="comments">
+    <script src="https://giscus.app/client.js"
+        data-repo="UniqueCrownClown/UniqueCrownClown.github.io" 
+        data-repo-id="MDEwOlJlcG9zaXRvcnkxMDQyODk2MzU=" 
+        data-category="General"
+        data-category-id="DIC_kwDOBjdVY84CQXdS"
+        data-mapping="pathname" 
+        data-reactions-enabled="1" 
+        data-emit-metadata="1" 
+        data-theme="light"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        data-input-position="bottom"
+        data-loading="lazy"
+        async>
+    </script>
+  </div>
+  
+  
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2024</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">clown</span>
+</div>
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_uv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+    </div>
+  </footer>
+
+  
+  <script size="90" alpha="0.6" zIndex="-1" src="https://unpkg.com/ribbon.js@1.0.2/dist/ribbon.min.js"></script>
+  <script src="https://unpkg.com/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/jquery@3.6.0/dist/jquery.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script>
+
+  
+<script src="https://unpkg.com/hexo-generator-searchdb@1.4.0/dist/search.js" integrity="sha256-vXZMYLEqsROAXkEw93GGIvaB2ab+QW6w3+1ahD9nXXA=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
+
+
+
+  <script src="/js/third-party/fancybox.js"></script>
+
+
+  
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+
+</body>
+</html>

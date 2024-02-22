@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.loli.net/css?family=Noto+Serif+SC:300,300italic,400,400italic,700,700italic%7CRoboto+Mono:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="https://unpkg.com/@fortawesome/fontawesome-free@5.15.4/css/all.min.css" integrity="sha256-mUZM63G8m73Mcidfrv5E+Y61y7a12O5mW4ezU3bxqW4=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://unpkg.com/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://unpkg.com/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"uniquecrownclown.github.io","root":"/","images":"/images","scheme":"Mist","darkmode":false,"version":"8.8.0","exturl":false,"sidebar":{"position":"left","display":"hide","padding":18,"offset":12,"width":240},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"giscus","storage":true,"lazyload":false,"nav":null,"activeClass":"giscus"},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+<meta name="description" content="web 构建 cli…">
+<meta property="og:type" content="article">
+<meta property="og:title" content="web构建cli">
+<meta property="og:url" content="https://uniquecrownclown.github.io/2018/09/16/knowledge/js/cli/index.html">
+<meta property="og:site_name" content="uniquecrownclown">
+<meta property="og:description" content="web 构建 cli…">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2018-09-16T11:23:51.000Z">
+<meta property="article:modified_time" content="2024-02-22T09:31:27.807Z">
+<meta property="article:author" content="clown">
+<meta property="article:tag" content="web构建cli">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://uniquecrownclown.github.io/2018/09/16/knowledge/js/cli/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://uniquecrownclown.github.io/2018/09/16/knowledge/js/cli/","path":"2018/09/16/knowledge/js/cli/","title":"web构建cli"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>web构建cli | uniquecrownclown</title>
+  
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">uniquecrownclown</h1>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">clown的笔记</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li>
+        <li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li>
+        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li>
+        <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+        <li class="menu-item menu-item-collection"><a href="/test/" rel="section"><i class="fa fa-cubes fa-fw"></i>collection</a></li>
+        <li class="menu-item menu-item-留言板"><a href="/guestbook/" rel="section"><i class="fa fa-book fa-fw"></i>留言板</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A8%A1%E5%9D%97%E5%8C%96"><span class="nav-number">1.</span> <span class="nav-text">模块化</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8F%91%E5%B1%95%E5%8E%86%E7%A8%8B"><span class="nav-number">1.1.</span> <span class="nav-text">发展历程</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#js-%E5%90%84%E7%A7%8D%E6%A8%A1%E5%9D%97%E5%86%99%E6%B3%95"><span class="nav-number">1.2.</span> <span class="nav-text">js 各种模块写法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#ESM-%E5%92%8C-CommonJs-%E7%9A%84%E5%B7%AE%E5%BC%82"><span class="nav-number">1.3.</span> <span class="nav-text">ESM 和 CommonJs 的差异</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#esm-%E5%92%8C-common-%E6%B7%B7%E7%94%A8"><span class="nav-number">2.</span> <span class="nav-text">esm 和 common 混用</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#esm-%E7%9A%84%E5%BE%AA%E7%8E%AF%E5%BC%95%E7%94%A8%E9%97%AE%E9%A2%98"><span class="nav-number">2.1.</span> <span class="nav-text">esm 的循环引用问题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#tree-shaking"><span class="nav-number">2.2.</span> <span class="nav-text">tree-shaking</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#webpack"><span class="nav-number">3.</span> <span class="nav-text">webpack</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%AD%94%E6%B3%95%E6%B3%A8%E9%87%8A"><span class="nav-number">3.1.</span> <span class="nav-text">魔法注释</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#webpack-require-ensure"><span class="nav-number">3.2.</span> <span class="nav-text">webpack require.ensure</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#webpack-require-context"><span class="nav-number">3.3.</span> <span class="nav-text">webpack require.context</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#vue-cli-webpack-%E8%A7%A3%E6%9E%90"><span class="nav-number">3.4.</span> <span class="nav-text">vue-cli webpack 解析</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%BC%96%E5%86%99-webpack-loader"><span class="nav-number">3.5.</span> <span class="nav-text">编写 webpack loader</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%BC%96%E5%86%99-webpack-plugin"><span class="nav-number">3.6.</span> <span class="nav-text">编写 webpack plugin</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#vue-cli3-%E4%B8%8B%E7%9A%84-webpack"><span class="nav-number">3.7.</span> <span class="nav-text">vue-cli3 下的 webpack</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#vue-cli3-%E4%B8%8B%E7%9A%84-webpack-%E6%89%93%E5%8C%85%E4%BC%98%E5%8C%96"><span class="nav-number">3.8.</span> <span class="nav-text">vue-cli3 下的 webpack 打包优化</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#webpack-%E6%8B%86%E5%8C%85"><span class="nav-number">3.9.</span> <span class="nav-text">webpack 拆包</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#TurboPack"><span class="nav-number">4.</span> <span class="nav-text">TurboPack</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#vite"><span class="nav-number">5.</span> <span class="nav-text">vite</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#vite-%E4%BB%8B%E7%BB%8D"><span class="nav-number">5.1.</span> <span class="nav-text">vite 介绍</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#vitest"><span class="nav-number">5.2.</span> <span class="nav-text">vitest</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#rollup-%E6%8F%92%E4%BB%B6"><span class="nav-number">5.3.</span> <span class="nav-text">rollup 插件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#esbuild-%E6%8F%92%E4%BB%B6"><span class="nav-number">5.4.</span> <span class="nav-text">esbuild 插件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%80%9A%E7%94%A8%E9%92%A9%E5%AD%90"><span class="nav-number">5.5.</span> <span class="nav-text">通用钩子</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#vite-%E7%89%B9%E6%9C%89%E9%92%A9%E5%AD%90"><span class="nav-number">5.6.</span> <span class="nav-text">vite 特有钩子</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%92%A9%E5%AD%90%E8%B0%83%E7%94%A8%E9%A1%BA%E5%BA%8F"><span class="nav-number">5.7.</span> <span class="nav-text">钩子调用顺序</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%8F%92%E4%BB%B6%E6%89%A7%E8%A1%8C%E9%A1%BA%E5%BA%8F"><span class="nav-number">5.8.</span> <span class="nav-text">插件执行顺序</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#vite-%E6%8F%92%E4%BB%B6%E6%89%A7%E8%A1%8C%E6%9C%BA%E5%88%B6"><span class="nav-number">5.9.</span> <span class="nav-text">vite 插件执行机制</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%83%AD%E6%9B%B4%E6%96%B0-hmr"><span class="nav-number">5.10.</span> <span class="nav-text">热更新 hmr</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8F%82%E8%80%83"><span class="nav-number">5.11.</span> <span class="nav-text">参考</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9E%84%E5%BB%BA%E5%B7%A5%E5%85%B7"><span class="nav-number">6.</span> <span class="nav-text">构建工具</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#cli-%E5%B7%A5%E5%85%B7%E5%BC%80%E5%8F%91"><span class="nav-number">7.</span> <span class="nav-text">cli 工具开发</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="clown"
+      src="/images/avatar.jpg">
+  <p class="site-author-name" itemprop="name">clown</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">77</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">21</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">63</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/UniqueCrownClown" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;UniqueCrownClown" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="/1129986876@qq.com" title="E-Mail → 1129986876@qq.com"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://weibo.com/u/2143916663" title="Weibo → https:&#x2F;&#x2F;weibo.com&#x2F;u&#x2F;2143916663" rel="noopener" target="_blank"><i class="fab fa-weibo fa-fw"></i>Weibo</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://twitter.com/CrownClown7777" title="Twitter → https:&#x2F;&#x2F;twitter.com&#x2F;CrownClown7777" rel="noopener" target="_blank"><i class="fab fa-twitter fa-fw"></i>Twitter</a>
+      </span>
+  </div>
+
+
+
+
+    <span id="jinrishici-sentence">正在加载今日诗词....</span>
+    <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+  <a href="https://github.com/UniqueCrownClown" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub" rel="noopener" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://uniquecrownclown.github.io/2018/09/16/knowledge/js/cli/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="clown">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="uniquecrownclown">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          web构建cli
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2018-09-16 11:23:51" itemprop="dateCreated datePublished" datetime="2018-09-16T11:23:51+00:00">2018-09-16</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2024-02-22 09:31:27" itemprop="dateModified" datetime="2024-02-22T09:31:27+00:00">2024-02-22</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/js/" itemprop="url" rel="index"><span itemprop="name">js</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <p>web 构建 cli…</p>
+<span id="more"></span>
+
+<h3 id="模块化"><a href="#模块化" class="headerlink" title="模块化"></a>模块化</h3><p>.mjs 是什么文件呢？很明显因为 ESM 和 CJS 的加载方式不同，为了更高的区分这两种不同的加载方式，于是创建了 .mjs(Module JavaScript).mjs 就是表示当前文件用 ESM 的方式进行加载，如果是普通的 .js 文件，则采用 CJS 的方式加载。</p>
+<h4 id="发展历程"><a href="#发展历程" class="headerlink" title="发展历程"></a>发展历程</h4><ul>
+<li>IIFE： 使用自执行函数来编写模块化，特点：在一个单独的函数作用域中执行代码，避免变量冲突。</li>
+<li>AMD： 使用 requireJS 来编写模块化，特点：依赖必须提前声明好。</li>
+<li>CMD： 使用 seaJS 来编写模块化，特点：支持动态引入依赖文件。</li>
+<li>CommonJS： nodejs 中自带的模块化。</li>
+<li>UMD：兼容 AMD，CommonJS 模块化语法。</li>
+<li>webpack(require.ensure)：webpack 2.x 版本中的代码分割。</li>
+<li>ES Modules： ES6 引入的模块化，支持 import 来引入另一个 js 。</li>
+</ul>
+<p>SystemJS 是一个通用的模块加载器，它能在浏览器或者 NodeJS 上动态加载模块，并且支持 CommonJS、AMD、全局模块对象和 ES6 模块。通过使用插件，它不仅可以加载 JavaScript，还可以加载 CoffeeScript 和 TypeScript。</p>
+<h4 id="js-各种模块写法"><a href="#js-各种模块写法" class="headerlink" title="js 各种模块写法"></a>js 各种模块写法</h4><ul>
+<li>UMD<br>其是 amd 和 commonjs 的统一规范，支持两种规范，即写一套代码，可用于多种场景。其用法如下：<br>前后端通用<br>与 CJS 或 AMD 不同，UMD 更像是一种配置多个模块系统的模式。<br>UMD 在使用诸如 Rollup/ Webpack 之类的 bundler 时通常用作备用模块</li>
+</ul>
+<p>UMD 希望提供一个前后端跨平台的解决方案（支持 AMD 与 CommonJS 模块方式）<br>​ 代码结构:</p>
+<ul>
+<li>先判断是否支持 Node.js 模块格式（exports 是否存在），存在则使用 Node.js 模块格式</li>
+<li>再判断是否支持 AMD（define 是否存在），存在则使用 AMD 方式加载模块</li>
+<li>前两个都不存在，则将模块公开到全局（window 或 global）</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">(<span class="function"><span class="keyword">function</span> (<span class="params">root, factory</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">if</span> (<span class="keyword">typeof</span> define === <span class="string">&quot;function&quot;</span> &amp;&amp; define.amd) &#123;</span><br><span class="line">    <span class="comment">// AMD</span></span><br><span class="line">    define([<span class="string">&quot;jquery&quot;</span>], factory);</span><br><span class="line">  &#125; <span class="keyword">else</span> <span class="keyword">if</span> (<span class="keyword">typeof</span> <span class="built_in">exports</span> === <span class="string">&quot;object&quot;</span>) &#123;</span><br><span class="line">    <span class="comment">// Node, CommonJS之类的</span></span><br><span class="line">    <span class="built_in">module</span>.exports = factory(<span class="built_in">require</span>(<span class="string">&quot;jquery&quot;</span>));</span><br><span class="line">  &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    <span class="comment">// 浏览器全局变量(root 即 window)</span></span><br><span class="line">    root.returnExports = factory(root.jQuery);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)(<span class="built_in">this</span>, <span class="function"><span class="keyword">function</span> (<span class="params">$</span>) </span>&#123;</span><br><span class="line">  <span class="comment">//    方法</span></span><br><span class="line">  <span class="function"><span class="keyword">function</span> <span class="title">myFunc</span>(<span class="params"></span>) </span>&#123;&#125;</span><br><span class="line">  <span class="comment">//    暴露公共方法</span></span><br><span class="line">  <span class="keyword">return</span> myFunc;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>AMD<br>amd（Asynchronous Module Definitions）规范因 RequireJS 而出名，其适用于浏览器端<br>commonjs 常被用于 node 中，当然其也可通过 Browserify 用于浏览器中。<br>异步加载<br>其被提出，主要用于客户端 browser<br>语法不直观，没有 commonjs 便于书写</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 文件名: foo.js</span></span><br><span class="line">define([<span class="string">&quot;jquery&quot;</span>], <span class="function"><span class="keyword">function</span> (<span class="params">$</span>) </span>&#123;</span><br><span class="line">  <span class="comment">//    方法</span></span><br><span class="line">  <span class="function"><span class="keyword">function</span> <span class="title">myFunc</span>(<span class="params"></span>) </span>&#123;&#125;</span><br><span class="line">  <span class="comment">//    暴露公共方法</span></span><br><span class="line">  <span class="keyword">return</span> myFunc;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>CJS(commonjs)<br>语法类似于 node，因为 node 使用 commonjs 规范<br>commonjs 导入模块是同步导入<br>主要用于后端，客户端用的话需要通过 Browserify<br>书写直观</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//    暴露公共方法（一个）</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">myFunc</span>(<span class="params"></span>) </span>&#123;&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">module</span>.exports = myFunc;</span><br><span class="line"><span class="comment">// 导出方式</span></span><br><span class="line"><span class="built_in">module</span>.exports = &#123;</span><br><span class="line">  <span class="attr">a</span>: <span class="number">1</span>,</span><br><span class="line">  <span class="attr">b</span>: <span class="number">2</span>,</span><br><span class="line">&#125;;</span><br><span class="line"><span class="comment">// 和上面等价，算一种</span></span><br><span class="line"><span class="built_in">exports</span>.a = <span class="number">1</span>;</span><br><span class="line"><span class="built_in">exports</span>.b = <span class="number">2</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 导入方式</span></span><br><span class="line"><span class="keyword">const</span> lib = <span class="built_in">require</span>(<span class="string">&quot;./lib&quot;</span>);</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">&quot;a:&quot;</span>, lib.a);</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">&quot;b:&quot;</span>, lib.b);</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>ESM(ES6 Modules)<ol>
+<li>esm 的浏览器写法</li>
+</ol>
+</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">&quot;module&quot;</span> <span class="attr">src</span>=<span class="string">&quot;./index.js&quot;</span>&gt;</span></span><br><span class="line">  xxx</span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 导出方式</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="string">&#x27;hello world&#x27;</span>; <span class="comment">// default export</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> name = <span class="string">&#x27;hello world&#x27;</span>; <span class="comment">// named export</span></span><br><span class="line"><span class="keyword">export</span> &#123;<span class="attr">name</span>:<span class="string">&#x27;hello world&#x27;</span>&#125; <span class="comment">// 上一种的简便写法</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 导入方式</span></span><br><span class="line"><span class="keyword">import</span> lib <span class="keyword">from</span> <span class="string">&#x27;./lib&#x27;</span>; <span class="comment">// default import</span></span><br><span class="line"><span class="keyword">import</span> * <span class="keyword">as</span> lib <span class="keyword">from</span> <span class="string">&#x27;./lib&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> &#123; method1, method2 &#125; <span class="keyword">from</span> <span class="string">&#x27;./lib&#x27;</span>;</span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>原生 ES 导入不支持下面这样的裸模块导入</li>
+</ol>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; someMethod &#125; <span class="keyword">from</span> <span class="string">&quot;my-dep&quot;</span>;</span><br></pre></td></tr></table></figure>
+
+<h4 id="ESM-和-CommonJs-的差异"><a href="#ESM-和-CommonJs-的差异" class="headerlink" title="ESM 和 CommonJs 的差异"></a>ESM 和 CommonJs 的差异</h4><ol>
+<li><p>语法上面，CommonJS 模块使用 require()加载和 module.exports 输出，ES6 模块使用 import 和 export。</p>
+</li>
+<li><p>用法上面，require()是同步加载，后面的代码必须等待这个命令执行完，才会执行。import 命令则是异步加载，或者更准确地说，ES6 模块有一个独立的静态解析阶段，依赖关系的分析是在那个阶段完成的，最底层的模块第一个执行。</p>
+</li>
+</ol>
+<h3 id="esm-和-common-混用"><a href="#esm-和-common-混用" class="headerlink" title="esm 和 common 混用"></a>esm 和 common 混用</h3><ol>
+<li>CommonJS 模块加载 ES6 模块</li>
+</ol>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">(<span class="keyword">async</span> () =&gt; &#123;</span><br><span class="line">  <span class="keyword">await</span> <span class="keyword">import</span>(<span class="string">&quot;./my-app.mjs&quot;</span>);</span><br><span class="line">&#125;)();</span><br></pre></td></tr></table></figure>
+
+<p>require()不支持 ES6 模块的一个原因是，它是同步加载，而 ES6 模块内部可以使用顶层 await 命令，导致无法被同步加载。</p>
+<p>顶层 await 是 es2021 的新特性，目前只有 chrome 浏览器高于 89 版本才支持（2021 年后），及 node15+默认支持无需携带试验参数。在低版本使用还是需要借助 babel 帮忙的。</p>
+<ol start="2">
+<li>ES6 模块加载 CommonJS 模块</li>
+</ol>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 正确</span></span><br><span class="line"><span class="keyword">import</span> packageMain <span class="keyword">from</span> <span class="string">&quot;commonjs-package&quot;</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 报错</span></span><br><span class="line"><span class="keyword">import</span> &#123; method &#125; <span class="keyword">from</span> <span class="string">&quot;commonjs-package&quot;</span>;</span><br></pre></td></tr></table></figure>
+
+<p>ES6 模块需要支持静态代码分析，而 CommonJS 模块的输出接口是 module.exports，是一个对象，无法被静态分析，所以只能整体加载。</p>
+<ol start="3">
+<li>package.json 指定入口</li>
+</ol>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&quot;exports&quot;</span>：&#123;</span><br><span class="line">    <span class="string">&quot;require&quot;</span>: <span class="string">&quot;./index.js&quot;</span>，</span><br><span class="line">    <span class="string">&quot;import&quot;</span>: <span class="string">&quot;./esm/wrapper.js&quot;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>在 package.json 文件的 exports 字段，指明两种格式模块各自的加载入口</p>
+<h4 id="esm-的循环引用问题"><a href="#esm-的循环引用问题" class="headerlink" title="esm 的循环引用问题"></a>esm 的循环引用问题</h4><p>esm 的 import 命令是在编译阶段就执行，优先于自身内容执行。<br>esm 并不关心是否存在循环引用，只是生成一个指向被加载模块的引用，代码未执行时，这个引用的值就是 undefined。</p>
+<h4 id="tree-shaking"><a href="#tree-shaking" class="headerlink" title="tree-shaking"></a>tree-shaking</h4><p>在使用 Tree shaking 的时候，有一个需要特别注意的地方，就是“副作用（side effects）”。</p>
+<p>有些模块的代码可能会在导入时执行一些副作用，例如改变全局变量、改变导入模块的状态等。这种情况下，即使模块中的部分导出没有被使用，由于其副作用，也不能被 Tree shaking 移除。否则，可能会导致程序运行出错。</p>
+<h3 id="webpack"><a href="#webpack" class="headerlink" title="webpack"></a>webpack</h3><h4 id="魔法注释"><a href="#魔法注释" class="headerlink" title="魔法注释"></a>魔法注释</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* webpackChunkName: &quot; &quot; */</span></span><br><span class="line"><span class="comment">// 路由懒加载自定义包名，打包的时候路由组件会单独打包出来</span></span><br><span class="line"><span class="comment">/* webpackExclude: /\.def$/ */</span></span><br><span class="line"><span class="comment">/* webpackMode: &quot;lazy&quot; */</span></span><br><span class="line"><span class="comment">/* webpackExports: [&quot;default&quot;, &quot;named&quot;] */</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="webpack-require-ensure"><a href="#webpack-require-ensure" class="headerlink" title="webpack require.ensure"></a>webpack require.ensure</h4><p>/</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> Vue <span class="keyword">from</span> <span class="string">&quot;vue&quot;</span>;</span><br><span class="line"><span class="keyword">import</span> Router <span class="keyword">from</span> <span class="string">&quot;vue-router&quot;</span>;</span><br><span class="line"><span class="comment">// 官网可知：下面没有指定webpackChunkName，每个组件打包成一个js文件。</span></span><br><span class="line"><span class="keyword">const</span> Foo = <span class="function">() =&gt;</span> <span class="keyword">import</span>(<span class="string">&quot;../components/Foo&quot;</span>);</span><br><span class="line"><span class="keyword">const</span> Aoo = <span class="function">() =&gt;</span> <span class="keyword">import</span>(<span class="string">&quot;../components/Aoo&quot;</span>);</span><br><span class="line"><span class="comment">// 下面2行代码，指定了相同的webpackChunkName，会合并打包成一个js文件。</span></span><br><span class="line"><span class="comment">// const Foo = () =&gt; import(/* webpackChunkName: &#x27;ImportFuncDemo&#x27; */ &#x27;../components/Foo&#x27;)</span></span><br><span class="line"><span class="comment">// const Aoo = () =&gt; import(/* webpackChunkName: &#x27;ImportFuncDemo&#x27; */ &#x27;../components/Aoo&#x27;)</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="keyword">new</span> Router(&#123;</span><br><span class="line">  <span class="attr">routes</span>: [</span><br><span class="line">    &#123;</span><br><span class="line">      <span class="attr">path</span>: <span class="string">&quot;/Foo&quot;</span>,</span><br><span class="line">      <span class="attr">name</span>: <span class="string">&quot;Foo&quot;</span>,</span><br><span class="line">      <span class="attr">component</span>: Foo,</span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">      <span class="attr">path</span>: <span class="string">&quot;/Aoo&quot;</span>,</span><br><span class="line">      <span class="attr">name</span>: <span class="string">&quot;Aoo&quot;</span>,</span><br><span class="line">      <span class="attr">component</span>: Aoo,</span><br><span class="line">    &#125;,</span><br><span class="line">  ],</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<p>require.ensure 可实现按需加载资源，包括 js,css 等。他会给里面 require 的文件单独打包，不会和主文件打包在一起。 有四个入参</p>
+<ul>
+<li>第一个参数是数组，表明第二个参数里需要依赖的模块，这些会提前加载。</li>
+<li>第二个是回调函数,在这个回调函数里面 require 的文件会被单独打包成一个 chunk,不会和主文件打包在一起，这样就生成了两个 chunk,第一次加载时只加载主文件。</li>
+<li>第三个参数是错误回调。</li>
+<li>第四个参数是单独打包的 chunk 的文件名</li>
+</ul>
+<p>import 和 require 的比较（了解）</p>
+<ol>
+<li><p>import 是解构过程并且是编译时执行</p>
+</li>
+<li><p>require 是赋值过程并且是运行时才执行，也就是异步加载</p>
+</li>
+<li><p>require 的性能相对于 import 稍低，因为 require 是在运行时才引入模块并且还赋值给某个变量</p>
+</li>
+</ol>
+<h4 id="webpack-require-context"><a href="#webpack-require-context" class="headerlink" title="webpack require.context"></a>webpack require.context</h4><p>webpack 构建期间运行的 function,可以实现自动化导入</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">require</span>.context(directory, useSubdirectories, regExp);</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> requireApi = <span class="built_in">require</span>.context(<span class="string">&quot;.&quot;</span>, <span class="literal">true</span>, <span class="regexp">/\.js$/</span>);</span><br><span class="line">requireApi.keys().forEach(<span class="function">(<span class="params">key, index</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">if</span> (key === <span class="string">&quot;./index.js&quot;</span>) <span class="keyword">return</span>; <span class="comment">// 不将当前文件导入</span></span><br><span class="line">  <span class="built_in">Object</span>.assign(<span class="built_in">module</span>, requireApi(key)); <span class="comment">// 将所有导出结果混入当前文件的module对象</span></span><br><span class="line">&#125;);</span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">module</span>);</span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">module</span>.b);</span><br></pre></td></tr></table></figure>
+
+<h4 id="vue-cli-webpack-解析"><a href="#vue-cli-webpack-解析" class="headerlink" title="vue-cli webpack 解析"></a>vue-cli webpack 解析</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">node --inspect-brk=9229 node_modules/@vue/cli-service/bin/vue-cli-service.js build</span><br></pre></td></tr></table></figure>
+
+<p>过程<br>解析依赖，loader 处理相应文件<br>loader 里面配 include，让 loader 只针对特殊资源。另一种办法是让你的第三方库 noparse<br>vue-loader 入手<br>file-loader 和 url-loader<br>hook 在 babel-loader 和 vue-loader 之前</p>
+<p>webpack 的 loader 和 plugin 的区别<br>基于 tapable 的插件架构，扩展性强，众多的 loader 或者 plugin 让 webpack 稍显复杂。<br>在你编写自定义 webpack 扩展前你需要想明白到底是要做一个 loader 还是 plugin 呢？可以这样判断：<br>如果你的扩展是想对一个个单独的文件进行转换那么就编写 loader 剩下的都是 plugin。<br>其中对文件进行转换可以是像：<br>babel-loader 把 es6 转换成 es5<br>file-loader 把文件替换成对应的 URL<br>raw-loader 注入文本文件内容到代码里去</p>
+<h4 id="编写-webpack-loader"><a href="#编写-webpack-loader" class="headerlink" title="编写 webpack loader"></a>编写 webpack loader</h4><p>请好好利用 loader-utils 包，它提供了很多有用的工具，最常用的一个就是获取传入 loader 的 options。除了 loader-utils 之外包还有 schema-utils 包，我们可以用 schema-utils 提供的工具，获取用于校验 options 的 JSON Schema 常量，从而校验 loader options</p>
+<p>我们在函数中处理 source 的转化，最终返回处理好的值。当然返回值的数量和返回方式依据 a-loader 的需求来定。一般情况下可以通过 return 返回一个值，也就是转化后的值。如果需要返回多个参数，则须调用 this.callback(err, values…) 来返回。在异步 loader 中你可以通过抛错来处理异常情况。Webpack 建议我们返回 1 至 2 个参数，第一个参数是转化后的 source，可以是 string 或 buffer。第二个参数可选，是用来当作 SourceMap 的对象。</p>
+<p>webpack 规定 use 数组中 loader 的执行顺序是从最后一个到第一个</p>
+<ul>
+<li>顺序最后的 loader 第一个被调用，它拿到的参数是 source 的内容</li>
+<li>顺序第一的 loader 最后被调用， webpack 期望它返回 JS 代码，source map 如前面所说是可选的返回值。</li>
+<li>夹在中间的 loader 被链式调用，他们拿到上个 loader 的返回值，为下一个 loader 提供输入。</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">module</span>: &#123;</span><br><span class="line">    <span class="attr">rules</span>: [&#123;</span><br><span class="line">        <span class="attr">test</span>: <span class="regexp">/\.html$/</span>,</span><br><span class="line">        use: [<span class="string">&#x27;html-loader&#x27;</span>, &#123;</span><br><span class="line">            <span class="attr">loader</span>: <span class="string">&#x27;html-minify-loader&#x27;</span>,</span><br><span class="line">            <span class="attr">options</span>: &#123;</span><br><span class="line">                <span class="attr">comments</span>: <span class="literal">false</span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;]</span><br><span class="line">    &#125;]</span><br><span class="line">&#125;,</span><br><span class="line"><span class="attr">resolveLoader</span>: &#123;</span><br><span class="line">    <span class="comment">// 因为 html-loader 是开源 npm 包，所以这里要添加 &#x27;node_modules&#x27; 目录</span></span><br><span class="line">    <span class="attr">modules</span>: [path.join(__dirname, <span class="string">&#x27;./src/loaders&#x27;</span>), <span class="string">&#x27;node_modules&#x27;</span>]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> Minimize = <span class="built_in">require</span>(<span class="string">&quot;minimize&quot;</span>);</span><br><span class="line"><span class="keyword">var</span> loaderUtils = <span class="built_in">require</span>(<span class="string">&quot;loader-utils&quot;</span>);</span><br><span class="line"></span><br><span class="line"><span class="built_in">module</span>.exports = <span class="function"><span class="keyword">function</span> (<span class="params">source</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">var</span> callback = <span class="built_in">this</span>.async();</span><br><span class="line">  <span class="keyword">if</span> (<span class="built_in">this</span>.cacheable) &#123;</span><br><span class="line">    <span class="built_in">this</span>.cacheable();</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">var</span> opts = loaderUtils.getOptions(<span class="built_in">this</span>) || &#123;&#125;;</span><br><span class="line">  <span class="keyword">var</span> minimize = <span class="keyword">new</span> Minimize(opts);</span><br><span class="line">  minimize.parse(source, callback);</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h4 id="编写-webpack-plugin"><a href="#编写-webpack-plugin" class="headerlink" title="编写 webpack plugin"></a>编写 webpack plugin</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">EndWebpackPlugin</span> </span>&#123;</span><br><span class="line">  <span class="function"><span class="title">constructor</span>(<span class="params">doneCallback, failCallback</span>)</span> &#123;</span><br><span class="line">    <span class="built_in">this</span>.doneCallback = doneCallback;</span><br><span class="line">    <span class="built_in">this</span>.failCallback = failCallback;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="title">apply</span>(<span class="params">compiler</span>)</span> &#123;</span><br><span class="line">    <span class="comment">// 监听webpack生命周期里的事件，做相应的处理</span></span><br><span class="line">    compiler.plugin(<span class="string">&quot;done&quot;</span>, <span class="function">(<span class="params">stats</span>) =&gt;</span> &#123;</span><br><span class="line">      <span class="built_in">this</span>.doneCallback(stats);</span><br><span class="line">    &#125;);</span><br><span class="line">    compiler.plugin(<span class="string">&quot;failed&quot;</span>, <span class="function">(<span class="params">err</span>) =&gt;</span> &#123;</span><br><span class="line">      <span class="built_in">this</span>.failCallback(err);</span><br><span class="line">    &#125;);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">module</span>.exports = EndWebpackPlugin;</span><br></pre></td></tr></table></figure>
+
+<p>loader 的入口需要导出一个 class, 在 new EndWebpackPlugin()的时候通过构造函数传入这个插件需要的参数，在 webpack 启动的时候会先实例化 plugin 再调用 plugin 的 apply 方法，插件需要在 apply 函数里监听 webpack 生命周期里的事件，做相应的处理。<br>webpack plugin 里有 2 个核心概念：</p>
+<ul>
+<li>Compiler: 从 webpack 启动到推出只存在一个 Compiler，Compiler 存放着 webpack 配置</li>
+<li>Compilation: 由于 webpack 的监听文件变化自动编译机制，Compilation 代表一次编译。<br>Compiler 和 Compilation 都会广播一系列事件。<br>webpack 生命周期里有非常多的事件可以在<a target="_blank" rel="noopener" href="https://webpack.js.org/api/plugins/compiler/#event-hooks">event-hooks</a>和<a target="_blank" rel="noopener" href="https://webpack.js.org/api/plugins/compilation/">Compilation</a>里查到。以上只是一个最简单的 demo，更复杂的可以查看 <a target="_blank" rel="noopener" href="https://github.com/webpack/docs/wiki/how-to-write-a-plugin">how to write a plugin</a>或参考<a target="_blank" rel="noopener" href="https://github.com/gwuhaolin/web-webpack-plugin">web-webpack-plugin</a>。</li>
+</ul>
+<h4 id="vue-cli3-下的-webpack"><a href="#vue-cli3-下的-webpack" class="headerlink" title="vue-cli3 下的 webpack"></a>vue-cli3 下的 webpack</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">用法：vue-cli-service build [options] [entry|pattern]</span><br><span class="line"></span><br><span class="line">选项：</span><br><span class="line">  --mode        指定环境模式 (默认值：production)</span><br><span class="line">  --dest        指定输出目录 (默认值：dist)</span><br><span class="line">  --modern      面向现代浏览器带自动回退地构建应用</span><br><span class="line">  --target      app | lib | wc | wc-async (默认值：app)</span><br><span class="line">  --name        库或 Web Components 模式下的名字 (默认值：package.json 中的 &quot;name&quot; 字段或入口文件名)</span><br><span class="line">  --no-clean    在构建项目之前不清除目标目录</span><br><span class="line">  --report      生成 report.html 以帮助分析包内容</span><br><span class="line">  --report-json 生成 report.json 以帮助分析包内容</span><br><span class="line">  --watch       监听文件变化</span><br></pre></td></tr></table></figure>
+
+<p>配置输出</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vue inspect&gt;output.js</span><br></pre></td></tr></table></figure>
+
+<p>构建包分析</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vue-cli-service build --report</span><br></pre></td></tr></table></figure>
+
+<h4 id="vue-cli3-下的-webpack-打包优化"><a href="#vue-cli3-下的-webpack-打包优化" class="headerlink" title="vue-cli3 下的 webpack 打包优化"></a>vue-cli3 下的 webpack 打包优化</h4><ul>
+<li><p>webpack.DllPlugin 方式</p>
+<ol>
+<li> 配置 webpack.dll.js 针对第三方库打包</li>
+<li> vue.config.js 中配置 plugin</li>
+<li> html 中引入 dll 打包出来的 js 文件。（一般采用部署 CDN 的方式）</li>
+</ol>
+</li>
+</ul>
+<h4 id="webpack-拆包"><a href="#webpack-拆包" class="headerlink" title="webpack 拆包"></a>webpack 拆包</h4><p>SplitChunksPlugin<br>chunks:可以自定义 chunk 输出分组。设置 test 对模块进行过滤，符合条件的模块分配到相同的组<br>cacheGroups:可以自定义 chunk 输出分组。设置 test 对模块进行过滤，符合条件的模块分配到相同的组<br>maxInitialRequests(入口的最大并行请求数) 和 maxAsyncRequests(异步请求中的最大并发请求数)</p>
+<p>CommonsChunkPlugin</p>
+<h3 id="TurboPack"><a href="#TurboPack" class="headerlink" title="TurboPack"></a>TurboPack</h3><h3 id="vite"><a href="#vite" class="headerlink" title="vite"></a>vite</h3><h4 id="vite-介绍"><a href="#vite-介绍" class="headerlink" title="vite 介绍"></a>vite 介绍</h4><p><a target="_blank" rel="noopener" href="https://github.com/vitejs/vite.git">vite 官网</a><br><a target="_blank" rel="noopener" href="https://github.com/JasKang/tsrv.git">0 配置脚手架示例</a></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; createServer, ViteDevServer &#125; <span class="keyword">from</span> <span class="string">&quot;vite&quot;</span>;</span><br></pre></td></tr></table></figure>
+
+<p>vite 只是应用于开发、构建、阶段，打包依赖于 rollup 工具<br>vite 解析实现过程如下:<br>开发服务器使用 http + connect 构建服务<br>通过多种中间件处理请求资源；也会遍历 html 节点，将元素的 src 属性添加上 base 前缀，将内联脚本转换为网络请求<br>会通过 es-module-lexer 这个库分析出所有 import 语句<br>vite 会在请求后添加 query 参数的方式，用来标识当前请求的处理逻辑</p>
+<h4 id="vitest"><a href="#vitest" class="headerlink" title="vitest"></a>vitest</h4><ol>
+<li>toBe 和 toEqual 和 toStrictEqual</li>
+</ol>
+<p>对象引用，基本类型用 toBe,会有层级克隆引用问题的 toEqual</p>
+<h4 id="rollup-插件"><a href="#rollup-插件" class="headerlink" title="rollup 插件"></a>rollup 插件</h4><ul>
+<li>@rollup/plugin-alias 设置别名</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 最后是导出一个插件函数</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="function"><span class="keyword">function</span> <span class="title">alias</span>(<span class="params">options: RollupAliasOptions = &#123;&#125;</span>)</span></span><br><span class="line"><span class="function">// 函数返回</span></span><br><span class="line"><span class="function"><span class="title">return</span> </span>&#123;</span><br><span class="line">    <span class="attr">name</span>: <span class="string">&#x27;alias&#x27;</span>,<span class="comment">// 插件名，报错查看</span></span><br><span class="line">    <span class="comment">// inputOptions 对应 rollup.config.js 写的配置 导出的值</span></span><br><span class="line">    <span class="comment">// 构建之前处理</span></span><br><span class="line">    <span class="keyword">async</span> <span class="function"><span class="title">buildStart</span>(<span class="params">inputOptions</span>)</span> &#123;</span><br><span class="line">      <span class="keyword">await</span> <span class="built_in">Promise</span>.all(</span><br><span class="line">        [...(<span class="built_in">Array</span>.isArray(options.entries) ? options.entries : []), options].map(</span><br><span class="line">          <span class="function">(<span class="params">&#123; customResolver &#125;</span>) =&gt;</span></span><br><span class="line">            customResolver &amp;&amp;</span><br><span class="line">            <span class="keyword">typeof</span> customResolver === <span class="string">&#x27;object&#x27;</span>));</span><br><span class="line">    <span class="comment">// 路径映射  a          ../a</span></span><br><span class="line">    <span class="function"><span class="title">resolveId</span>(<span class="params">importee, importer</span>)</span> &#123;</span><br><span class="line">      <span class="comment">// 返回真正的 路径</span></span><br><span class="line">    &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="esbuild-插件"><a href="#esbuild-插件" class="headerlink" title="esbuild 插件"></a>esbuild 插件</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// build.js</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> exampleOnLoadPlugin = &#123;</span><br><span class="line">  <span class="attr">name</span>: <span class="string">&quot;example&quot;</span>, <span class="comment">// 名字为了报错警告提示</span></span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="title">setup</span>(<span class="params">build</span>)</span> &#123;</span><br><span class="line">    <span class="keyword">let</span> fs = <span class="built_in">require</span>(<span class="string">&quot;fs&quot;</span>);</span><br><span class="line">    <span class="comment">// 输入的 options</span></span><br><span class="line">    <span class="built_in">console</span>.log(build.initialOptions);</span><br><span class="line">    <span class="comment">// 我们可以在操作中修改配置  build.initialOptions.outdir = &#x27;lib&#x27;</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">// build.onStart(&#123;&#125;, () =&gt; &#123;</span></span><br><span class="line">    <span class="comment">//     // 不能再 onstart 中修改配置</span></span><br><span class="line">    <span class="comment">// &#125;)</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">// 处理哪类文件</span></span><br><span class="line">    build.onResolve(</span><br><span class="line">      &#123;</span><br><span class="line">        <span class="attr">filter</span>: <span class="regexp">/\.txt$/</span>,</span><br><span class="line">      &#125;,</span><br><span class="line">      <span class="keyword">async</span> (args) =&gt; (&#123;</span><br><span class="line">        <span class="attr">path</span>: args.path,</span><br><span class="line">        <span class="attr">namespace</span>: <span class="string">&quot;txt&quot;</span>, <span class="comment">// 区分文件加载，标识</span></span><br><span class="line">      &#125;)</span><br><span class="line">    );</span><br><span class="line"></span><br><span class="line">    build.onLoad(</span><br><span class="line">      &#123;</span><br><span class="line">        <span class="comment">// 在 go 里执行 正则</span></span><br><span class="line">        <span class="attr">filter</span>: <span class="regexp">/\.\*$/</span>, <span class="comment">//什么类型文件执行</span></span><br><span class="line">        namespace: <span class="string">&quot;txt&quot;</span>,</span><br><span class="line">      &#125;,</span><br><span class="line"></span><br><span class="line">      <span class="keyword">async</span> (args) =&gt; &#123;</span><br><span class="line">        <span class="comment">// 模块的文件路径</span></span><br><span class="line">        <span class="keyword">let</span> text = <span class="keyword">await</span> fs.promises.readFile(args.path, <span class="string">&quot;utf-8&quot;</span>);</span><br><span class="line">        <span class="keyword">return</span> &#123;</span><br><span class="line">          <span class="comment">// 文件内容预处理</span></span><br><span class="line">          <span class="attr">contents</span>: <span class="string">`export default <span class="subst">$&#123;<span class="built_in">JSON</span>.stringify([</span></span></span><br><span class="line"><span class="subst"><span class="string">            ...text.split(<span class="regexp">/\s+/</span>),</span></span></span><br><span class="line"><span class="subst"><span class="string">            <span class="string">&quot;----------&quot;</span>,</span></span></span><br><span class="line"><span class="subst"><span class="string">          ])&#125;</span>`</span>,</span><br><span class="line">          <span class="comment">// loader: &quot;json&quot;,</span></span><br><span class="line">        &#125;;</span><br><span class="line">      &#125;</span><br><span class="line">    );</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="built_in">require</span>(<span class="string">&quot;esbuild&quot;</span>)</span><br><span class="line">  .build(&#123;</span><br><span class="line">    <span class="comment">// 命令行参数</span></span><br><span class="line">    <span class="attr">entryPoints</span>: [<span class="string">&quot;index.js&quot;</span>],</span><br><span class="line">    <span class="attr">bundle</span>: <span class="literal">true</span>,</span><br><span class="line">    <span class="attr">outdir</span>: <span class="string">&quot;dist&quot;</span>,</span><br><span class="line">    <span class="attr">loader</span>: &#123;</span><br><span class="line">      <span class="string">&quot;.png&quot;</span>: <span class="string">&quot;dataurl&quot;</span>,</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="attr">plugins</span>: [exampleOnLoadPlugin],</span><br><span class="line">  &#125;)</span><br><span class="line">  .catch(<span class="function">() =&gt;</span> process.exit(<span class="number">1</span>));</span><br></pre></td></tr></table></figure>
+
+<h4 id="通用钩子"><a href="#通用钩子" class="headerlink" title="通用钩子"></a>通用钩子</h4><p>开发时，vite dev server 创建一个插件容器按照 rollup 调用创建钩子的规则请求各个钩子函数</p>
+<ol>
+<li>构建阶段</li>
+</ol>
+<p>服务器启动调用一次</p>
+<ul>
+<li>options(options) 获取操纵 rollup 选项</li>
+<li>buildStart(options) 每次开始构建时调用</li>
+<li>resolveId(source,importer,options)每个传入模块请求时被调用，创建自定义确认函数，，可以用来定位第三方依赖</li>
+<li>load(id) 自定义加载器</li>
+<li>transform(code,id) 转换已加载的模块内容<br>服务器关闭调用一次</li>
+<li>buildEnd</li>
+</ul>
+<ol start="2">
+<li>输出阶段</li>
+</ol>
+<ul>
+<li>outputOptions(options)：接受输出参数；</li>
+<li>renderStart(outputOptions, inputOptions)：每次 bundle.generate 和 bundle.write 调用时都会被触发；</li>
+<li>augmentChunkHash(chunkInfo)：用来给 chunk 增加 hash；</li>
+<li>renderChunk(code, chunk, options)：转译单个的 chunk 时触发。rollup 输出每一个 chunk 文件的时候都会调用；</li>
+<li>generateBundle(options, bundle, isWrite)：在调用 bundle.write 之前立即触发这个 hook；</li>
+<li>writeBundle(options, bundle)：在调用 bundle.write 后，所有的 chunk 都写入文件后，最后会调用一次 writeBundle；</li>
+<li>closeBundle()：在服务器关闭时被调用</li>
+</ul>
+<h4 id="vite-特有钩子"><a href="#vite-特有钩子" class="headerlink" title="vite 特有钩子"></a>vite 特有钩子</h4><p>config(config,env) 修改 vite 配置<br>configResolved(resolvedConfig) vite 配置确认<br>configureServer(server) 用于配置 dev server<br>transformIndexHtml(html) 转换 index.html 的专用钩子。钩子接收当前的 HTML 字符串和转换上下文<br>handleHotUpdate(ctx) 执行自定义 HMR 更新，可以通过 ws 往客户端发送自定义的事件</p>
+<h4 id="钩子调用顺序"><a href="#钩子调用顺序" class="headerlink" title="钩子调用顺序"></a>钩子调用顺序</h4><ul>
+<li>配置解析相关</li>
+<li>构建阶段通用钩子</li>
+<li>输出阶段的通用钩子</li>
+</ul>
+<p>config–&gt;configResolved–&gt;options–&gt;configureServer–&gt;buildStart–&gt;resolvedId–&gt;load–&gt;transform–&gt;buildEnd–&gt;outputOptions–&gt;renderStart–&gt;augmentChunkHash–&gt;renderChunk–&gt;generateBundle–&gt;transformIndexHtml–&gt;writeBundle–&gt;closeBudle</p>
+<h4 id="插件执行顺序"><a href="#插件执行顺序" class="headerlink" title="插件执行顺序"></a>插件执行顺序</h4><ul>
+<li>别名处理 Alias</li>
+<li>用户插件设置 enforce: ‘pre’</li>
+<li>vite 核心插件</li>
+<li>用户插件未设置 enforce</li>
+<li>vite 构建插件</li>
+<li>用户插件设置 enforce: ‘post’</li>
+<li>vite 构建后置插件(minify, manifest, reporting)</li>
+</ul>
+<h4 id="vite-插件执行机制"><a href="#vite-插件执行机制" class="headerlink" title="vite 插件执行机制"></a>vite 插件执行机制</h4><p>可以通过变量控制 vite 插件执行时机,类似 loader 可以控制执行顺序</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 插件执行是个函数，传参</span></span><br><span class="line"><span class="attr">plugins</span>: [</span><br><span class="line">vue(),</span><br><span class="line">vueJsx(),</span><br><span class="line">testPlugins(<span class="string">&#x27;post&#x27;</span>),</span><br><span class="line">testPlugins(),</span><br><span class="line">testPlugins(<span class="string">&#x27;pre&#x27;</span>)</span><br><span class="line">],</span><br><span class="line"></span><br><span class="line"><span class="comment">// 插件是个函数</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> (enforce?: <span class="string">&#x27;pre&#x27;</span> | <span class="string">&#x27;post&#x27;</span>) =&gt; &#123;</span><br><span class="line">  <span class="keyword">return</span> &#123;</span><br><span class="line">    <span class="attr">name</span>: <span class="string">&#x27;test&#x27;</span>,</span><br><span class="line">    enforce,</span><br><span class="line">    <span class="comment">// 启动就调用</span></span><br><span class="line">    <span class="function"><span class="title">buildStart</span>(<span class="params"></span>)</span> &#123;</span><br><span class="line">      <span class="built_in">console</span>.log(<span class="string">&#x27;buildstart&#x27;</span>, enforce)</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="comment">// 解析文件时调用，请求时；没有 return， undefined 意思当前插件没有找到相关文件</span></span><br><span class="line">    <span class="comment">// 后续走到了 vite 核心插件中，</span></span><br><span class="line">    <span class="comment">// resolveId() &#123;</span></span><br><span class="line">    <span class="comment">//   console.log(&#x27;resolveid&#x27;, enforce) // 都是 pre</span></span><br><span class="line">    <span class="comment">// &#125;,</span></span><br><span class="line">    <span class="function"><span class="title">load</span>(<span class="params"></span>)</span> &#123;</span><br><span class="line">      <span class="comment">/**</span></span><br><span class="line"><span class="comment">       * 有 pre 和 post</span></span><br><span class="line"><span class="comment">       * 大部分不会再拆件中使用，内部核心插件用，</span></span><br><span class="line"><span class="comment">       */</span></span><br><span class="line">      <span class="built_in">console</span>.log(<span class="string">&#x27;load&#x27;</span>, enforce)</span><br><span class="line">    &#125;,</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="热更新-hmr"><a href="#热更新-hmr" class="headerlink" title="热更新 hmr"></a>热更新 hmr</h4><ul>
+<li>监听 import.meta.hot 和常见钩子</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 可能不存在 hot，  vite build，这段会被 treeshaking</span></span><br><span class="line"><span class="keyword">if</span> (<span class="keyword">import</span>.meta.hot) &#123;</span><br><span class="line">  <span class="comment">// 文件可以接受 自己的 热更新,内容改变就会热重载</span></span><br><span class="line">  <span class="keyword">import</span>.meta.hot.accept();</span><br><span class="line">  <span class="comment">// 只针对第一个参数中依赖的文件改变，才会热更新</span></span><br><span class="line">  <span class="keyword">import</span>.meta.hot.accept([<span class="string">&quot;style.css&quot;</span>], <span class="function">(<span class="params">newM</span>) =&gt;</span> &#123;</span><br><span class="line">    newM.render(); <span class="comment">// 可以手动触发更新</span></span><br><span class="line">  &#125;); <span class="comment">// 只有依赖的文件变了才更新</span></span><br><span class="line">  <span class="comment">// import.meta.hot.accept((newModule) =&gt; &#123;</span></span><br><span class="line">  <span class="comment">// newModule.render()</span></span><br><span class="line">  <span class="comment">// &#125;);</span></span><br><span class="line">  <span class="comment">// 这里的 timer 会一直存在，热更新完后会存在多个</span></span><br><span class="line">  <span class="keyword">let</span> timer = <span class="built_in">setInterval</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="number">8</span>);</span><br><span class="line">  &#125;, <span class="number">1000</span>);</span><br><span class="line">  <span class="comment">// 销毁时触发</span></span><br><span class="line">  <span class="keyword">import</span>.meta.hot.dispose(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">    <span class="comment">// 删除已有的</span></span><br><span class="line">    <span class="keyword">if</span> (timer) <span class="built_in">clearInterval</span>(timer);</span><br><span class="line">  &#125;);</span><br><span class="line">  <span class="keyword">import</span>.meta.hot.invalidate(); <span class="comment">// 强制 accept module 之后重新加载应用，页面刷新</span></span><br><span class="line">  <span class="comment">// 热更新数据缓存，避免每次热更新重新开始</span></span><br><span class="line">  <span class="keyword">let</span> index = <span class="keyword">import</span>.meta.hot.data.cache.getIndex() || <span class="number">0</span>;</span><br><span class="line">  <span class="keyword">import</span>.meta.hot.data.cache = &#123;</span><br><span class="line">    <span class="function"><span class="title">getIndex</span>(<span class="params"></span>)</span> &#123;</span><br><span class="line">      <span class="keyword">return</span> index;</span><br><span class="line">    &#125;,</span><br><span class="line">  &#125;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h4><p>(vite 插件)[<a target="_blank" rel="noopener" href="https://juejin.cn/post/7103165205483356168#heading-16]">https://juejin.cn/post/7103165205483356168#heading-16]</a></p>
+<h3 id="构建工具"><a href="#构建工具" class="headerlink" title="构建工具"></a>构建工具</h3><ul>
+<li>snowpack</li>
+<li>rollup</li>
+<li>webpack</li>
+<li>gulp 常用 function</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; src, dest, series, parallel &#125; <span class="keyword">from</span> <span class="string">&#x27;gulp&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> &#123; src, dest &#125; = <span class="built_in">require</span>(<span class="string">&#x27;gulp&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">copy</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> src(<span class="string">&#x27;input/*.js&#x27;</span>)</span><br><span class="line">    .pipe(dest(<span class="string">&#x27;output/&#x27;</span>));</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">exports</span>.copy = copy;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 将任务函数和/或组合操作组合成更大的操作，这些操作将按顺序依次执行。对于使用 series() 和 parallel() 组合操作的嵌套深度没有强制限制。</span></span><br><span class="line">/ This is INCORRECT</span><br><span class="line"><span class="keyword">const</span> &#123; series, parallel &#125; = <span class="built_in">require</span>(<span class="string">&#x27;gulp&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> clean = <span class="function"><span class="keyword">function</span>(<span class="params">cb</span>) </span>&#123;</span><br><span class="line">  <span class="comment">// body omitted</span></span><br><span class="line">  cb();</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> css = series(clean, <span class="function"><span class="keyword">function</span>(<span class="params">cb</span>) </span>&#123;</span><br><span class="line">  <span class="comment">// body omitted</span></span><br><span class="line">  cb();</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> javascript = series(clean, <span class="function"><span class="keyword">function</span>(<span class="params">cb</span>) </span>&#123;</span><br><span class="line">  <span class="comment">// body omitted</span></span><br><span class="line">  cb();</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="built_in">exports</span>.build = parallel(css, javascript);</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> &#123; series, parallel &#125; = <span class="built_in">require</span>(<span class="string">&#x27;gulp&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">clean</span>(<span class="params">cb</span>) </span>&#123;</span><br><span class="line">  <span class="comment">// body omitted</span></span><br><span class="line">  cb();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">css</span>(<span class="params">cb</span>) </span>&#123;</span><br><span class="line">  <span class="comment">// body omitted</span></span><br><span class="line">  cb();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">javascript</span>(<span class="params">cb</span>) </span>&#123;</span><br><span class="line">  <span class="comment">// body omitted</span></span><br><span class="line">  cb();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">exports</span>.build = series(clean, parallel(css, javascript));</span><br></pre></td></tr></table></figure>
+
+<p>Rollup 是基于 ES6 实现的代码模块化工具<br>可以使用 rollup 来编译出符合所有类型规范的代码</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// src/rollup.config.js</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> &#123; resolve &#125; <span class="keyword">from</span> <span class="string">&quot;path&quot;</span>;</span><br><span class="line"><span class="keyword">import</span> &#123; name &#125; <span class="keyword">from</span> <span class="string">&quot;../package.json&quot;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> FORMAT = &#123;</span><br><span class="line">  <span class="attr">ES</span>: <span class="string">&quot;es&quot;</span>,</span><br><span class="line">  <span class="attr">CJS</span>: <span class="string">&quot;cjs&quot;</span>,</span><br><span class="line">  <span class="attr">UMD</span>: <span class="string">&quot;umd&quot;</span>,</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> base = &#123;</span><br><span class="line">  <span class="attr">input</span>: resolve(__dirname, <span class="string">&quot;../src/index.js&quot;</span>),</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> output = <span class="function"><span class="keyword">function</span> (<span class="params">format</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> &#123;</span><br><span class="line">    name,</span><br><span class="line">    <span class="attr">dir</span>: resolve(__dirname, <span class="string">`../dist/<span class="subst">$&#123;format&#125;</span>`</span>),</span><br><span class="line">    <span class="comment">// format 参数，决定输出需要满足哪一种模块化规范</span></span><br><span class="line">    format,</span><br><span class="line">  &#125;;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> [</span><br><span class="line">  &#123;</span><br><span class="line">    ...base,</span><br><span class="line">    <span class="attr">output</span>: output(FORMAT.ES),</span><br><span class="line">  &#125;,</span><br><span class="line">  &#123;</span><br><span class="line">    ...base,</span><br><span class="line">    <span class="attr">output</span>: output(FORMAT.CJS),</span><br><span class="line">  &#125;,</span><br><span class="line">  &#123;</span><br><span class="line">    ...base,</span><br><span class="line">    <span class="attr">output</span>: output(FORMAT.UMD),</span><br><span class="line">  &#125;,</span><br><span class="line">];</span><br></pre></td></tr></table></figure>
+
+<p>修改 package.json</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="string">&quot;name&quot;</span>: <span class="string">&quot;@baidu/hummer-master&quot;</span>,</span><br><span class="line">  <span class="string">&quot;version&quot;</span>: <span class="string">&quot;1.0.0&quot;</span>,</span><br><span class="line">- <span class="string">&quot;main&quot;</span>: <span class="string">&quot;src/index.js&quot;</span>,</span><br><span class="line">+ <span class="string">&quot;main&quot;</span>: <span class="string">&quot;dist/cjs/index.js&quot;</span>,</span><br><span class="line">+ <span class="string">&quot;module&quot;</span>: <span class="string">&quot;dist/es/index.js&quot;</span>,</span><br><span class="line">+ <span class="string">&quot;files&quot;</span>: [<span class="string">&quot;dist&quot;</span>],</span><br><span class="line">  <span class="string">&quot;scripts&quot;</span>: &#123;</span><br><span class="line">+   <span class="string">&quot;build&quot;</span>:<span class="string">&quot;rm -rf ./dist &amp;&amp; rollup -c build/rollup.config.js&quot;</span>,</span><br><span class="line">    <span class="string">&quot;test&quot;</span>: <span class="string">&quot;echo \&quot;Error: no test specified\&quot; &amp;&amp; exit 1&quot;</span></span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="string">&quot;devDependencies&quot;</span>: &#123;</span><br><span class="line">    <span class="string">&quot;rollup&quot;</span>: <span class="string">&quot;^2.55.1&quot;</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>package:</p>
+<ul>
+<li>rollup-plugin-css-porter</li>
+</ul>
+<ol>
+<li>测试 esm 类型</li>
+</ol>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; method1, method2 &#125; <span class="keyword">from</span> <span class="string">&quot;./lib&quot;</span>;</span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>测试 cjs 类型</li>
+</ol>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// mock 一个 nodejs 项目来测试 cjs 规范</span></span><br><span class="line"><span class="comment">// index.js</span></span><br><span class="line"><span class="keyword">const</span> &#123; HummerMaster &#125; = <span class="built_in">require</span>(<span class="string">&quot;@baidu/hummer-master&quot;</span>);</span><br><span class="line"><span class="keyword">const</span> hummerMaster = <span class="keyword">new</span> HummerMaster();</span><br><span class="line"><span class="built_in">console</span>.log(hummerMaster.getStory());</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">&quot;Hello World!&quot;</span>);</span><br></pre></td></tr></table></figure>
+
+<ol start="3">
+<li>测试 umd 类型</li>
+</ol>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;utf-8&quot;</span> /&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;./node_modules/@baidu/hummer-master/dist/umd/index.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="javascript"></span></span><br><span class="line"><span class="javascript">      <span class="keyword">const</span> &#123; HummerMaster &#125; = <span class="built_in">window</span>[<span class="string">&quot;@baidu/hummer-master&quot;</span>];</span></span><br><span class="line"><span class="javascript">      <span class="keyword">const</span> hummerMaster = <span class="keyword">new</span> HummerMaster();</span></span><br><span class="line"><span class="javascript">      <span class="built_in">console</span>.log(hummerMaster.getStory());</span></span><br><span class="line"><span class="javascript">      <span class="built_in">console</span>.log(<span class="string">&quot;Hello World!&quot;</span>);</span></span><br><span class="line"><span class="javascript">    </span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="cli-工具开发"><a href="#cli-工具开发" class="headerlink" title="cli 工具开发"></a>cli 工具开发</h3><ol>
+<li>#! /usr/bin/env node</li>
+</ol>
+<p>执行文件 bin/cli.js 里要加上这句</p>
+<p>意思就是用 node 来执行此文件，node 怎么来呢，就去用户(usr)的安装根目录(bin)下的 env 环境变量中去找，简单的说就是如果在 windows 上面，就去安装 node 的 bin 目录去找 node 执行器，一般我们都放在环境变量中，所以就能正确找到 node 来执行</p>
+<ol start="2">
+<li>package.json 的 bin 字段</li>
+</ol>
+<p>bin 字段是命令名到本地文件名的映射。在安装时，npm 会将文件符号链接到 prefix/bin 以进行全局安装或./node_modules/.bin/本地安装。<br>当我们使用 npm 或者 yarn 命令安装包时，如果该包的 package.json 文件有 bin 字段，就会在 node_modules 文件夹下面的 .bin 目录中复制了 bin 字段链接的执行文件。我们在调用执行文件时，可以不带路径，直接使用命令名来执行相对应的执行文件。</p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/web%E6%9E%84%E5%BB%BAcli/" rel="tag"># web构建cli</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2018/07/22/knowledge/os/k8s/" rel="prev" title="k8s基础">
+                  <i class="fa fa-chevron-left"></i> k8s基础
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2019/03/04/knowledge/js/record/" rel="next" title="record">
+                  record <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    
+  
+  <div class="comments">
+    <script src="https://giscus.app/client.js"
+        data-repo="UniqueCrownClown/UniqueCrownClown.github.io" 
+        data-repo-id="MDEwOlJlcG9zaXRvcnkxMDQyODk2MzU=" 
+        data-category="General"
+        data-category-id="DIC_kwDOBjdVY84CQXdS"
+        data-mapping="pathname" 
+        data-reactions-enabled="1" 
+        data-emit-metadata="1" 
+        data-theme="light"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        data-input-position="bottom"
+        data-loading="lazy"
+        async>
+    </script>
+  </div>
+  
+  
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2024</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">clown</span>
+</div>
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_uv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+    </div>
+  </footer>
+
+  
+  <script size="90" alpha="0.6" zIndex="-1" src="https://unpkg.com/ribbon.js@1.0.2/dist/ribbon.min.js"></script>
+  <script src="https://unpkg.com/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/jquery@3.6.0/dist/jquery.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script>
+
+  
+<script src="https://unpkg.com/hexo-generator-searchdb@1.4.0/dist/search.js" integrity="sha256-vXZMYLEqsROAXkEw93GGIvaB2ab+QW6w3+1ahD9nXXA=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
+
+
+
+  <script src="/js/third-party/fancybox.js"></script>
+
+
+  
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+
+</body>
+</html>
