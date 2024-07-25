@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.loli.net/css?family=Noto+Serif+SC:300,300italic,400,400italic,700,700italic%7CRoboto+Mono:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="https://unpkg.com/@fortawesome/fontawesome-free@5.15.4/css/all.min.css" integrity="sha256-mUZM63G8m73Mcidfrv5E+Y61y7a12O5mW4ezU3bxqW4=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://unpkg.com/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://unpkg.com/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"uniquecrownclown.github.io","root":"/","images":"/images","scheme":"Mist","darkmode":false,"version":"8.8.0","exturl":false,"sidebar":{"position":"left","display":"hide","padding":18,"offset":12,"width":240},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"giscus","storage":true,"lazyload":false,"nav":null,"activeClass":"giscus"},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+<meta name="description" content="http…">
+<meta property="og:type" content="article">
+<meta property="og:title" content="browser">
+<meta property="og:url" content="https://uniquecrownclown.github.io/2022/03/01/knowledge/interview/browser/index.html">
+<meta property="og:site_name" content="uniquecrownclown">
+<meta property="og:description" content="http…">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://s1.ax1x.com/2022/05/23/XpBRu6.md.png">
+<meta property="og:image" content="https://s1.ax1x.com/2022/05/23/XpBWDK.png">
+<meta property="article:published_time" content="2022-03-01T11:23:51.000Z">
+<meta property="article:modified_time" content="2024-07-25T04:50:36.955Z">
+<meta property="article:author" content="clown">
+<meta property="article:tag" content="browser">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://s1.ax1x.com/2022/05/23/XpBRu6.md.png">
+
+
+<link rel="canonical" href="https://uniquecrownclown.github.io/2022/03/01/knowledge/interview/browser/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://uniquecrownclown.github.io/2022/03/01/knowledge/interview/browser/","path":"2022/03/01/knowledge/interview/browser/","title":"browser"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>browser | uniquecrownclown</title>
+  
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">uniquecrownclown</h1>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">clown的笔记</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li>
+        <li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li>
+        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li>
+        <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li>
+        <li class="menu-item menu-item-collection"><a href="/test/" rel="section"><i class="fa fa-cubes fa-fw"></i>collection</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B5%8F%E8%A7%88%E5%99%A8%E7%BA%BF%E7%A8%8B"><span class="nav-number">1.</span> <span class="nav-text">浏览器线程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%90%8C%E6%AD%A5%E4%B8%8E%E5%BC%82%E6%AD%A5%E6%89%A7%E8%A1%8C%E9%A1%BA%E5%BA%8F"><span class="nav-number">2.</span> <span class="nav-text">同步与异步执行顺序</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%8F%E4%BB%BB%E5%8A%A1%E4%B8%8E%E5%BE%AE%E4%BB%BB%E5%8A%A1%E6%89%A7%E8%A1%8C%E9%A1%BA%E5%BA%8F"><span class="nav-number">3.</span> <span class="nav-text">宏任务与微任务执行顺序</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B5%8F%E8%A7%88%E5%99%A8%E6%B8%B2%E6%9F%93"><span class="nav-number">4.</span> <span class="nav-text">浏览器渲染</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B5%8F%E8%A7%88%E5%99%A8%E5%AF%B9%E5%90%8C%E4%B8%80%E5%9F%9F%E5%90%8D%E8%BF%9B%E8%A1%8C%E8%AF%B7%E6%B1%82%E7%9A%84%E6%9C%80%E5%A4%A7%E5%B9%B6%E5%8F%91%E8%BF%9E%E6%8E%A5%E6%95%B0"><span class="nav-number">5.</span> <span class="nav-text">浏览器对同一域名进行请求的最大并发连接数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B5%8F%E8%A7%88%E5%99%A8%E7%BC%93%E5%AD%98"><span class="nav-number">6.</span> <span class="nav-text">浏览器缓存</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#http-%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%BB%A3%E7%90%86%E7%BC%93%E5%AD%98"><span class="nav-number">6.1.</span> <span class="nav-text">http 服务器代理缓存</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#request-%E7%9A%84%E7%8A%B6%E6%80%81%E7%A0%81%E8%AF%B4%E6%98%8E"><span class="nav-number">6.2.</span> <span class="nav-text">request 的状态码说明</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#HTTP-%E7%BC%93%E5%AD%98-Cache-Control-%E5%93%8D%E5%BA%94%E5%A4%B4"><span class="nav-number">6.3.</span> <span class="nav-text">HTTP 缓存 Cache-Control 响应头</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#xxs-%E6%94%BB%E5%87%BB%E5%92%8C-csrf-xsrf-%E6%94%BB%E5%87%BB"><span class="nav-number">7.</span> <span class="nav-text">xxs 攻击和 csrf&#x2F;xsrf 攻击</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%8B%A5%E4%BE%9D%E7%9A%84xss%E6%B3%A8%E5%85%A5%E5%AE%9E%E7%8E%B0"><span class="nav-number">8.</span> <span class="nav-text">若依的xss注入实现</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%B7%A8%E5%9F%9F"><span class="nav-number">9.</span> <span class="nav-text">跨域</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#jsonp-cors-%E5%92%8C-ajax"><span class="nav-number">9.1.</span> <span class="nav-text">jsonp cors 和 ajax</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Cross-Origin-Resource-Sharing-CORS"><span class="nav-number">9.2.</span> <span class="nav-text">Cross-Origin Resource Sharing (CORS)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#nginx%E9%85%8D%E7%BD%AE%E8%B7%A8%E5%9F%9F"><span class="nav-number">9.3.</span> <span class="nav-text">nginx配置跨域</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%BB%E6%B5%81%E9%89%B4%E6%9D%83%E6%96%B9%E6%A1%88"><span class="nav-number">10.</span> <span class="nav-text">主流鉴权方案</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#token"><span class="nav-number">11.</span> <span class="nav-text">token</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AF%B4%E6%98%8E"><span class="nav-number">11.1.</span> <span class="nav-text">说明</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#token-%E6%B5%81%E7%A8%8B"><span class="nav-number">11.2.</span> <span class="nav-text">token 流程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Token-%E5%92%8C-JWT-%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="nav-number">11.3.</span> <span class="nav-text">Token 和 JWT 的区别</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8D%95%E7%82%B9%E7%99%BB%E5%BD%95"><span class="nav-number">11.4.</span> <span class="nav-text">单点登录</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#JWT-%E5%9F%BA%E6%9C%AC"><span class="nav-number">11.5.</span> <span class="nav-text">JWT 基本</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#JSON-Web-Token-%E5%92%8C-Session-Cookies-%E7%9A%84%E5%AF%B9%E6%AF%94"><span class="nav-number">11.6.</span> <span class="nav-text">JSON Web Token 和 Session Cookies 的对比</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%97%A0%E6%84%9F%E5%88%B7%E6%96%B0-token"><span class="nav-number">11.7.</span> <span class="nav-text">无感刷新 token</span></a></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="clown"
+      src="/images/avatar.jpg">
+  <p class="site-author-name" itemprop="name">clown</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">84</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">8</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">67</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/UniqueCrownClown" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;UniqueCrownClown" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="/1129986876@qq.com" title="E-Mail → 1129986876@qq.com"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://weibo.com/u/2143916663" title="Weibo → https:&#x2F;&#x2F;weibo.com&#x2F;u&#x2F;2143916663" rel="noopener" target="_blank"><i class="fab fa-weibo fa-fw"></i>Weibo</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://twitter.com/CrownClown7777" title="Twitter → https:&#x2F;&#x2F;twitter.com&#x2F;CrownClown7777" rel="noopener" target="_blank"><i class="fab fa-twitter fa-fw"></i>Twitter</a>
+      </span>
+  </div>
+
+
+
+
+    <span id="jinrishici-sentence">正在加载今日诗词....</span>
+    <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+  <a href="https://github.com/UniqueCrownClown" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub" rel="noopener" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://uniquecrownclown.github.io/2022/03/01/knowledge/interview/browser/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="clown">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="uniquecrownclown">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          browser
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2022-03-01 11:23:51" itemprop="dateCreated datePublished" datetime="2022-03-01T11:23:51+00:00">2022-03-01</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2024-07-25 04:50:36" itemprop="dateModified" datetime="2024-07-25T04:50:36+00:00">2024-07-25</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/interview/" itemprop="url" rel="index"><span itemprop="name">interview</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <p>http…</p>
+<span id="more"></span>
+
+<h2 id="浏览器线程"><a href="#浏览器线程" class="headerlink" title="浏览器线程"></a>浏览器线程</h2><ul>
+<li>GUI 渲染线程</li>
+<li>JS 引擎线程</li>
+<li>事件触发线程</li>
+<li>定时器触发线程</li>
+<li>HTTP 请求线程</li>
+</ul>
+<h2 id="同步与异步执行顺序"><a href="#同步与异步执行顺序" class="headerlink" title="同步与异步执行顺序"></a>同步与异步执行顺序</h2><ol>
+<li>js 将任务分为同步任务和异步任务，同步任务进入主线中，异步任务首先到 Event Table 进行回调函数注册</li>
+<li>当异步任务的触发条件满足，将回调函数从 Event Table 压入 Event Queue 中</li>
+<li>主线程的同步任务执行完毕，系统从 Event Queue 中读取异步的回调函数</li>
+<li>主线程空了去 Event Queue 读取回调函数的过程称为 Event Loop</li>
+<li>异步任务进行了更精细的划分，，异步任务又进一步分为微任务和宏任务<!-- ![任务分类视图](https://cdn.jsdelivr.net/gh/UniqueCrownClown/pic-bed@master/hexo/knowledge/nodeJsPic/task.png) -->
+<a target="_blank" rel="noopener" href="https://imgtu.com/i/XpBRu6"><img src="https://s1.ax1x.com/2022/05/23/XpBRu6.md.png" alt="XpBRu6.md.png"></a></li>
+<li>宏任务和微任务分别有各自的任务队列 Event Queue，即宏任务队列和微任务队列。</li>
+<li>Promise 中的函数是立即执行的，而后续的 .then 则会被分发到 microtask 的 Promise 队列中去</li>
+<li>宏任务和微任务，本质上也是让 JS 脚本能够在渲染阶段前后，有了完成某些功能的能力。<br><a target="_blank" rel="noopener" href="https://juejin.cn/post/7086307441847042062#heading-2">JavaScript为什么要有微任务？</a></li>
+</ol>
+<h2 id="宏任务与微任务执行顺序"><a href="#宏任务与微任务执行顺序" class="headerlink" title="宏任务与微任务执行顺序"></a>宏任务与微任务执行顺序</h2><ol>
+<li>代码开始执行,创建一个全局调用栈,script 作为宏任务执行</li>
+<li>执行过程同步任务立即执行,异步任务根据异步任务类型分别注册到微任务队列和宏任务队列</li>
+<li>同步任务执行完毕，查看微任务队列</li>
+</ol>
+<ul>
+<li><p>若存在微任务，将微任务队列全部执行(包括执行微任务过程中产生的新微任务)</p>
+</li>
+<li><p>若无微任务，查看宏任务队列，执行第一个宏任务，宏任务执行完毕，查看微任务队列，重复上述操作，直至宏任务队列为空<br>Event Loop 异步任务执行顺序图:</p>
+  <!-- ![异步任务执行顺序](https://cdn.jsdelivr.net/gh/UniqueCrownClown/pic-bed@master/hexo/knowledge/nodeJsPic/taskProcess.png) -->
+
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/XpBWDK"><img src="https://s1.ax1x.com/2022/05/23/XpBWDK.png" alt="XpBWDK.png"></a></p>
+</li>
+<li><p>microtasks</p>
+<ul>
+<li>process.nextTick</li>
+<li>promise</li>
+<li>Object.observe (废弃)</li>
+<li>MutationObserver</li>
+</ul>
+</li>
+<li><p>macrotasks</p>
+<ul>
+<li>setTimeout</li>
+<li>setImmerdiate</li>
+<li>setInterval</li>
+<li>I/O</li>
+<li>UI 渲染</li>
+</ul>
+</li>
+<li><p>代码执行时序分析:<br>created 同步<br>mounted 同步<br>promise.then 异步微<br>setTimeout 异步宏</p>
+</li>
+</ul>
+<p>先同步再异步，异步先微再宏</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="title">created</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">&quot;created&quot;</span>);</span><br><span class="line">    <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function"><span class="params">resolve</span> =&gt;</span> &#123;</span><br><span class="line">        resolve()</span><br><span class="line">    &#125;).then( <span class="function"><span class="params">res</span> =&gt;</span> &#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">&quot;.then&quot;</span>);</span><br><span class="line">        <span class="built_in">setTimeout</span>(<span class="function">()=&gt;</span>&#123;</span><br><span class="line">            <span class="built_in">console</span>.log(<span class="string">&quot;setTimeout  -- 3000&quot;</span>)</span><br><span class="line">        &#125;,<span class="number">3000</span>);</span><br><span class="line">    &#125;);</span><br><span class="line">    <span class="built_in">setTimeout</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">&quot;setTimeout -- 5000&quot;</span>);</span><br><span class="line">    &#125;,<span class="number">5000</span>);</span><br><span class="line">&#125;,</span><br><span class="line"><span class="function"><span class="title">mounted</span>(<span class="params"></span>)</span> &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">&quot;mounted&quot;</span>)；</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 结果:</span></span><br><span class="line"><span class="comment">// created</span></span><br><span class="line"><span class="comment">// mounted</span></span><br><span class="line"><span class="comment">// .then</span></span><br><span class="line"><span class="comment">// setTimeout -- 3000</span></span><br><span class="line"><span class="comment">// setTimeout -- 5000</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="浏览器渲染"><a href="#浏览器渲染" class="headerlink" title="浏览器渲染"></a>浏览器渲染</h2><p>浏览器可以对拿到手的资源进行缓存，避免对一个资源的重复请求获取，节约时间提升性能</p>
+<p>假如现在页面里放在 head 的 css 文件下载速度很慢，页面会出现什么情况？<br>大概页面会等待这个 CSS 的下载，这个时候页面是白屏状态，然后这个 CSS 资源会有一个超时时间，<br>假如超过了这个超时时间，这个资源相当于会下载失败，浏览器会直接跳过这个 CSS 资源，<br>根据已有的 CSS 资源生成 CSS 规则树，进而生成 Render 树，然后渲染页面。</p>
+<h2 id="浏览器对同一域名进行请求的最大并发连接数"><a href="#浏览器对同一域名进行请求的最大并发连接数" class="headerlink" title="浏览器对同一域名进行请求的最大并发连接数"></a>浏览器对同一域名进行请求的最大并发连接数</h2><p>ie10,11,Chrome 和 Firefox 限制数为 <strong>6</strong> 个</p>
+<p>ajax 请求是在第 6 个请求的时候就开始有 Stalled 时间了,当有 6 个响应时间比较长的 ajax 请求的时候会阻塞到后面的 ajax 请求执行，少于 6 个的时候不会阻塞后续的 ajax 执行。</p>
+<h2 id="浏览器缓存"><a href="#浏览器缓存" class="headerlink" title="浏览器缓存"></a>浏览器缓存</h2><ol>
+<li>强缓存：上一次的 HTTP 交互中，服务器通知了浏览器一个缓存时间，在该时间内对该资源的请求都可以直接使用缓存。</li>
+<li>协商缓存：向服务器发送请求，服务器会根据这个请求的 request header 的参数来判断是否命中，如果命中则返回 304 状态码告诉浏览器可以直接使用缓存，否则就重新处理请求并返回资源。</li>
+</ol>
+<p>判断命中与否主要是通过对 <strong>request header</strong> 中的 <strong>If-Modified-Since</strong> 和 <strong>Etag</strong> 或<strong>If-None-Match</strong>字段与服务器上资源的信息进行比对分析得出的。</p>
+<ol start="3">
+<li><p>浏览器先根据这个资源的 http 头信息来判断是否命中强缓存。如果命中则直接加在缓存中的资源，并不会将请求发送到服务器。</p>
+</li>
+<li><p>如果未命中强缓存，则浏览器会将资源加载请求发送到服务器。服务器来判断浏览器本地缓存是否失效。若可以使用，则服务器并不会返回资源信息，浏览器继续从缓存加载资源。</p>
+</li>
+<li><p>如果未命中协商缓存，则服务器会将完整的资源返回给浏览器，浏览器加载新资源，并更新缓存。</p>
+</li>
+</ol>
+<h3 id="http-服务器代理缓存"><a href="#http-服务器代理缓存" class="headerlink" title="http 服务器代理缓存"></a>http 服务器代理缓存</h3><p>让代理服务器接管一部分的服务端 HTTP 缓存，客户端缓存过期后就近到代理缓存中获取，代理缓存过期了才请求源服务器，这样流量巨大的时候能明显降低源服务器的压力。</p>
+<p>缓存代理的控制分为两部分，一部分是源服务器端的控制，一部分是客户端的控制。</p>
+<ol>
+<li>源服务器控制</li>
+</ol>
+<p>cache-Control:public/private,表示是否允许代理服务器缓存，前者禁止，后者为允许</p>
+<p>must-revalidate 的意思是客户端缓存过期就去源服务器获取，而 proxy-revalidate 则表示代理服务器的缓存过期后到源服务器获取。</p>
+<p>s-maxage 限定了缓存在代理服务器中可以存放多久</p>
+<ol start="2">
+<li>客户端控制</li>
+</ol>
+<p>max-stale 对代理服务器上的缓存进行宽容操作,客户端到代理服务器上拿缓存的时候，即使代理缓存过期了也不要紧，只要过期时间在 5 秒之内，还是可以从代理中获取的</p>
+<p>min-fresh 对代理服务器上的缓存进行限制操作,代理缓存需要一定的新鲜度，不要等到缓存刚好到期再拿，一定要在到期前 5 秒之前的时间拿，否则拿不到。</p>
+<p>only-if-cached 这个字段加上后表示客户端只会接受代理缓存，而不会接受源服务器的响应。如果代理缓存无效，则直接返回 504（Gateway Timeout）。</p>
+<h3 id="request-的状态码说明"><a href="#request-的状态码说明" class="headerlink" title="request 的状态码说明"></a>request 的状态码说明</h3><p>304 接受请求，响应浏览器继续用缓存(协商缓存)<br>200 接受请求,响应新的资源，生成新的浏览器缓存<br><a target="_blank" rel="noopener" href="https://www.cnblogs.com/ranyonsue/p/8918908.html">资源</a></p>
+<h3 id="HTTP-缓存-Cache-Control-响应头"><a href="#HTTP-缓存-Cache-Control-响应头" class="headerlink" title="HTTP 缓存 Cache-Control 响应头"></a>HTTP 缓存 Cache-Control 响应头</h3><ol>
+<li>Cache-Control:max-age=N<br>浏览器获取到资源内容后，将资源内容缓存在本地，缓存有效期是 N 秒。<br>若过期前再次访问资源，直接使用本地缓存；过期后再访问，则向服务器发请求，若服务器检查资源没有更新，则返回 304 状态码；如果有更新，则返回 200 状态码以及新的资源内容。同时浏览器延长本地资源的缓存有效期。</li>
+<li>Cache-Control:no-cache<br>资源可以缓存在浏览器本地，但每次使用缓存前，都要跟服务器协商确认资源是否有更新。<br>和 1 的区别是比 1 多了个不经过服务器的有效期</li>
+<li>Cache-Control:no-store<br>禁用缓存。浏览器每次都要请求服务器，服务器每次都要返回 200 状态码以及资源内容。</li>
+<li>Cache-Control:max-age=N,must-revalidate<br>和 1 一致,在没加 must-revalidate 的情况下，如果服务器发生异常没有响应浏览器的请求，则浏览器会使用本地已过期的缓存；如果有加，则不会使用过期的缓存</li>
+</ol>
+<h2 id="xxs-攻击和-csrf-xsrf-攻击"><a href="#xxs-攻击和-csrf-xsrf-攻击" class="headerlink" title="xxs 攻击和 csrf/xsrf 攻击"></a>xxs 攻击和 csrf/xsrf 攻击</h2><p>通常来说 CSRF(点击或者是携带敏感 cookies 访问三方服务器，三方服务器向目标服务器发起权限之下的请求)<br>是由 XSS(代码注入)实现的==&gt;jwt 实现防御</p>
+<p>X-XSS-Protection 这个响应头是用来防范 XSS 的。最早我是在介绍 IE8 的文章里看到这个，现在主流浏览器都支持，并且默认都开启了 XSS 保护</p>
+<ol>
+<li>输入过滤<br>对用户的输入进行过滤，包括 text、post 等等所有输入进行可靠性检测。<br>也可以制作一个白名单，一但输入中的字符不在白名单内，自动过滤掉。</li>
+<li>转义<br>与正则的思想类似，对比如&lt;、&gt;等等特殊字符进行转义处理。</li>
+</ol>
+<p>decodingMap， 用于对用户输入所包含的特殊字符或标签进行编码或过滤，如 &lt;，&gt;，script，防止 XSS 攻击<br>验证码会强制用户必须与应用进行交互，才能完成最终请求。因为通常情况下，验证码能够很好地遏制 CSRF 攻击</p>
+<p>SameSite=Strict，一般就是自己带上 referer</p>
+<p>目前防御 CSRF 攻击主要有三种策略：</p>
+<ol>
+<li>验证 HTTP Referer 字段；</li>
+<li>在请求地址中添加 token 并验证；</li>
+<li>在 HTTP 头中自定义属性并验证。（都需要在后台验证）</li>
+</ol>
+<p>token 可以在用户登陆后产生并放于 session 之中，然后在每次请求时把 token 从 session 中拿出，与请求中的 token 进行比对</p>
+<h2 id="若依的xss注入实现"><a href="#若依的xss注入实现" class="headerlink" title="若依的xss注入实现"></a>若依的xss注入实现</h2><p>xss注解实现的例子</p>
+<p>不给插入xml格式的内容</p>
+<p>实现ConstraintValidator的isValid</p>
+<h2 id="跨域"><a href="#跨域" class="headerlink" title="跨域"></a>跨域</h2><p>跨域三大宝：jsonp(原理是 script 的 src 标签可以跨域，所以数据交互都封成 json 格式)，cors(原理是在服务端的 response 的 header 上直接写个 Access-Control-Allow-Origin:”*“就能过去了)nginx 的代理(反向代理修改配置文件，前提服务器是 nginx)</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">location /promotion/activityPro &#123;</span><br><span class="line">            proxy_pass http://frontHost/promotion/activityPro;</span><br><span class="line">            add_header &#x27;Access-Control-Allow-Origin&#x27; &#x27;*&#x27;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>nginx,tomcat,apache,IIS</p>
+<h3 id="jsonp-cors-和-ajax"><a href="#jsonp-cors-和-ajax" class="headerlink" title="jsonp cors 和 ajax"></a>jsonp cors 和 ajax</h3><p>在未正确设置的情况下，跨域访问会提示如下错误：</p>
+<p>No ‘Access-Control-Allow-Origin’ header is present on the requested resource.<br>jsonp 只支持 get 方式（因为本质是通过 script 标签的 src 属性访问 url）<br>ajax 直接请求普通文件存在跨域无权限访问的问题<br>web 页面调用 js 文件不受跨域的影响(凡是含有”src”这个属性的标签都拥有跨域的能力)<br>想通过纯 web 端跨域的方法:<br>在远程服务器上把数据装进 js 格式的文件里，供客户端调用和进一步处理<br>jsonp 和 ajax 的区别和应用<br>相同<br>请求一个 url，然后把服务器返回的数据进行处理<br>不同<br>ajax 的核心是通过 XmlHttpRequest 获取非本页内容<br>jsonp 的核心则是动态添加 script 标签来调用服务器提供的 js 脚本<br>ajax 通过服务端代理一样可以实现跨域，jsonp 本身也不排斥同域的数据的获取。<br>应用<br>可以直接在$.ajax({})中定义 dataType: “jsonp”来实现跨域</p>
+<h3 id="Cross-Origin-Resource-Sharing-CORS"><a href="#Cross-Origin-Resource-Sharing-CORS" class="headerlink" title="Cross-Origin Resource Sharing (CORS)"></a>Cross-Origin Resource Sharing (CORS)</h3><p>通过设置 HTTP 请求和返回中 header，告知浏览器该请求是合法的<br>涉及到服务器端和浏览器端双方的设置：请求的发起(Http Request Header)和服务器对请求正确的响应（Http response header）</p>
+<p>原生的 xmlrequest 对象如何实现跨域</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// JQuery的$.ajax()可以用来发起XHR或者CORS请求,,提供的跨域方法</span></span><br><span class="line">$.ajax(&#123;</span><br><span class="line">  <span class="comment">// The &#x27;type&#x27; property sets the HTTP method.</span></span><br><span class="line">  <span class="comment">// A value of &#x27;PUT&#x27; or &#x27;DELETE&#x27; will trigger a preflight request.</span></span><br><span class="line">  <span class="attr">type</span>: <span class="string">&quot;GET&quot;</span>,</span><br><span class="line"></span><br><span class="line">  <span class="comment">// The URL to make the request to.</span></span><br><span class="line">  <span class="attr">url</span>: <span class="string">&quot;http://updates.html5rocks.com&quot;</span>,</span><br><span class="line"></span><br><span class="line">  <span class="comment">// The &#x27;contentType&#x27; property sets the &#x27;Content-Type&#x27; header.</span></span><br><span class="line">  <span class="comment">// The JQuery default for this property is</span></span><br><span class="line">  <span class="comment">// &#x27;application/x-www-form-urlencoded; charset=UTF-8&#x27;, which does not trigger</span></span><br><span class="line">  <span class="comment">// a preflight. If you set this value to anything other than</span></span><br><span class="line">  <span class="comment">// application/x-www-form-urlencoded, multipart/form-data, or text/plain,</span></span><br><span class="line">  <span class="comment">// you will trigger a preflight request.</span></span><br><span class="line">  <span class="attr">contentType</span>: <span class="string">&quot;text/plain&quot;</span>,</span><br><span class="line"></span><br><span class="line">  <span class="attr">xhrFields</span>: &#123;</span><br><span class="line">    <span class="comment">// The &#x27;xhrFields&#x27; property sets additional fields on the XMLHttpRequest.</span></span><br><span class="line">    <span class="comment">// This can be used to set the &#x27;withCredentials&#x27; property.</span></span><br><span class="line">    <span class="comment">// Set the value to &#x27;true&#x27; if you&#x27;d like to pass cookies to the server.</span></span><br><span class="line">    <span class="comment">// If this is enabled, your server must respond with the header</span></span><br><span class="line">    <span class="comment">// &#x27;Access-Control-Allow-Credentials: true&#x27;.</span></span><br><span class="line">    <span class="attr">withCredentials</span>: <span class="literal">false</span>,</span><br><span class="line">  &#125;,</span><br><span class="line"></span><br><span class="line">  <span class="attr">headers</span>: &#123;</span><br><span class="line">    <span class="comment">// Set any custom headers here.</span></span><br><span class="line">    <span class="comment">// If you set any non-simple headers, your server must include these</span></span><br><span class="line">    <span class="comment">// headers in the &#x27;Access-Control-Allow-Headers&#x27; response header.</span></span><br><span class="line">  &#125;,</span><br><span class="line"></span><br><span class="line">  <span class="attr">success</span>: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="comment">// Here&#x27;s where you handle a successful response.</span></span><br><span class="line">  &#125;,</span><br><span class="line"></span><br><span class="line">  <span class="attr">error</span>: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="comment">// Here&#x27;s where you handle an error response.</span></span><br><span class="line">    <span class="comment">// Note that if the error was due to a CORS issue,</span></span><br><span class="line">    <span class="comment">// this function will still fire, but there won&#x27;t be any additional</span></span><br><span class="line">    <span class="comment">// information about the error.</span></span><br><span class="line">  &#125;,</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<p>服务器正确响应 CORS 请求<br>1、简单请求(重点)<br>get,post,head<br>header 内容= Accept+Accept Language+Content Language+Last Event ID+Content Type：仅接受 application/x-www-form-urlencoded，multipart/form-data，text/plain<br>栗子<br>b.com 向 a.com 发起跨域请求</p>
+<p>怎么起两个服务器做实验呢??</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 客户端js：</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> xhr = XMLHttpRequest();</span><br><span class="line">xhr.open(<span class="string">&quot;post&quot;</span>, url, <span class="literal">true</span>); <span class="comment">//url绝对路径，true异步，false同步</span></span><br><span class="line">xhr.withCredentails = <span class="literal">true</span>;</span><br><span class="line">xhr.onload = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;&#125;;</span><br><span class="line">xhr.send();</span><br><span class="line"></span><br><span class="line"><span class="comment">// 服务端(node):</span></span><br><span class="line"></span><br><span class="line">res.setHeader(<span class="string">&quot;Access-Control-Allow-Origin&quot;</span>, req.header.origin);</span><br><span class="line">res.setHeader(<span class="string">&quot;Access-Control-Allow-Credentails&quot;</span>, <span class="literal">true</span>); <span class="comment">//告诉客户端可以在http请求中加上cookie</span></span><br><span class="line">res.setHeader(<span class="string">&quot;Access-Control-Allow-Method&quot;</span>, <span class="string">&quot;POST,GET,PUT,DELETE,OPTIONS&quot;</span>);</span><br></pre></td></tr></table></figure>
+
+<p>cors是前后端需要配合使用，后端配置，，前端的请求发送也要带上相应的跨域标志位</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">fetch(<span class="string">&quot;http://10.8.6.125/auth-center/login?username=admin123&amp;password=12345678&quot;</span>, &#123;</span><br><span class="line">        <span class="attr">mode</span>: <span class="string">&quot;cors&quot;</span>,</span><br><span class="line">        <span class="attr">method</span>: <span class="string">&#x27;post&#x27;</span>,</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<h3 id="nginx配置跨域"><a href="#nginx配置跨域" class="headerlink" title="nginx配置跨域"></a>nginx配置跨域</h3><p>$request_method = ‘OPTIONS’,注意options请求的配置</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">add_header &#x27;Access-Control-Allow-Origin&#x27; &#x27;*&#x27;;</span><br><span class="line">add_header &#x27;Access-Control-Allow-Methods&#x27; &#x27;GET, POST, PUT, DELETE, OPTIONS&#x27;;</span><br><span class="line">add_header &#x27;Access-Control-Allow-Headers&#x27; &#x27;x-requested-with, Authorization, Content-Type&#x27;;</span><br><span class="line">if ($request_method = &#x27;OPTIONS&#x27;) &#123;</span><br><span class="line">    add_header &#x27;Access-Control-Allow-Origin&#x27; &#x27;*&#x27;;</span><br><span class="line">    add_header &#x27;Access-Control-Allow-Methods&#x27; &#x27;GET, POST, PUT, DELETE, OPTIONS&#x27;;</span><br><span class="line">    add_header &#x27;Access-Control-Allow-Headers&#x27; &#x27;Authorization, Content-Type&#x27;;</span><br><span class="line">    add_header &#x27;Access-Control-Allow-Credentials&#x27; &#x27;true&#x27;;</span><br><span class="line">    add_header &#x27;Access-Control-Max-Age&#x27; 1728000;</span><br><span class="line">    add_header &#x27;Content-Length&#x27; 0;</span><br><span class="line">    return 204;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="主流鉴权方案"><a href="#主流鉴权方案" class="headerlink" title="主流鉴权方案"></a>主流鉴权方案</h2><ol>
+<li>引入 Redis 做分布式会话，即用户登录成功后，将用户身份、权限信息存入 Redis，以一个唯一 ID 作为 Key，并设置信息在 Redis 里的失效时间。这个唯一 ID 的 Key 将返回给客户端，客户端可以放入 Cookie，sessionStorage 等处做本地存储。下次访问的时候，将这个唯一 ID 放入请求参数中一起发送（一般放入 Header）。服务端通过检查 Redis 里有无这个 ID 来判断用户是否登录，获取用户身份和权限信息。客户端如果长时间没有操作，则存储在 Redis 里会话信息过期自动删除。客户端每访问一次服务端，需刷新一次会话信息的过期时间，避免固定过期时间带来的低用户体验。</li>
+<li>JWT，即 Java Web Token。用户登录成功后，服务端向客户端返回的唯一 ID 不再是无意义的字符串，而是包含了用户身份、权限、失效时间等信息的加密字符串。并且这个字符串包含数字签名，服务端可对这个字符串做数字签名验签，确保该字符串未经篡改和伪造。相比分布式会话方案，JWT 虽省去了 Redis 存储，但是每次访问都要做数字签名验证，增加了 CPU 的资源损耗。</li>
+</ol>
+<h2 id="token"><a href="#token" class="headerlink" title="token"></a>token</h2><h3 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h3><p>json web token 简称 JWT，是基于 JSON 的一种开放标准<br>JWT = base64 编码(header) + ‘.’ + base64 编码(payload) + ‘.’ + signature</p>
+<h3 id="token-流程"><a href="#token-流程" class="headerlink" title="token 流程"></a>token 流程</h3><ol>
+<li>用户使用用户名密码来请求服务器</li>
+<li>服务器进行验证用户的信息</li>
+<li>服务器通过验证发送给用户一个 token</li>
+<li>客户端存储 token，并在每次请求时附送上这个 token 值</li>
+<li>服务端验证 token 值，并返回数据</li>
+</ol>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 客户端应用</span></span><br><span class="line">fetch(<span class="string">&quot;api/user/1&quot;</span>, &#123;</span><br><span class="line">  <span class="attr">headers</span>: &#123;</span><br><span class="line">    <span class="attr">Authorization</span>: <span class="string">&quot;Bearer &quot;</span> + token,</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<h3 id="Token-和-JWT-的区别"><a href="#Token-和-JWT-的区别" class="headerlink" title="Token 和 JWT 的区别"></a>Token 和 JWT 的区别</h3><ul>
+<li>Token：服务端验证客户端发送过来的 Token 时，还需要查询数据库获取用户信息，然后验证 Token 是否有效(Session 的用法)。</li>
+<li>JWT： 将 Token 和 Payload 加密后存储于客户端，服务端只需要使用密钥解密进行校验（校验也是 JWT 自己实现的）即可，不需要查询或者减少查询数据库，因为 JWT 自包含了用户信息和加密的数据</li>
+<li>Cookies 和 WebStorage,web storage 是用于本地大容量存储数据(web storage 的存储量大到 <strong>5MB</strong>);而 cookie 是用于客户端和服务端间的信息传递；Cookies 大小限制为 <strong>4kb</strong>,cookie 既可以由服务端来设置，也可以由客户端来设置。</li>
+<li>当客户端要发送 http 请求时，浏览器会先检查下是否有对应的 cookie。有的话，则<strong>自动</strong>地添加在 request header 中的 cookie 字段。注意，每一次的 http 请求时，如果有 cookie，浏览器都会自动带上 cookie 发送给服务端。那么把什么数据放到 cookie 中就很重要了，因为很多数据并不是每次请求都需要发给服务端，毕竟会增加网络开销，浪费带宽。</li>
+<li>服务端可以设置 cookie 的所有选项：expires、domain、path、secure、HttpOnly</li>
+<li>在客户端是不能通过 js 代码去设置一个 httpOnly 类型的 cookie 的，这种类型的 cookie 只能通过服务端来设置。</li>
+</ul>
+<h3 id="单点登录"><a href="#单点登录" class="headerlink" title="单点登录"></a>单点登录</h3><p>身份验证服务</p>
+<h3 id="JWT-基本"><a href="#JWT-基本" class="headerlink" title="JWT 基本"></a>JWT 基本</h3><p>json web token 简称 JWT，是基于 JSON 的一种开放标准<br>JWT = base64 编码(header) + ‘.’ + base64 编码(payload) + ‘.’ + signature<br>单点登录是当今广泛使用 JWT 的一项功能，因为它的开销很小。</p>
+<p>token 流程</p>
+<ul>
+<li>需要一个 secret（随机数）</li>
+<li>后端利用 secret 和加密算法(如：HMAC-SHA256)对 payload(如账号密码)生成一个字符串(token)，返回前端</li>
+<li>前端每次 request 在 header 中带上 token</li>
+<li>后端用同样的算法解密</li>
+</ul>
+<ol>
+<li>用户使用用户名密码来请求服务器</li>
+<li>服务器进行验证用户的信息</li>
+<li>服务器通过验证发送给用户一个 token</li>
+<li>客户端存储 token，并在每次请求时附送上这个 token 值</li>
+<li>服务端验证 token 值，并返回数据</li>
+<li>客户端应用</li>
+</ol>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">fetch(<span class="string">&quot;api/user/1&quot;</span>, &#123;</span><br><span class="line">  <span class="attr">headers</span>: &#123;</span><br><span class="line">    <span class="attr">Authorization</span>: <span class="string">&quot;Bearer &quot;</span> + token,</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<h3 id="JSON-Web-Token-和-Session-Cookies-的对比"><a href="#JSON-Web-Token-和-Session-Cookies-的对比" class="headerlink" title="JSON Web Token 和 Session Cookies 的对比"></a>JSON Web Token 和 Session Cookies 的对比</h3><p>用来处理在不同页面之间切换，保存用户登录信息的机制。</p>
+<ol>
+<li>Session Cookies 也称为会话 Cookies，在 Session Cookies 中，用户的登录状态会保存在服务器的内存中。当用户登录时，Session 就被服务端安全的创建。</li>
+</ol>
+<p>在每次请求时，服务器都会从会话 Cookie 中读取 SessionId，如果服务端的数据和读取的 SessionId 相同，那么服务器就会发送响应给浏览器，允许用户登录。</p>
+<ol start="2">
+<li><p>Session Cookies 是存储在服务器内存中，这就意味着如果网站或者应用很大的情况下会耗费大量的资源。由于 JWT 是无状态的，在许多情况下，它们可以节省服务器资源。因此 JWT 要比 Session Cookies 具有更强的可扩展性。</p>
+</li>
+<li><p>JWT 具有加密签名，而 Session Cookies 则没有。JWT 是无状态的，因为声明被存储在客户端，而不是服务端内存中。Session Cookies 是存储在服务器内存中，这就意味着如果网站或者应用很大的情况下会耗费大量的资源。由于 JWT 是无状态的，在许多情况下，它们可以节省服务器资源。因此 JWT 要比 Session Cookies 具有更强的可扩展性。</p>
+</li>
+<li><p>Session Cookies 只能用在单个节点的域或者它的子域中有效。JWT 能够通过多个节点进行用户认证，也就是我们常说的跨域认证。</p>
+</li>
+<li><p>用计算时间(JWT)换存储空间(Session Cookies)</p>
+</li>
+<li><p>同域内浏览器中发出的任何一个请求都会带上 cookie，无论请求什么资源，请求时，cookie 会出现在请求头的 cookie 字段中。</p>
+</li>
+</ol>
+<h3 id="无感刷新-token"><a href="#无感刷新-token" class="headerlink" title="无感刷新 token"></a>无感刷新 token</h3><p>token 过期时间太短，需要频繁的去登录<br>后端提供刷新 token 的接口，实现无感刷新的思路</p>
+<ol>
+<li>定时器调接口,定时刷新 token 接口</li>
+<li>响应拦截器中拦截，判断 token 返回过期后，调用刷新 token 接口<br>token 定期过期，这时请求返回 token 过期，就需要拿着 refreshToken 去请求新的 accessToken，<br>但是因为 ajax 是异步请求，所以会存在多个接口重复刷新 token，引发报错。解决办法：刷新一次 token，其余请求拦截放入缓存中，等 token 刷新成功后在发起请求。(资料示例)[<a target="_blank" rel="noopener" href="https://www.jianshu.com/p/2a3cae40fc7f]">https://www.jianshu.com/p/2a3cae40fc7f]</a></li>
+</ol>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/browser/" rel="tag"># browser</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2022/02/01/knowledge/interview/exercise/" rel="prev" title="exercise">
+                  <i class="fa fa-chevron-left"></i> exercise
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2022/03/23/life/idea/" rel="next" title="collection">
+                  collection <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    
+  
+  <div class="comments">
+    <script src="https://giscus.app/client.js"
+        data-repo="UniqueCrownClown/UniqueCrownClown.github.io" 
+        data-repo-id="MDEwOlJlcG9zaXRvcnkxMDQyODk2MzU=" 
+        data-category="General"
+        data-category-id="DIC_kwDOBjdVY84CQXdS"
+        data-mapping="pathname" 
+        data-reactions-enabled="1" 
+        data-emit-metadata="1" 
+        data-theme="light"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        data-input-position="bottom"
+        data-loading="lazy"
+        async>
+    </script>
+  </div>
+  
+  
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2024</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">clown</span>
+</div>
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_uv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+    </div>
+  </footer>
+
+  
+  <script size="90" alpha="0.6" zIndex="-1" src="https://unpkg.com/ribbon.js@1.0.2/dist/ribbon.min.js"></script>
+  <script src="https://unpkg.com/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/jquery@3.6.0/dist/jquery.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script>
+
+  
+<script src="https://unpkg.com/hexo-generator-searchdb@1.4.0/dist/search.js" integrity="sha256-vXZMYLEqsROAXkEw93GGIvaB2ab+QW6w3+1ahD9nXXA=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
+
+
+
+  <script src="/js/third-party/fancybox.js"></script>
+
+
+  
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+
+</body>
+</html>
