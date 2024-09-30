@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.loli.net/css?family=Noto+Serif+SC:300,300italic,400,400italic,700,700italic%7CRoboto+Mono:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="https://unpkg.com/@fortawesome/fontawesome-free@5.15.4/css/all.min.css" integrity="sha256-mUZM63G8m73Mcidfrv5E+Y61y7a12O5mW4ezU3bxqW4=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://unpkg.com/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://unpkg.com/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"uniquecrownclown.github.io","root":"/","images":"/images","scheme":"Mist","darkmode":false,"version":"8.8.0","exturl":false,"sidebar":{"position":"left","display":"hide","padding":18,"offset":12,"width":240},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"giscus","storage":true,"lazyload":false,"nav":null,"activeClass":"giscus"},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+<meta name="description" content="java…">
+<meta property="og:type" content="article">
+<meta property="og:title" content="java笔记">
+<meta property="og:url" content="https://uniquecrownclown.github.io/2017/08/21/knowledge/java/java/index.html">
+<meta property="og:site_name" content="uniquecrownclown">
+<meta property="og:description" content="java…">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2017-08-21T11:23:51.000Z">
+<meta property="article:modified_time" content="2024-09-30T08:33:35.001Z">
+<meta property="article:author" content="clown">
+<meta property="article:tag" content="java">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://uniquecrownclown.github.io/2017/08/21/knowledge/java/java/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://uniquecrownclown.github.io/2017/08/21/knowledge/java/java/","path":"2017/08/21/knowledge/java/java/","title":"java笔记"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>java笔记 | uniquecrownclown</title>
+  
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">uniquecrownclown</h1>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">clown的笔记</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li>
+        <li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li>
+        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li>
+        <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li>
+        <li class="menu-item menu-item-collection"><a href="/test/" rel="section"><i class="fa fa-cubes fa-fw"></i>collection</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BF%90%E8%A1%8C-shell"><span class="nav-number">1.</span> <span class="nav-text">运行 shell</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="nav-number">2.</span> <span class="nav-text">数据类型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#LinkedHashMap"><span class="nav-number">3.</span> <span class="nav-text">LinkedHashMap</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BC%95%E7%94%A8%E7%B1%BB%E5%9E%8B%E5%92%8C%E5%80%BC%E7%B1%BB%E5%9E%8B"><span class="nav-number">4.</span> <span class="nav-text">引用类型和值类型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#thread"><span class="nav-number">5.</span> <span class="nav-text">thread</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#callback"><span class="nav-number">6.</span> <span class="nav-text">callback</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#listener"><span class="nav-number">7.</span> <span class="nav-text">listener</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#io-%E4%B8%8E-nio"><span class="nav-number">8.</span> <span class="nav-text">io 与 nio</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#record"><span class="nav-number">9.</span> <span class="nav-text">record</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#guava"><span class="nav-number">9.1.</span> <span class="nav-text">guava</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Apache-%E5%B7%A5%E5%85%B7%E5%BA%93"><span class="nav-number">10.</span> <span class="nav-text">Apache 工具库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%B1%BB%E5%8A%A0%E8%BD%BD%E5%99%A8"><span class="nav-number">11.</span> <span class="nav-text">类加载器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%80%BC%E4%BC%A0%E9%80%92%E5%92%8C%E5%AF%B9%E8%B1%A1%E4%BC%A0%E9%80%92"><span class="nav-number">12.</span> <span class="nav-text">值传递和对象传递</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%AF%E5%8F%98%E5%8F%82%E6%95%B0"><span class="nav-number">13.</span> <span class="nav-text">可变参数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#try-with-resources-%E8%AF%AD%E5%8F%A5"><span class="nav-number">14.</span> <span class="nav-text">try-with-resources 语句</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B3%9B%E5%9E%8B"><span class="nav-number">15.</span> <span class="nav-text">泛型</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B3%9B%E5%9E%8B%E6%93%A6%E9%99%A4"><span class="nav-number">15.1.</span> <span class="nav-text">泛型擦除</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A4%9A%E7%BA%BF%E7%A8%8B"><span class="nav-number">16.</span> <span class="nav-text">多线程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#java8"><span class="nav-number">17.</span> <span class="nav-text">java8</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#java11"><span class="nav-number">18.</span> <span class="nav-text">java11</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#java17"><span class="nav-number">19.</span> <span class="nav-text">java17</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%87%BD%E6%95%B0%E5%BC%8F%E7%BC%96%E7%A8%8B"><span class="nav-number">20.</span> <span class="nav-text">函数式编程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Stream-API"><span class="nav-number">21.</span> <span class="nav-text">Stream API</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9E%84%E5%BB%BA"><span class="nav-number">21.1.</span> <span class="nav-text">构建</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#stream-%E7%9A%84%E5%90%88%E5%B9%B6%E5%92%8C%E6%88%AA%E5%8F%96"><span class="nav-number">21.2.</span> <span class="nav-text">stream 的合并和截取</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#stream-%E7%9A%84%E7%94%9F%E6%88%90"><span class="nav-number">21.3.</span> <span class="nav-text">stream 的生成</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#stream-%E7%9A%84%E6%9F%A5%E6%89%BE%E5%92%8C%E5%88%A4%E6%96%AD"><span class="nav-number">21.4.</span> <span class="nav-text">stream 的查找和判断</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#stream-%E7%9A%84%E5%8E%BB%E9%87%8D%E5%92%8C%E6%8E%92%E5%BA%8F"><span class="nav-number">21.5.</span> <span class="nav-text">stream 的去重和排序</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#stream-%E7%9A%84%E5%8C%96%E7%AE%80"><span class="nav-number">21.6.</span> <span class="nav-text">stream 的化简</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#stream-%E7%9A%84%E6%94%B6%E9%9B%86"><span class="nav-number">21.7.</span> <span class="nav-text">stream 的收集</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#stream-%E7%9A%84%E6%94%B6%E9%9B%86%E5%99%A8"><span class="nav-number">21.8.</span> <span class="nav-text">stream 的收集器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#stream-%E7%9A%84%E4%B8%8B%E6%B8%B8%E6%94%B6%E9%9B%86%E5%99%A8-groupingBy"><span class="nav-number">21.9.</span> <span class="nav-text">stream 的下游收集器 groupingBy</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#stream-%E5%9F%BA%E6%9C%AC%E6%B5%81"><span class="nav-number">21.10.</span> <span class="nav-text">stream 基本流</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#stream-%E7%9A%84%E5%B9%B6%E8%A1%8C%E6%B5%81"><span class="nav-number">21.11.</span> <span class="nav-text">stream 的并行流</span></a></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="clown"
+      src="/images/avatar.jpg">
+  <p class="site-author-name" itemprop="name">clown</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">86</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">8</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">69</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/UniqueCrownClown" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;UniqueCrownClown" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="/1129986876@qq.com" title="E-Mail → 1129986876@qq.com"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://weibo.com/u/2143916663" title="Weibo → https:&#x2F;&#x2F;weibo.com&#x2F;u&#x2F;2143916663" rel="noopener" target="_blank"><i class="fab fa-weibo fa-fw"></i>Weibo</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://twitter.com/CrownClown7777" title="Twitter → https:&#x2F;&#x2F;twitter.com&#x2F;CrownClown7777" rel="noopener" target="_blank"><i class="fab fa-twitter fa-fw"></i>Twitter</a>
+      </span>
+  </div>
+
+
+
+
+    <span id="jinrishici-sentence">正在加载今日诗词....</span>
+    <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+  <a href="https://github.com/UniqueCrownClown" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub" rel="noopener" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://uniquecrownclown.github.io/2017/08/21/knowledge/java/java/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="clown">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="uniquecrownclown">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          java笔记
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2017-08-21 11:23:51" itemprop="dateCreated datePublished" datetime="2017-08-21T11:23:51+00:00">2017-08-21</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2024-09-30 08:33:35" itemprop="dateModified" datetime="2024-09-30T08:33:35+00:00">2024-09-30</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/java/" itemprop="url" rel="index"><span itemprop="name">java</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <p>java…</p>
+<span id="more"></span>
+
+<h2 id="运行-shell"><a href="#运行-shell" class="headerlink" title="运行 shell"></a>运行 shell</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">top pid # 能够实时显示系统中各个进程的资源占用状况，类似于Windows的任务管理器</span><br><span class="line"></span><br><span class="line">ll /proc/ # 会列出/proc/目录下的所有子目录和文件 /proc是一个虚拟文件系统，因此其中的大多数文件和目录都是动态生成的，并且在不同的系统上可能会有所不同。</span><br><span class="line"></span><br><span class="line">java -jar -Xms256M -Xmx256M amq-console-1.0.0.0.jar</span><br><span class="line">java -jar -Dspring.config.location=config/application.yml ats-console-1.0.0.0.jar</span><br><span class="line">nohup java -jar **.jar &amp; # nohup表示终端关闭进程不受影响,&amp;符号用于将进程放入后台运行，这样您可以继续使用终端会话而不会受到进程的干扰。</span><br><span class="line"></span><br><span class="line">nohup java -jar *.jar &amp; &gt; hello.log &amp;</span><br><span class="line">more hello.log</span><br><span class="line">ps -ef | grep java</span><br><span class="line"></span><br><span class="line">kill -9 pid</span><br><span class="line"></span><br><span class="line">tail -f filename # 会把 filename 文件里的最尾部的内容显示在屏幕上，并且不断刷新，只要 filename 更新就可以看到最新的文件内容。</span><br><span class="line">tail -f /proc/&lt;PID&gt;/fd/1 # 标准输出（stdout）</span><br><span class="line">tail -f /proc/&lt;PID&gt;/fd/2 # 标准错误输出（stderr</span><br><span class="line"></span><br><span class="line">tail -n 50 文件名 # 显示最后50行</span><br><span class="line"></span><br><span class="line">ps -aux | grep java</span><br><span class="line">ps -ef | grep java</span><br><span class="line"></span><br><span class="line">ps -aux|grep nginx</span><br><span class="line">ps -aux|grep tomcat</span><br><span class="line">ps -ef | grep nginx</span><br><span class="line"></span><br><span class="line">java -jar springboot.jar --spring.profiles.active=dev</span><br></pre></td></tr></table></figure>
+
+<h2 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h2><h2 id="LinkedHashMap"><a href="#LinkedHashMap" class="headerlink" title="LinkedHashMap"></a>LinkedHashMap</h2><h2 id="引用类型和值类型"><a href="#引用类型和值类型" class="headerlink" title="引用类型和值类型"></a>引用类型和值类型</h2><h2 id="thread"><a href="#thread" class="headerlink" title="thread"></a>thread</h2><pre><code>线程5大状态
+    new
+    running
+    runnable
+    dead
+    Blocked
+</code></pre>
+<h2 id="callback"><a href="#callback" class="headerlink" title="callback"></a>callback</h2><p>同步回调<br>代码运行到某一个位置的时候，如果遇到了需要回调的代码，会在这里等待，等待回调结果返回后再继续执行。</p>
+<p>异步回调<br>代码执行到需要回调的代码的时候，并不会停下来，而是继续执行，当然可能过一会回调的结果会返回回来。</p>
+<h2 id="listener"><a href="#listener" class="headerlink" title="listener"></a>listener</h2><p>实现异步监听</p>
+<h2 id="io-与-nio"><a href="#io-与-nio" class="headerlink" title="io 与 nio"></a>io 与 nio</h2><h2 id="record"><a href="#record" class="headerlink" title="record"></a>record</h2><p>Java“单继承，多实现”</p>
+<p>java 对象的组成<br>对象头+实例数据（对象真正存储的数据区，各种类型的字段内容）+对齐填充（占位）<br>对象头 = 对象自身运行时的数据 + 类型指针（指向此对象的类元数据的指针）</p>
+<p>final 修饰的类不允许被继承</p>
+<p>final 修饰的方法表示此方法提供的功能已经满足当前要求，不需要进行扩展，并且也不允许任何从此类继承的类来重写此方法</p>
+<p>当 final 修饰参数时，表示此参数在整个方法内不允许被修改</p>
+<h3 id="guava"><a href="#guava" class="headerlink" title="guava"></a>guava</h3><p>google 开源的 java 工具库</p>
+<h2 id="Apache-工具库"><a href="#Apache-工具库" class="headerlink" title="Apache 工具库"></a>Apache 工具库</h2><p>commons-collections<br>commons-io<br>commons-text<br>commons-lang<br>commons-lang3</p>
+<h2 id="类加载器"><a href="#类加载器" class="headerlink" title="类加载器"></a>类加载器</h2><p>类加载器是 Java 中的一个重要概念，用于将类加载到 JVM 中以便于程序运行。每个类都由特定的类加载器加载，通常情况下，一个类只会被加载一次。</p>
+<p>BootStrap ClassLoader<br>Extension ClassLoader<br>Application ClassLoader<br>Custom ClassLoader</p>
+<h2 id="值传递和对象传递"><a href="#值传递和对象传递" class="headerlink" title="值传递和对象传递"></a>值传递和对象传递</h2><ol>
+<li>值传递</li>
+</ol>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">testSwap</span><span class="params">()</span> </span>&#123;</span><br><span class="line">   <span class="keyword">int</span> a = <span class="number">1</span>;</span><br><span class="line">   <span class="keyword">int</span> b = <span class="number">2</span>;</span><br><span class="line">   swap(a, b); <span class="comment">// a、b值不会变化。</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">swap</span><span class="params">(<span class="keyword">int</span> a, <span class="keyword">int</span> b)</span> </span>&#123;</span><br><span class="line">   <span class="keyword">int</span> c = a;</span><br><span class="line">   a = b;</span><br><span class="line">   b = c;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>对象传递</li>
+</ol>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">testSwap</span><span class="params">()</span> </span>&#123;</span><br><span class="line">   Integer a = <span class="number">1</span>;</span><br><span class="line">   Integer b = <span class="number">2</span>;</span><br><span class="line">   swap(a, b); <span class="comment">// a、b的值会被修改</span></span><br><span class="line">   System.out.println(<span class="string">&quot;a = &quot;</span> + a + <span class="string">&quot;, b = &quot;</span> + b);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">swap</span><span class="params">(Integer a, Integer b)</span> </span>&#123;</span><br><span class="line">   Integer c = a;</span><br><span class="line">   a = b;</span><br><span class="line">   b = c;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h2 id="可变参数"><a href="#可变参数" class="headerlink" title="可变参数"></a>可变参数</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 允许在方法中定义可变数量的参数。可变参数必须是方法的最后一个参数。</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">printNumbers</span><span class="params">(<span class="keyword">int</span>... numbers)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> number : numbers) &#123;</span><br><span class="line">        System.out.println(number);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">printNumbers(<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>);</span><br></pre></td></tr></table></figure>
+
+<h2 id="try-with-resources-语句"><a href="#try-with-resources-语句" class="headerlink" title="try-with-resources 语句"></a>try-with-resources 语句</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 自动关闭资源</span></span><br><span class="line"><span class="keyword">try</span> (BufferedReader br = <span class="keyword">new</span> BufferedReader(<span class="keyword">new</span> FileReader(<span class="string">&quot;file.txt&quot;</span>))) &#123;</span><br><span class="line">    System.out.println(br.readLine());</span><br><span class="line">&#125; <span class="keyword">catch</span> (IOException e) &#123;</span><br><span class="line">    e.printStackTrace();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="泛型"><a href="#泛型" class="headerlink" title="泛型"></a>泛型</h2><p>泛型只能是包装类型</p>
+<h3 id="泛型擦除"><a href="#泛型擦除" class="headerlink" title="泛型擦除"></a>泛型擦除</h3><h2 id="多线程"><a href="#多线程" class="headerlink" title="多线程"></a>多线程</h2><p>java 异步</p>
+<p>FutureCallback</p>
+<p>在多线程环境下，使用 HashMap 进行 put 操作时存在丢失数据的情况，为了避免这种 bug 的隐患，强烈建议使用 ConcurrentHashMap 代替 HashMap。</p>
+<p>golang 为啥高并发<br>协程更轻量，占用内存更小，这是它能做到高并发的前提。</p>
+<h2 id="java8"><a href="#java8" class="headerlink" title="java8"></a>java8</h2><h2 id="java11"><a href="#java11" class="headerlink" title="java11"></a>java11</h2><p>Map.of()<br>List.of()</p>
+<h2 id="java17"><a href="#java17" class="headerlink" title="java17"></a>java17</h2><p>record 是 Java 14 引入的一个预览特性，后来在 Java 16 成为正式特性。Record 类是一种特殊类型的类，旨在简化不可变数据类（Immutable Data Classes）的创建过程。使用 record 关键字声明的类会自动生成构造器、getter 方法、equals()、hashCode() 和 toString() 方法，极大地减少了样板代码的编写。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> record <span class="title">Person</span><span class="params">(String name, <span class="keyword">int</span> age)</span> </span>&#123;&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="函数式编程"><a href="#函数式编程" class="headerlink" title="函数式编程"></a>函数式编程</h2><p>lambda 表达式 :</p>
+<p>函数对象:</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@FunctionalInterface</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">MyFunction</span>&lt;<span class="title">T</span>, <span class="title">R</span>&gt; </span>&#123;</span><br><span class="line">  <span class="function">R <span class="title">apply</span><span class="params">(T t)</span></span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>常见函数接口:<br>Predicate</p>
+<ul>
+<li>Predicate<T> 接收一个参数并返回一个布尔值</li>
+</ul>
+<p>Consumer</p>
+<ul>
+<li>Consumer<T> 接收一个参数，不返回任何结果</li>
+<li>BiConsumer<T> 接收两个参数，不返回任何结果</li>
+</ul>
+<p>Function</p>
+<ul>
+<li>Function&lt;T, R&gt; 接收一个参数 T 并返回一个结果 R</li>
+</ul>
+<p>Supplier</p>
+<ul>
+<li>Supplier<T> 无参数，返回一个 T</li>
+</ul>
+<p>Operator</p>
+<ul>
+<li>UnaryOperator<T> 接收单个同类型参数并返回同类型结果的操作</li>
+<li>BinaryOperator<T> 接收两个同类型参数并返回同类型结果的操作</li>
+</ul>
+<p>方法引用:</p>
+<p>构造方法引用:(类名::new)<br>Student::new 等价于()-&gt;new Student()<br>静态方法引用:(类名::静态方法)<br>Math::max 等价于(a,b)-&gt;Math.max(a,b)<br>System.out::println 等价于(x)-&gt;System.out.println(x)<br>非静态方法引用:(类名::非静态方法)<br>String::length 等价于(x)-&gt;x.length()<br>Student::getName 等价于(x)-&gt;x.getName()<br>Student::setName 等价于(x,y)-&gt;x.setName(y)</p>
+<p>this::非静态方法<br>super::非静态方法</p>
+<h2 id="Stream-API"><a href="#Stream-API" class="headerlink" title="Stream API"></a>Stream API</h2><ul>
+<li>forEach</li>
+<li>filter</li>
+<li>map</li>
+<li>flatMap</li>
+<li>reduce</li>
+<li>collect</li>
+</ul>
+<h3 id="构建"><a href="#构建" class="headerlink" title="构建"></a>构建</h3><ul>
+<li>Stream.of(T… values) 对象构建</li>
+<li>Arrays.stream(T[] values) 数组构建</li>
+<li>集合.stream() 集合构建</li>
+</ul>
+<h3 id="stream-的合并和截取"><a href="#stream-的合并和截取" class="headerlink" title="stream 的合并和截取"></a>stream 的合并和截取</h3><ul>
+<li>Stream.concat(Stream a, Stream b) 合并两个流</li>
+<li>skip(long n) 跳过前 n 个元素</li>
+<li>limit(long n) 截取前 n 个元素</li>
+<li>takeWhile(Predicate p) 截取第一个不满足 p 的元素之前的元素</li>
+<li>dropWhile(Predicate p) 截取第一个满足 p 的元素之后的元素</li>
+</ul>
+<h3 id="stream-的生成"><a href="#stream-的生成" class="headerlink" title="stream 的生成"></a>stream 的生成</h3><ul>
+<li>IntStream.range(1, 10)</li>
+<li>IntStream.rangeClosed(1, 10)</li>
+<li>IntStream.generate(() -&gt; new Random().nextInt(100))</li>
+<li>IntStream.iterate(1, (x) -&gt; x + 1)</li>
+</ul>
+<h3 id="stream-的查找和判断"><a href="#stream-的查找和判断" class="headerlink" title="stream 的查找和判断"></a>stream 的查找和判断</h3><ul>
+<li>filter( Predicate p).findFirst() 返回第一个元素</li>
+<li>filter( Predicate p).findAny() 返回任意一个元素</li>
+<li>anyMatch(Predicate p) 是否存在元素满足 p</li>
+<li>allMatch(Predicate p) 是否所有元素满足 p</li>
+<li>noneMatch(Predicate p) 是否所有元素都不满足 p</li>
+</ul>
+<h3 id="stream-的去重和排序"><a href="#stream-的去重和排序" class="headerlink" title="stream 的去重和排序"></a>stream 的去重和排序</h3><ul>
+<li>sorted(Comparator c) 排序</li>
+<li>distinct() 去重</li>
+</ul>
+<h3 id="stream-的化简"><a href="#stream-的化简" class="headerlink" title="stream 的化简"></a>stream 的化简</h3><ul>
+<li>reduce(BinaryOperator op) 化简</li>
+</ul>
+<h3 id="stream-的收集"><a href="#stream-的收集" class="headerlink" title="stream 的收集"></a>stream 的收集</h3><ul>
+<li>collect(Collector c) 收集</li>
+</ul>
+<h3 id="stream-的收集器"><a href="#stream-的收集器" class="headerlink" title="stream 的收集器"></a>stream 的收集器</h3><ul>
+<li>Collectors.toList()</li>
+<li>Collectors.toSet()</li>
+<li>Collectors.toMap(keyMapper, valueMapper)</li>
+<li>Collectors.joining(delimiter)</li>
+</ul>
+<h3 id="stream-的下游收集器-groupingBy"><a href="#stream-的下游收集器-groupingBy" class="headerlink" title="stream 的下游收集器 groupingBy"></a>stream 的下游收集器 groupingBy</h3><ul>
+<li>mapping(Function mapper, Collector downstream)</li>
+<li>filtering(Predicate predicate, Collector downstream)</li>
+<li>flatMapping(Function mapper, Collector downstream)</li>
+<li>counting()</li>
+<li>minBy(Comparator c)</li>
+<li>maxBy(Comparator c)</li>
+<li>summingInt(ToIntFunction mapper)</li>
+<li>averagingInt(ToIntFunction mapper)</li>
+<li>reducing(BinaryOperator op)</li>
+</ul>
+<h3 id="stream-基本流"><a href="#stream-基本流" class="headerlink" title="stream 基本流"></a>stream 基本流</h3><ul>
+<li>IntStream</li>
+<li>LongStream</li>
+<li>DoubleStream</li>
+</ul>
+<h3 id="stream-的并行流"><a href="#stream-的并行流" class="headerlink" title="stream 的并行流"></a>stream 的并行流</h3><ul>
+<li>paraller</li>
+</ul>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/java/" rel="tag"># java</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2017/08/21/knowledge/java/jvm/" rel="prev" title="jvm笔记">
+                  <i class="fa fa-chevron-left"></i> jvm笔记
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2017/08/21/knowledge/java/firefly/" rel="next" title="可观测">
+                  可观测 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    
+  
+  <div class="comments">
+    <script src="https://giscus.app/client.js"
+        data-repo="UniqueCrownClown/UniqueCrownClown.github.io" 
+        data-repo-id="MDEwOlJlcG9zaXRvcnkxMDQyODk2MzU=" 
+        data-category="General"
+        data-category-id="DIC_kwDOBjdVY84CQXdS"
+        data-mapping="pathname" 
+        data-reactions-enabled="1" 
+        data-emit-metadata="1" 
+        data-theme="light"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        data-input-position="bottom"
+        data-loading="lazy"
+        async>
+    </script>
+  </div>
+  
+  
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2024</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">clown</span>
+</div>
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_uv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+    </div>
+  </footer>
+
+  
+  <script size="90" alpha="0.6" zIndex="-1" src="https://unpkg.com/ribbon.js@1.0.2/dist/ribbon.min.js"></script>
+  <script src="https://unpkg.com/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/jquery@3.6.0/dist/jquery.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script>
+
+  
+<script src="https://unpkg.com/hexo-generator-searchdb@1.4.0/dist/search.js" integrity="sha256-vXZMYLEqsROAXkEw93GGIvaB2ab+QW6w3+1ahD9nXXA=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
+
+
+
+  <script src="/js/third-party/fancybox.js"></script>
+
+
+  
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+
+</body>
+</html>

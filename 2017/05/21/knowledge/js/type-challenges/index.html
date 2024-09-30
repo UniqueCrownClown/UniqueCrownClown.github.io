@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.loli.net/css?family=Noto+Serif+SC:300,300italic,400,400italic,700,700italic%7CRoboto+Mono:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="https://unpkg.com/@fortawesome/fontawesome-free@5.15.4/css/all.min.css" integrity="sha256-mUZM63G8m73Mcidfrv5E+Y61y7a12O5mW4ezU3bxqW4=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://unpkg.com/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://unpkg.com/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"uniquecrownclown.github.io","root":"/","images":"/images","scheme":"Mist","darkmode":false,"version":"8.8.0","exturl":false,"sidebar":{"position":"left","display":"hide","padding":18,"offset":12,"width":240},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"giscus","storage":true,"lazyload":false,"nav":null,"activeClass":"giscus"},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+<meta name="description" content="type chanllenges…">
+<meta property="og:type" content="article">
+<meta property="og:title" content="typeChallenges">
+<meta property="og:url" content="https://uniquecrownclown.github.io/2017/05/21/knowledge/js/type-challenges/index.html">
+<meta property="og:site_name" content="uniquecrownclown">
+<meta property="og:description" content="type chanllenges…">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2017-05-21T11:23:51.000Z">
+<meta property="article:modified_time" content="2024-09-30T08:33:35.003Z">
+<meta property="article:author" content="clown">
+<meta property="article:tag" content="typeChallenges">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://uniquecrownclown.github.io/2017/05/21/knowledge/js/type-challenges/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://uniquecrownclown.github.io/2017/05/21/knowledge/js/type-challenges/","path":"2017/05/21/knowledge/js/type-challenges/","title":"typeChallenges"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>typeChallenges | uniquecrownclown</title>
+  
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">uniquecrownclown</h1>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">clown的笔记</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li>
+        <li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li>
+        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li>
+        <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li>
+        <li class="menu-item menu-item-collection"><a href="/test/" rel="section"><i class="fa fa-cubes fa-fw"></i>collection</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%B1%BB%E5%9E%8B%E4%BD%93%E6%93%8D-%E7%B1%BB%E5%9E%8B%E7%BC%96%E7%A8%8B"><span class="nav-number">1.</span> <span class="nav-text">类型体操,类型编程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#simple-tips"><span class="nav-number">2.</span> <span class="nav-text">simple tips</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B8%B8%E8%A7%81%E5%B7%A5%E5%85%B7%E7%B1%BB%E5%9E%8B"><span class="nav-number">3.</span> <span class="nav-text">常见工具类型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E9%93%BE%E6%8E%A5"><span class="nav-number">4.</span> <span class="nav-text">参考链接</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%A4%BA%E4%BE%8B"><span class="nav-number">5.</span> <span class="nav-text">示例</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="clown"
+      src="/images/avatar.jpg">
+  <p class="site-author-name" itemprop="name">clown</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">86</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">8</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">69</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/UniqueCrownClown" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;UniqueCrownClown" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="/1129986876@qq.com" title="E-Mail → 1129986876@qq.com"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://weibo.com/u/2143916663" title="Weibo → https:&#x2F;&#x2F;weibo.com&#x2F;u&#x2F;2143916663" rel="noopener" target="_blank"><i class="fab fa-weibo fa-fw"></i>Weibo</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://twitter.com/CrownClown7777" title="Twitter → https:&#x2F;&#x2F;twitter.com&#x2F;CrownClown7777" rel="noopener" target="_blank"><i class="fab fa-twitter fa-fw"></i>Twitter</a>
+      </span>
+  </div>
+
+
+
+
+    <span id="jinrishici-sentence">正在加载今日诗词....</span>
+    <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+  <a href="https://github.com/UniqueCrownClown" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub" rel="noopener" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://uniquecrownclown.github.io/2017/05/21/knowledge/js/type-challenges/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="clown">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="uniquecrownclown">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          typeChallenges
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2017-05-21 11:23:51" itemprop="dateCreated datePublished" datetime="2017-05-21T11:23:51+00:00">2017-05-21</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2024-09-30 08:33:35" itemprop="dateModified" datetime="2024-09-30T08:33:35+00:00">2024-09-30</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/js/" itemprop="url" rel="index"><span itemprop="name">js</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <p>type chanllenges…</p>
+<span id="more"></span>
+
+<h3 id="类型体操-类型编程"><a href="#类型体操-类型编程" class="headerlink" title="类型体操,类型编程"></a>类型体操,类型编程</h3><p>TS 的类型系统是图灵完备的，这意味着它是可以用来进行逻辑运算，也就是我们戏称的类型体操</p>
+<p>值空间和类型空间<br>在 TS 中，存在两个空间：值空间和类型空间。值空间用于存放会被编译成 JS 的实体内容，而类型空间用于存放各种类型信息，且这些信息会在编译后被完全擦除。两个空间彼此联系，但又互不影响。</p>
+<ul>
+<li>泛型基础</li>
+<li>索引类型&amp;映射类型</li>
+<li>条件类型&amp;分布式条件类型</li>
+<li>infer 关键字</li>
+</ul>
+<h3 id="simple-tips"><a href="#simple-tips" class="headerlink" title="simple tips"></a>simple tips</h3><ul>
+<li>keyin<br>keyin 的方式和获取对象中属性的方式十分相似。并且 TS 只支持数组形式获取成员类型，不支持.语法。并且如果当前类型是<strong>数组或者元组</strong>，还可以通过/**[number]或者[1]/**进一步获取数组子项类型。</li>
+</ul>
+<figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">type</span> FriendList = &#123;</span><br><span class="line">  <span class="attr">count</span>: <span class="built_in">number</span>;</span><br><span class="line">  friends: &#123;</span><br><span class="line">    <span class="attr">firstName</span>: <span class="built_in">string</span>;</span><br><span class="line">    lastName: <span class="built_in">string</span>;</span><br><span class="line">  &#125;[];</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">type</span> Friends = FriendList[<span class="string">&quot;friends&quot;</span>];</span><br><span class="line"><span class="comment">// 等价于</span></span><br><span class="line"><span class="comment">// type Friends = &#123;</span></span><br><span class="line"><span class="comment">//   firstName: string;</span></span><br><span class="line"><span class="comment">//   lastName: string;</span></span><br><span class="line"><span class="comment">// &#125;[];</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">type</span> Friend = Friends[<span class="built_in">number</span>];</span><br><span class="line"><span class="comment">// 等价于</span></span><br><span class="line"><span class="comment">// type Friend = &#123;</span></span><br><span class="line"><span class="comment">//   firstName: string;</span></span><br><span class="line"><span class="comment">//   lastName: string;</span></span><br><span class="line"><span class="comment">// &#125;;</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>keyof<br>keyof 用于获取对象属性名，并用这些属性名构成联合类型<br>keyof 操作的类型是类，则会获取该类所有的 public 属性名</li>
+</ul>
+<figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">type</span> Friend = &#123;</span><br><span class="line">  <span class="attr">firstName</span>: <span class="built_in">string</span>;</span><br><span class="line">  lastName: <span class="built_in">string</span>;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">type</span> Keys = keyof Friend; <span class="comment">// &quot;firstName&quot; | &quot;lastName&quot;</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Person</span> </span>&#123;</span><br><span class="line">  <span class="keyword">public</span> name: <span class="built_in">string</span>;</span><br><span class="line">  <span class="keyword">protected</span> age: <span class="built_in">number</span>;</span><br><span class="line">  <span class="keyword">private</span> sex: <span class="built_in">boolean</span>;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">public</span> <span class="function"><span class="title">foo</span>(<span class="params"></span>)</span> &#123;&#125;</span><br><span class="line">  <span class="keyword">protected</span> <span class="function"><span class="title">bar</span>(<span class="params"></span>)</span> &#123;&#125;</span><br><span class="line">  <span class="keyword">private</span> <span class="function"><span class="title">baz</span>(<span class="params"></span>)</span> &#123;&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">type</span> Keys = keyof Person; <span class="comment">// &quot;name&quot; | &quot;foo&quot;</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>擦除类型限制，通过+/-操作符</li>
+</ul>
+<figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">type</span> RemoveReadonly&lt;T&gt; = &#123;</span><br><span class="line">  -<span class="keyword">readonly</span> [P <span class="keyword">in</span> keyof T]: T[P];</span><br><span class="line">&#125;;</span><br><span class="line"><span class="comment">// Readonly 工具类型中到 readonly 等价于 +readonly，不过通常忽略不写，就像正数不写 + 前缀一样</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">type</span> ReadonlyFriend = &#123;</span><br><span class="line">  <span class="keyword">readonly</span> firstName: <span class="built_in">string</span>;</span><br><span class="line">  <span class="keyword">readonly</span> lastName: <span class="built_in">string</span>;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">type</span> Friend = RemoveReadonly&lt;ReadonlyFriend&gt;;</span><br><span class="line"><span class="comment">// 等价于</span></span><br><span class="line"><span class="comment">// type Friend = &#123;</span></span><br><span class="line"><span class="comment">//     firstName: string;</span></span><br><span class="line"><span class="comment">//     lastName: string;</span></span><br><span class="line"><span class="comment">//   &#125;;</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>TS 泛型的 extends 属性<br>extends 的类型分发<br>extends 前面的参数如果为裸联合类型时则会分解联合类型进行判断（依次遍历所有的子类型进行条件判断）。然后将最终的结果组成新的联合类型。</li>
+</ul>
+<figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Type 是裸类型，会进行分发</span></span><br><span class="line"><span class="keyword">type</span> NakedToArray&lt;Type&gt; = Type <span class="keyword">extends</span> <span class="built_in">any</span> ? Type[] : <span class="built_in">never</span>;</span><br><span class="line"><span class="keyword">type</span> t1 = NakedToArray&lt;<span class="built_in">string</span> | <span class="built_in">number</span>&gt;; <span class="comment">// string[] | number[];</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// [Type] 不是裸类型，不会进行分发</span></span><br><span class="line"><span class="keyword">type</span> ToArray&lt;Type&gt; = [Type] <span class="keyword">extends</span> [<span class="built_in">any</span>] ? Type[] : <span class="built_in">never</span>;</span><br><span class="line"><span class="keyword">type</span> t2 = ToArray&lt;<span class="built_in">string</span> | <span class="built_in">number</span>&gt;; <span class="comment">// (string | number)[]</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>never<br>never 在类型编程中是一个十分有用的类型，它表示不存在的类型，所以在类型编程中任何包含 never 的类型都会将其中 never 忽略掉</li>
+</ul>
+<figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">type</span> Exclude&lt;T, U&gt; = T <span class="keyword">extends</span> U ? <span class="built_in">never</span> : T;</span><br><span class="line"></span><br><span class="line"><span class="keyword">type</span> t1 = <span class="string">&quot;a&quot;</span> | <span class="string">&quot;b&quot;</span> | <span class="string">&quot;c&quot;</span> | <span class="string">&quot;d&quot;</span>;</span><br><span class="line"><span class="keyword">type</span> t2 = <span class="string">&quot;a&quot;</span> | <span class="string">&quot;b&quot;</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 按照分发特性，t3 应该是 never | never | &quot;c&quot; | &quot;d&quot;，而 never 会被省略，所以最终结果是 &quot;c&quot; | &quot;d&quot;</span></span><br><span class="line"><span class="keyword">type</span> t3 = Exclude&lt;t1, t2&gt;; <span class="comment">// &quot;c&quot; | &quot;d&quot;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="常见工具类型"><a href="#常见工具类型" class="headerlink" title="常见工具类型"></a>常见工具类型</h3><ul>
+<li>Partial<T> – 将传入的属性由非可选变为可选 (对象类型)</li>
+<li>Pick&lt;T,K extends keyof T&gt; – 从传入的属性中摘取某些返回 (对象类型,key 的联合类型)</li>
+<li>Exclude&lt;T, U&gt; – 从 T 中剔除可以赋值给 U 的类型。(联合类型,具体类型 string)</li>
+<li>NonNullable<T> – 从 T 中剔除 null 和 undefined。(含有 null 和 undefined 的联合类型)</li>
+<li>Extract&lt;T, U&gt; – 提取 T 中可以赋值给 U 的类型。(联合类型，具体类型 string)</li>
+<li>ReturnType<T> – 获取函数返回值类型。(function 定义)</li>
+<li>InstanceType<T> – 获取构造函数类型的实例类型。(class)</li>
+<li>Parameters<T> – 获取函数类型的参数类型 (function 定义)</li>
+<li>ConstructorParameters<T> – 获取构造函数的参数类型 (function 定义)</li>
+<li>Readonly<T> – 为传入的属性每一项都加上 readonly 修饰符来实现 (对象类型)</li>
+<li>Record&lt;K,T&gt; – 具有一组属性 K，每个属性的类型为 T。可用于将一个类型的属性映射为另一个类型。(联合类型,对象类型)</li>
+<li>Omit&lt;K,T&gt; – 基于已经声明的类型进行属性剔除获得新类型 (对象类型,keyName)</li>
+</ul>
+<h3 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h3><p><a target="_blank" rel="noopener" href="https://github.com/semlinker/awesome-typescript/issues">重学 ts 练习题</a></p>
+<p><a target="_blank" rel="noopener" href="https://github.com/type-challenges/type-challenges">type-challenges</a></p>
+<h3 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h3><ol>
+<li>实现 ts 内置的 Pick&lt;T, K&gt;</li>
+</ol>
+<figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">interface</span> Todo &#123;</span><br><span class="line">  <span class="attr">title</span>: <span class="built_in">string</span>;</span><br><span class="line">  description: <span class="built_in">string</span>;</span><br><span class="line">  completed: <span class="built_in">boolean</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">type</span> TodoPreview = MyPick&lt;Todo, <span class="string">&quot;title&quot;</span> | <span class="string">&quot;completed&quot;</span>&gt;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> todo: TodoPreview = &#123;</span><br><span class="line">  <span class="attr">title</span>: <span class="string">&quot;Clean room&quot;</span>,</span><br><span class="line">  <span class="attr">completed</span>: <span class="literal">false</span>,</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">type</span> MyPick&lt;T, K <span class="keyword">extends</span> keyof T&gt; = &#123;</span><br><span class="line">  [key <span class="keyword">in</span> K]: T[key];</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>实现内置的 Readonly<T></li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">interface Todo &#123;</span><br><span class="line">    title: string</span><br><span class="line">    description: string</span><br><span class="line">&#125;</span><br><span class="line">const todo: MyReadonly&lt;Todo&gt; = &#123;</span><br><span class="line">    title: &quot;hey&quot;,</span><br><span class="line">    description: &quot;foobar&quot;</span><br><span class="line">&#125;</span><br><span class="line">todo.title = &quot;Hello&quot; // Error: cannot reassign a readonly property</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">MyReadonly&lt;T&gt; = &#123;</span><br><span class="line">    <span class="keyword">readonly</span> [k <span class="keyword">in</span> keyof T]: T[k]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ol start="3">
+<li>元组转对象</li>
+</ol>
+<figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> tuple = [<span class="string">&quot;tesla&quot;</span>, <span class="string">&quot;model 3&quot;</span>, <span class="string">&quot;model X&quot;</span>, <span class="string">&quot;model Y&quot;</span>] <span class="keyword">as</span> <span class="keyword">const</span>;</span><br><span class="line"><span class="keyword">type</span> result = TupleToObject&lt;<span class="keyword">typeof</span> tuple&gt;; <span class="comment">// expected &#123;tesla: &#x27;tesla&#x27;, &#x27;model 3&#x27;: &#x27;model 3&#x27;, &#x27;model X&#x27;: &#x27;model X&#x27;, &#x27;model Y&#x27;: &#x27;model Y&#x27;&#125;</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">type</span> TupleToObject&lt;T <span class="keyword">extends</span> <span class="keyword">readonly</span> (<span class="built_in">string</span> | <span class="built_in">number</span> | symbol)[]&gt; = &#123;</span><br><span class="line">  [P <span class="keyword">in</span> T[<span class="built_in">number</span>]]: P;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>使用const来缩小到最具体的类型</p>
+<figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> foo = &#123; <span class="attr">name</span>: <span class="string">&#x27;foo&#x27;</span> &#125;; <span class="comment">// typed: &#123; name: string &#125;</span></span><br><span class="line"><span class="keyword">let</span> Bar = &#123; <span class="attr">name</span>: <span class="string">&#x27;bar&#x27;</span> &#125; <span class="keyword">as</span> <span class="keyword">const</span>; <span class="comment">// typed: &#123; name: &#x27;bar&#x27; &#125;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> a = [<span class="number">1</span>, <span class="number">2</span>]; <span class="comment">// typed: number[]</span></span><br><span class="line"><span class="keyword">let</span> b = [<span class="number">1</span>, <span class="number">2</span>] <span class="keyword">as</span> <span class="keyword">const</span>; <span class="comment">// typed: [1, 2]</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// typed &#123; kind: &#x27;circle; radius: number &#125;</span></span><br><span class="line"><span class="keyword">let</span> circle = &#123; <span class="attr">kind</span>: <span class="string">&#x27;circle&#x27;</span> <span class="keyword">as</span> <span class="keyword">const</span>, <span class="attr">radius</span>: <span class="number">1.0</span> &#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 如果circle没有使用const关键字进行初始化，则以下内容将无法正常工作</span></span><br><span class="line"><span class="keyword">let</span> shape: &#123; <span class="attr">kind</span>: <span class="string">&#x27;circle&#x27;</span> | <span class="string">&#x27;rect&#x27;</span> &#125; = circle;</span><br></pre></td></tr></table></figure>
+
+<ol start="4">
+<li>获取元组长度</li>
+</ol>
+<figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">type</span> tesla = [<span class="string">&quot;tesla&quot;</span>, <span class="string">&quot;model 3&quot;</span>, <span class="string">&quot;model X&quot;</span>, <span class="string">&quot;model Y&quot;</span>];</span><br><span class="line"><span class="keyword">type</span> spaceX = [</span><br><span class="line">  <span class="string">&quot;FALCON 9&quot;</span>,</span><br><span class="line">  <span class="string">&quot;FALCON HEAVY&quot;</span>,</span><br><span class="line">  <span class="string">&quot;DRAGON&quot;</span>,</span><br><span class="line">  <span class="string">&quot;STAPSHIP&quot;</span>,</span><br><span class="line">  <span class="string">&quot;HUMAN SPACEFLIGHT&quot;</span></span><br><span class="line">];</span><br><span class="line"><span class="keyword">type</span> teslaLength = Length&lt;tesla&gt;; <span class="comment">// expected 4</span></span><br><span class="line"><span class="keyword">type</span> spaceXLength = Length&lt;spaceX&gt;; <span class="comment">// expected 5</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">type</span> Length&lt;T&gt; = T <span class="keyword">extends</span> <span class="keyword">readonly</span> <span class="built_in">any</span>[] ? T[<span class="string">&quot;length&quot;</span>] : <span class="built_in">never</span>;</span><br></pre></td></tr></table></figure>
+
+<ol start="5">
+<li>实现两个数的加法<br>使用元组的特性：元组是包含了固定长度的数组，所以 TS 能确切的知道元组的长度</li>
+</ol>
+<figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">type</span> getLength&lt;R&gt; = R <span class="keyword">extends</span> <span class="built_in">any</span>[] ? R[<span class="string">&quot;length&quot;</span>] : <span class="built_in">never</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">type</span> Hello = getLength&lt;[<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]&gt;;</span><br></pre></td></tr></table></figure>
+
+<p>思路:</p>
+<ol>
+<li>构建长度为 T1 和 T2 的元组</li>
+<li>将元组合并，合并后的元组长度就是加法运算的结果</li>
+</ol>
+<figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 构建长度为T的元组</span></span><br><span class="line"><span class="keyword">type</span> GetTuple&lt;T <span class="keyword">extends</span> <span class="built_in">number</span>, R <span class="keyword">extends</span> <span class="built_in">any</span>[] = []&gt; = R[<span class="string">&quot;length&quot;</span>] <span class="keyword">extends</span> T</span><br><span class="line">  ? R</span><br><span class="line">  : GetTuple&lt;T, [...R, <span class="built_in">any</span>]&gt;;</span><br><span class="line"><span class="keyword">type</span> Add&lt;T1 <span class="keyword">extends</span> numbder, T2 <span class="keyword">extends</span> numbder&gt; = [</span><br><span class="line">  ...GetTuple&lt;T1&gt;,</span><br><span class="line">  ...GetTuple&lt;T2&gt;</span><br><span class="line">][<span class="string">&quot;length&quot;</span>];</span><br><span class="line"><span class="keyword">type</span> Five = Add&lt;<span class="number">2</span>, <span class="number">3</span>&gt;;</span><br></pre></td></tr></table></figure>
+
+<ol start="6">
+<li>字符串字面量类型拆分为元组类型</li>
+</ol>
+<figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">type</span> StrToTuple&lt;T <span class="keyword">extends</span> <span class="built_in">string</span>&gt; = T <span class="keyword">extends</span> <span class="string">`<span class="subst">$&#123;infer F&#125;</span><span class="subst">$&#123;infer L&#125;</span>`</span></span><br><span class="line">  ? [F, ...StrToTuple&lt;L&gt;]</span><br><span class="line">  : [];</span><br><span class="line"></span><br><span class="line"><span class="keyword">type</span> t1 = StrToTuple&lt;<span class="string">&quot;foo&quot;</span>&gt;; <span class="comment">// [&quot;f&quot;, &quot;o&quot;, &quot;o&quot;]</span></span><br></pre></td></tr></table></figure>
+
+<ol start="7">
+<li><p>实现柯里化的类型定义</p>
+</li>
+<li><p>联合转交叉<br>在逆变位置上，同一类型变量的多个候选类型将会被推断为交叉类型：????</p>
+</li>
+</ol>
+<figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">type</span> UnionToIntersection&lt;T&gt; = (T <span class="keyword">extends</span> <span class="built_in">any</span> ? <span class="function">(<span class="params">x: T</span>) =&gt;</span> <span class="built_in">void</span> : <span class="built_in">never</span>) <span class="keyword">extends</span> (</span><br><span class="line">  x: infer R</span><br><span class="line">) =&gt; <span class="built_in">void</span></span><br><span class="line">  ? R</span><br><span class="line">  : <span class="built_in">never</span>;</span><br><span class="line"><span class="keyword">type</span> u1 = UnionToIntersection&lt;<span class="string">&quot;str&quot;</span> | <span class="built_in">string</span>&gt;; <span class="comment">// string</span></span><br><span class="line"><span class="keyword">type</span> u2 = UnionToIntersection&lt;<span class="string">&quot;str1&quot;</span> | <span class="string">&quot;str2&quot;</span>&gt;; <span class="comment">// &quot;str1&quot; &amp; &quot;str2&quot; -&gt;never</span></span><br></pre></td></tr></table></figure>
+
+<ol start="9">
+<li>联合转元组</li>
+</ol>
+<ul>
+<li>首先将 union 转化为函数类型 union</li>
+<li>再利用 union 转 intersection 的特性，将函数 union 变成函数重载</li>
+<li>最后利用重载类型推断时以最后一个为准，就能分离出最后一个 union 类型</li>
+<li>剩下的 union 类型重复上述过程直到结束</li>
+</ul>
+<figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">type</span> LastOfUnion&lt;T&gt; = UnionToIntersection&lt;</span><br><span class="line">  T <span class="keyword">extends</span> <span class="built_in">any</span> ? <span class="function">(<span class="params">x: T</span>) =&gt;</span> <span class="built_in">void</span> : <span class="built_in">never</span></span><br><span class="line">&gt; <span class="keyword">extends</span> (x: infer L) =&gt; <span class="built_in">void</span></span><br><span class="line">  ? L</span><br><span class="line">  : <span class="built_in">never</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">type</span> UnionToTuple&lt;T, R <span class="keyword">extends</span> <span class="built_in">any</span>[] = []&gt; = isNever&lt;T&gt; <span class="keyword">extends</span> <span class="literal">true</span></span><br><span class="line">  ? R</span><br><span class="line">  : UnionToTuple&lt;Exclude&lt;T, LastOfUnion&lt;T&gt;&gt;, [LastOfUnion&lt;T&gt;, ...R]&gt;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">type</span> t1 = UnionToTuple&lt;<span class="string">&quot;1&quot;</span> | <span class="string">&quot;2&quot;</span> | <span class="string">&quot;3&quot;</span> | <span class="string">&quot;4&quot;</span>&gt;; <span class="comment">// [&quot;1&quot;, &quot;2&quot;, &quot;3&quot;, &quot;4&quot;]</span></span><br></pre></td></tr></table></figure>
+
+<ol start="10">
+<li>实现 IsEqual<br><a target="_blank" rel="noopener" href="https://stackoverflow.com/questions/68961864/how-does-the-equals-work-in-typescript">how does the <code>Equals</code> work in typescript</a></li>
+</ol>
+<figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">type</span> IsEqual&lt;T1, T2&gt; = (&lt;U&gt;<span class="function">() =&gt;</span> U <span class="keyword">extends</span> T1 ? <span class="literal">true</span> : <span class="literal">false</span>) <span class="keyword">extends</span> &lt;</span><br><span class="line">  U</span><br><span class="line">&gt;<span class="function">() =&gt;</span> U <span class="keyword">extends</span> T2 ? <span class="literal">true</span> : <span class="literal">false</span></span><br><span class="line">  ? <span class="literal">true</span></span><br><span class="line">  : <span class="literal">false</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">type</span> e1 = IsEqual&lt;&#123; <span class="attr">name</span>: <span class="built_in">string</span> &#125;, &#123; <span class="attr">name</span>: <span class="built_in">string</span> &#125;&gt;; <span class="comment">// true</span></span><br><span class="line"><span class="keyword">type</span> e2 = IsEqual&lt;&#123; <span class="attr">name</span>: <span class="built_in">string</span> &#125;, &#123; <span class="keyword">readonly</span> name: <span class="built_in">string</span> &#125;&gt;; <span class="comment">// false</span></span><br><span class="line"><span class="keyword">type</span> e3 = IsEqual&lt;<span class="built_in">number</span>, <span class="built_in">string</span>&gt;; <span class="comment">// false</span></span><br></pre></td></tr></table></figure>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/typeChallenges/" rel="tag"># typeChallenges</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2017/05/21/knowledge/js/typescript/" rel="prev" title="typescript">
+                  <i class="fa fa-chevron-left"></i> typescript
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2017/05/21/knowledge/js/ssr/" rel="next" title="ssr">
+                  ssr <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    
+  
+  <div class="comments">
+    <script src="https://giscus.app/client.js"
+        data-repo="UniqueCrownClown/UniqueCrownClown.github.io" 
+        data-repo-id="MDEwOlJlcG9zaXRvcnkxMDQyODk2MzU=" 
+        data-category="General"
+        data-category-id="DIC_kwDOBjdVY84CQXdS"
+        data-mapping="pathname" 
+        data-reactions-enabled="1" 
+        data-emit-metadata="1" 
+        data-theme="light"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        data-input-position="bottom"
+        data-loading="lazy"
+        async>
+    </script>
+  </div>
+  
+  
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2024</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">clown</span>
+</div>
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_uv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+    </div>
+  </footer>
+
+  
+  <script size="90" alpha="0.6" zIndex="-1" src="https://unpkg.com/ribbon.js@1.0.2/dist/ribbon.min.js"></script>
+  <script src="https://unpkg.com/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/jquery@3.6.0/dist/jquery.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script>
+
+  
+<script src="https://unpkg.com/hexo-generator-searchdb@1.4.0/dist/search.js" integrity="sha256-vXZMYLEqsROAXkEw93GGIvaB2ab+QW6w3+1ahD9nXXA=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
+
+
+
+  <script src="/js/third-party/fancybox.js"></script>
+
+
+  
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+
+</body>
+</html>
