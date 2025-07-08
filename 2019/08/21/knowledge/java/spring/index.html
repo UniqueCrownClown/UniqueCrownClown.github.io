@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.loli.net/css?family=Noto+Serif+SC:300,300italic,400,400italic,700,700italic%7CRoboto+Mono:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="https://unpkg.com/@fortawesome/fontawesome-free@5.15.4/css/all.min.css" integrity="sha256-mUZM63G8m73Mcidfrv5E+Y61y7a12O5mW4ezU3bxqW4=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://unpkg.com/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://unpkg.com/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"uniquecrownclown.github.io","root":"/","images":"/images","scheme":"Mist","darkmode":false,"version":"8.8.0","exturl":false,"sidebar":{"position":"left","display":"hide","padding":18,"offset":12,"width":240},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"giscus","storage":true,"lazyload":false,"nav":null,"activeClass":"giscus"},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+<meta name="description" content="spring…">
+<meta property="og:type" content="article">
+<meta property="og:title" content="spring">
+<meta property="og:url" content="https://uniquecrownclown.github.io/2019/08/21/knowledge/java/spring/index.html">
+<meta property="og:site_name" content="uniquecrownclown">
+<meta property="og:description" content="spring…">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2019-08-21T11:23:51.000Z">
+<meta property="article:modified_time" content="2025-07-08T09:57:09.506Z">
+<meta property="article:author" content="clown">
+<meta property="article:tag" content="spring">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://uniquecrownclown.github.io/2019/08/21/knowledge/java/spring/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://uniquecrownclown.github.io/2019/08/21/knowledge/java/spring/","path":"2019/08/21/knowledge/java/spring/","title":"spring"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>spring | uniquecrownclown</title>
+  
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">uniquecrownclown</h1>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">clown的笔记</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li>
+        <li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li>
+        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li>
+        <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li>
+        <li class="menu-item menu-item-collection"><a href="/test/" rel="section"><i class="fa fa-cubes fa-fw"></i>collection</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#IOC"><span class="nav-number">1.</span> <span class="nav-text">IOC</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8-Ioc-%E5%AE%B9%E5%99%A8%E7%AE%A1%E7%90%86-bean-Ioc"><span class="nav-number">1.1.</span> <span class="nav-text">使用 Ioc 容器管理 bean(Ioc)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%8E%B7%E5%8F%96%E5%AE%B9%E5%99%A8"><span class="nav-number">1.2.</span> <span class="nav-text">获取容器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#bean-%E7%9A%84%E5%AE%9E%E4%BE%8B%E5%8C%96"><span class="nav-number">1.3.</span> <span class="nav-text">bean 的实例化</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#bean-%E7%9A%84%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F"><span class="nav-number">1.4.</span> <span class="nav-text">bean 的生命周期</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%87%AA%E5%8A%A8%E8%A3%85%E9%85%8D"><span class="nav-number">1.5.</span> <span class="nav-text">自动装配</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%89%E6%96%B9-bean-%E7%9A%84%E7%AE%A1%E7%90%86"><span class="nav-number">1.6.</span> <span class="nav-text">三方 bean 的管理</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#DI"><span class="nav-number">2.</span> <span class="nav-text">DI</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#xml-%E5%BC%80%E5%8F%91"><span class="nav-number">3.</span> <span class="nav-text">xml 开发</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B3%A8%E8%A7%A3%E5%BC%80%E5%8F%91"><span class="nav-number">4.</span> <span class="nav-text">注解开发</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#AOP"><span class="nav-number">5.</span> <span class="nav-text">AOP</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Spring-%E4%BA%8B%E5%8A%A1"><span class="nav-number">6.</span> <span class="nav-text">Spring 事务</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B8%B8%E8%A7%81-web-%E6%A1%86%E6%9E%B6"><span class="nav-number">7.</span> <span class="nav-text">常见 web 框架</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#record"><span class="nav-number">8.</span> <span class="nav-text">record</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#bean-%E7%9A%84%E7%90%86%E8%A7%A3-amp-ComponentScan"><span class="nav-number">9.</span> <span class="nav-text">bean 的理解 &amp; @ComponentScan</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#lombok-%E7%9A%84%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0%E6%B3%A8%E8%A7%A3"><span class="nav-number">10.</span> <span class="nav-text">lombok 的构造函数注解</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Date-%E5%AF%B9%E8%B1%A1%E6%98%A0%E5%B0%84"><span class="nav-number">11.</span> <span class="nav-text">Date 对象映射</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="clown"
+      src="/images/avatar.jpg">
+  <p class="site-author-name" itemprop="name">clown</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">93</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">8</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">70</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/UniqueCrownClown" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;UniqueCrownClown" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="/1129986876@qq.com" title="E-Mail → 1129986876@qq.com"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://weibo.com/u/2143916663" title="Weibo → https:&#x2F;&#x2F;weibo.com&#x2F;u&#x2F;2143916663" rel="noopener" target="_blank"><i class="fab fa-weibo fa-fw"></i>Weibo</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://twitter.com/CrownClown7777" title="Twitter → https:&#x2F;&#x2F;twitter.com&#x2F;CrownClown7777" rel="noopener" target="_blank"><i class="fab fa-twitter fa-fw"></i>Twitter</a>
+      </span>
+  </div>
+
+
+
+
+    <span id="jinrishici-sentence">正在加载今日诗词....</span>
+    <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+  <a href="https://github.com/UniqueCrownClown" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub" rel="noopener" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://uniquecrownclown.github.io/2019/08/21/knowledge/java/spring/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="clown">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="uniquecrownclown">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          spring
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2019-08-21 11:23:51" itemprop="dateCreated datePublished" datetime="2019-08-21T11:23:51+00:00">2019-08-21</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2025-07-08 09:57:09" itemprop="dateModified" datetime="2025-07-08T09:57:09+00:00">2025-07-08</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/java/" itemprop="url" rel="index"><span itemprop="name">java</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <p>spring…</p>
+<span id="more"></span>
+
+<h2 id="IOC"><a href="#IOC" class="headerlink" title="IOC"></a>IOC</h2><h3 id="使用-Ioc-容器管理-bean-Ioc"><a href="#使用-Ioc-容器管理-bean-Ioc" class="headerlink" title="使用 Ioc 容器管理 bean(Ioc)"></a>使用 Ioc 容器管理 bean(Ioc)</h3><p>在 Ioc 容器中将有依赖关系的 bean 进行关系绑定(DI)</p>
+<h3 id="获取容器"><a href="#获取容器" class="headerlink" title="获取容器"></a>获取容器</h3><p>BeanFactory<br>ApplicationContext<br>ConfigurableApplicationContext<br>ClassPathXmlAplicationContext<br>FileSystemXmlApplicationContext<br>参考子类继承的设计思想</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="bean-的实例化"><a href="#bean-的实例化" class="headerlink" title="bean 的实例化"></a>bean 的实例化</h3><ol>
+<li>构造方法实例化 bean</li>
+</ol>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">bean</span> <span class="attr">id</span>=<span class="string">&quot;myBean&quot;</span> <span class="attr">class</span>=<span class="string">&quot;com.example.MyClass&quot;</span>/&gt;</span></span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>静态工厂实例化 bean</li>
+</ol>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">bean</span> <span class="attr">id</span>=<span class="string">&quot;myBean&quot;</span> <span class="attr">class</span>=<span class="string">&quot;com.example.Myfactory&quot;</span> <span class="attr">factory-method</span>=<span class="string">&quot;getMyBean&quot;</span>/&gt;</span></span><br></pre></td></tr></table></figure>
+
+<ol start="3">
+<li>实例工厂实例化 bean</li>
+</ol>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">bean</span> <span class="attr">id</span>=<span class="string">&quot;myFactory&quot;</span> <span class="attr">class</span>=<span class="string">&quot;com.example.MyFactory&quot;</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">bean</span> <span class="attr">id</span>=<span class="string">&quot;myBean&quot;</span> <span class="attr">factory-bean</span>=<span class="string">&quot;myFactory&quot;</span> <span class="attr">factory-method</span>=<span class="string">&quot;getMyBean&quot;</span>/&gt;</span></span><br></pre></td></tr></table></figure>
+
+<ol start="4">
+<li>使用 factorybean 实例化</li>
+</ol>
+<p>工厂类实现了 FactoryBean 接口</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MybeanFactory</span>  <span class="keyword">implements</span> <span class="title">FactoryBean</span>&lt;<span class="title">MyBean</span>&gt;</span>&#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> MyBean <span class="title">getObject</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> MyBean();</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="class"><span class="keyword">class</span>&lt;?&gt; <span class="title">getObjectType</span>()</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> MyBean.class;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="meta">@Override</span>	<span class="comment">//是否单例</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">isSingleton</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">bean</span> <span class="attr">id</span>=<span class="string">&quot;myBean&quot;</span> <span class="attr">class</span>=<span class="string">&quot;com.example.MybeanFactory&quot;</span> <span class="attr">init-method</span>=<span class="string">&quot;init&quot;</span> <span class="attr">destroy-method</span>=<span class="string">&quot;destroy&quot;</span>/&gt;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="bean-的生命周期"><a href="#bean-的生命周期" class="headerlink" title="bean 的生命周期"></a>bean 的生命周期</h3><p>init-method<br>destory-method<br>或者实现 InitializingBean, DisposableBean</p>
+<h3 id="自动装配"><a href="#自动装配" class="headerlink" title="自动装配"></a>自动装配</h3><p>自动装配优先级低于 setter 注入和构造器注入，同时出现自动装配配置失效</p>
+<h3 id="三方-bean-的管理"><a href="#三方-bean-的管理" class="headerlink" title="三方 bean 的管理"></a>三方 bean 的管理</h3><p>三方 bean 的依赖注入</p>
+<p>bean 声明中使用 properties</p>
+<h2 id="DI"><a href="#DI" class="headerlink" title="DI"></a>DI</h2><p>依赖注入方式</p>
+<ol>
+<li>构造器注入</li>
+</ol>
+<ul>
+<li>依赖项通过构造函数参数传递对象</li>
+<li>这是最推荐的依赖注入方式，因为它强制要求依赖项在对象创建时就存在，有助于提高对象的不可变性和可测试性。</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MyClass</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">final</span> MyDependency dependency;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Autowired</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">MyClass</span><span class="params">(MyDependency dependency)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.dependency = dependency;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>字段注入</li>
+</ol>
+<ul>
+<li>依赖项直接注入到类的字段中。</li>
+<li>这种方式简单直接，但可能会降低代码的可测试性，因为依赖项不是通过构造函数或方法显式提供的。</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MyClass</span> </span>&#123;</span><br><span class="line">    <span class="meta">@Autowired</span></span><br><span class="line">    <span class="keyword">private</span> MyDependency dependency;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ol start="3">
+<li>setter 方法注入</li>
+</ol>
+<ul>
+<li>依赖项通过 setter 方法注入。</li>
+<li>这种方式允许在运行时更改依赖项，但可能破坏对象的封装性。</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MyClass</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> MyDependency dependency;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Autowired</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setDependency</span><span class="params">(MyDependency dependency)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.dependency = dependency;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="xml-开发"><a href="#xml-开发" class="headerlink" title="xml 开发"></a>xml 开发</h2><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">bean</span></span></span><br><span class="line"><span class="tag">    <span class="attr">id</span>=<span class="string">&quot;myBean&quot;</span> // <span class="attr">bean</span>的<span class="attr">id</span></span></span><br><span class="line"><span class="tag">    <span class="attr">name</span>=<span class="string">&quot;myBean&quot;</span> // <span class="attr">bean</span>的别名</span></span><br><span class="line"><span class="tag">    <span class="attr">class</span>=<span class="string">&quot;com.example.MyClass&quot;</span> // <span class="attr">bean</span>类型,静态工厂类,<span class="attr">FactoryBean</span></span></span><br><span class="line"><span class="tag">    <span class="attr">scope</span>=<span class="string">&quot;singleton&quot;</span> // <span class="attr">bean</span>的实例数量</span></span><br><span class="line"><span class="tag">    <span class="attr">init-method</span>=<span class="string">&quot;init&quot;</span> // 初始化方法</span></span><br><span class="line"><span class="tag">    <span class="attr">destroy-method</span>=<span class="string">&quot;destroy&quot;</span>// 销毁方法</span></span><br><span class="line"><span class="tag">    <span class="attr">autowired</span>=<span class="string">&quot;true&quot;</span> // 是否自动注入依赖项</span></span><br><span class="line"><span class="tag">    <span class="attr">lazy-init</span>=<span class="string">&quot;true&quot;</span> // 是否延迟初始化</span></span><br><span class="line"><span class="tag">    <span class="attr">factory-bean</span>=<span class="string">&quot;myFactoryBean&quot;</span> // 使用工厂<span class="attr">bean</span>创建<span class="attr">bean</span></span></span><br><span class="line"><span class="tag">    <span class="attr">factory-method</span>=<span class="string">&quot;getMyBean&quot;</span> // 使用工厂方法创建<span class="attr">bean</span></span></span><br><span class="line"><span class="tag">/&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="注解开发"><a href="#注解开发" class="headerlink" title="注解开发"></a>注解开发</h2><ul>
+<li>Spring Boot自动装配，Spring Boot 项目借助 @SpringBootApplication 注解开启自动配置，该注解包含了 @ComponentScan 功能。@SpringBootApplication 组合了 @Configuration、@EnableAutoConfiguration 和 @ComponentScan 这三个注解。</li>
+</ul>
+<p>@SpringBootApplication 注解<strong>会自动扫描与 YourApplication 类同包及其子包下的组件，并将其注册为 Bean</strong>。</p>
+<ul>
+<li>@Component @Controller @Service @Repository</li>
+</ul>
+<p>通过使用 @Component 注解，Spring 可以自动扫描和识别被标记的类，并将其实例化为 Bean 并添加到应用程序的上下文中。这样，我们就可以在应用程序中使用 @Autowired 或 @Resource 注解来自动装配这些 Bean。</p>
+<p>除了 @Component 注解外，Spring 还提供了其他几个注解，如 @Service、@Repository 和 @Controller，它们都是基于 @Component 注解实现的，并且都具有相同的作用，只是在语义上有所区别。例如，@Service 注解用于标记业务逻辑层的组件，而 @Repository 注解用于标记数据访问层的组件。</p>
+<p>@RestController = @Controller + @ResponseBody</p>
+<p>Java 类代替 Spring 核心配置文件@Configuration+@ComponentScan(多个使用数组格式)–&gt;AnnotationConfigApplicationContext 加载配置类,从上下文中获取装配的 bean 实例</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">AnnotationConfigApplicationContext ctx = <span class="keyword">new</span> AnnotationConfigApplicationContext(SpringConfig.class);</span><br><span class="line">User user = ctx.getBean(User.class);</span><br><span class="line">system.out.println(user);</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>bean 作用范围</li>
+</ul>
+<p>@Scope(“prototype”)<br>@Scope(“singleton”)</p>
+<ul>
+<li>bean 周期</li>
+</ul>
+<ol>
+<li><p>@PostStruct<br>这个注解是由 Java EE 规范定义的，用于标记在依赖注入完成后执行初始化方法。<br>标记了 @PostConstruct 的方法会在所有依赖注入完成后，但在任何其他初始化方法（如 init-method 属性指定的方法）之前调用。<br>该方法不能接受任何参数，并且返回类型必须是 void。</p>
+</li>
+<li><p>@PreDestroy</p>
+</li>
+</ol>
+<p>同样由 Java EE 规范定义，用于标记在 Bean 销毁前执行的方法。<br>当容器决定销毁一个 Bean 时，会先调用标记了 @PreDestroy 的方法。<br>和 @PostConstruct 一样，该方法不能接受任何参数，并且返回类型必须是 void。</p>
+<ul>
+<li>自动装配</li>
+</ul>
+<p>@Autowired 类型匹配,实现引用类型的注入<br>@Autowired+@Qualifier(beanName) 匹配</p>
+<p>@Value 实现简单类型的注入<br>@PropertySource(“classpath:jdbc.properties”)(多个使用数组格式)</p>
+<ul>
+<li>三方 bean 管理</li>
+</ul>
+<p>@Import<br>@Bean 返回一个要注入的</p>
+<ul>
+<li>三方 bean 依赖注入</li>
+</ul>
+<p>简单类型用@Value+成员变量<br>引用类型直接用形参，只要能扫到就能自动装配注入</p>
+<h2 id="AOP"><a href="#AOP" class="headerlink" title="AOP"></a>AOP</h2><p>一种无侵入式的功能增强的编程范式,对应 oop,面对对象编程</p>
+<ul>
+<li>连接点(JoinPoint)程序执行的任意位置，粒度为执行方法，设置变量，抛出异常等</li>
+<li>切入点(Pointcut)哪些方法需要追加功能的，匹配通知的方法，叫切入点</li>
+<li>通知(Advice)各个方法共用的功能(@Before,@After, @AfterReturning, @AfterThrowing, @Around)</li>
+<li>通知类 定义通知的类</li>
+<li>切面(Aspect)切面描述的是通知共用的功能与所对应切入点的关系。在哪些切入点上执行哪些通知叫切面</li>
+</ul>
+<p>@EnableAspectJAutoProxy</p>
+<p>@Component<br>@Aspect</p>
+<p>@Pointcut(execution(* com.atguigu.spring.service.impl.AccountServiceImpl.transfer(..)))</p>
+<p>工作流程<br>AOP 的本质是代理模式</p>
+<p>切入点表达式</p>
+<p>@Order(1) 用于指定切面执行顺序的注解。在存在多个切面的场景下，@Order 注解能设定切面的优先级，数值越小优先级越高。</p>
+<p>@Order(1)  // 确保在事务之前执行</p>
+<p>通知类型<br>@Before 形参 JoinPoint 在目标方法执行之前执行</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> org.aspectj.lang.JoinPoint;</span><br><span class="line"><span class="keyword">import</span> org.aspectj.lang.annotation.Aspect;</span><br><span class="line"><span class="keyword">import</span> org.aspectj.lang.annotation.Before;</span><br><span class="line"><span class="keyword">import</span> org.springframework.stereotype.Component;</span><br><span class="line"></span><br><span class="line"><span class="meta">@Aspect</span></span><br><span class="line"><span class="meta">@Component</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">LoggingAspect</span> </span>&#123;</span><br><span class="line">    <span class="meta">@Before(&quot;execution(* com.example.service.*.*(..))&quot;)</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">beforeAdvice</span><span class="params">(JoinPoint joinPoint)</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;Before method: &quot;</span> + joinPoint.getSignature().getName());</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>@After 形参 JoinPoint 无论目标方法正常返回还是抛出异常，都会在目标方法执行结束后执行。<br>@Around 环绕通知(重点) 是功能最强大的通知类型，能在目标方法执行前后进行自定义操作，还能控制目标方法是否执行。 形参 ProceedingJoinPoint.proceed() 表示对原始操作的调用<br>@AfterReturning 在目标方法正常返回后执行<br>@AfterThrowing 在目标方法抛出异常时执行</p>
+<h2 id="Spring-事务"><a href="#Spring-事务" class="headerlink" title="Spring 事务"></a>Spring 事务</h2><p>mybatis 使用的是 jdbc 事务</p>
+<p>Spring 开启事务，使用注解版本，需要三步<br>1：定义的 service 接口的方法，添加@Transactional 注解<br>2：在 jdbcConfig.java 配置类中，设置事务管理器 DataSourseTransactionManager<br>3：在 SpringConfig.java 中，开启注解式事务驱动。@EnableTransactionManagement</p>
+<p>事务角色<br>事务管理员<br>事务协调员</p>
+<p>事务相关配置<br>readOnly<br>timeout = -1 # -1 表示不设置超时时间<br>rollbackFor={NullPointExecption.class} 表示遇到了 NullPointExection 异常，会开启事务。</p>
+<p>propagation = Propagation.REQUIRED # 默认值，表示当前方法开启事务，如果当前方法没有开启事务，则开启事务，加入事务<br>Propagation.REQUIRES_NEW # 表示当前方法开启事务，如果当前方法没有开启事务，则开启事务,一定新开事务</p>
+<h2 id="常见-web-框架"><a href="#常见-web-框架" class="headerlink" title="常见 web 框架"></a>常见 web 框架</h2><p>表示层<br>通过 JSP 页面实现交互界面，负责传送请求(Request)和接收响应(Response)，然后 Struts 根据配置文件(struts-config.xml)将 ActionServlet 接收到的 Request 委派给相应的 Action 处理。</p>
+<p>业务逻辑层<br>管理服务组件的 Spring IoC 容器负责向 Action 提供业务模型(Model)组件和该组件的协作对象数据处理(DAO)组件完成业务逻辑，并提供事务处理、缓冲池等容器组件以提升系统性能和保证数据的完整性。</p>
+<p>数据持久层<br>依赖于 Hibernate 的对象化映射和数据库交互，处理 DAO 组件请求的数据，并返回处理结果。</p>
+<p>域模块层(实体层)</p>
+<p>struts+spring+hibernate<br>集成 SSH 框架的系统</p>
+<p>Spring+SpringMVC+Mybatis</p>
+<p>spring boot</p>
+<p>spring cloud</p>
+<h2 id="record"><a href="#record" class="headerlink" title="record"></a>record</h2><p>-Dspring.profiles.active=dev</p>
+<p>spring 如何动态注入 bean</p>
+<p>@ConditionalOnClass<br>@ConditionalOnMissingBean(TokenStore.class)<br>@ConditionalOnProperty(“spring.redis.host”)<br>@ConditionalOnExpression<br>@ConditionalOnClass(DispatcherServlet.class)</p>
+<p>@Configuration</p>
+<p>存在多个接口类的实现类<br>@Qualifier(“service”)<br>@Service(“service”)</p>
+<p>spring-session-data-redis 的使用和影响</p>
+<p>spring-data-jpa<br>JPA 默认使用 Hibernate 作为 ORM 实现，所以，一般使用 Spring Data JPA 即会使用 Hibernate。<br>hibernate 和 mybatis 比较<br>Hibernate 是面向对象的，而 MyBatis 是面向关系的<br>Hibernate 可以根据配置信息自动生成数据库表</p>
+<p>@Resource 和@Autowired<br>@Autowired 是 byType 自动注入，而@Resource 默认 byName 自动注入<br>引入由 Spring 容器管理的 bean</p>
+<p>ApplicationContext 实例–&gt;beanFactory–&gt;bean–&gt;装配的 service 对象<br>BeanDefinition<br>Spring 默认是不同文件的时候可以 Bean 覆盖的。</p>
+<p>经典 null 和 equals 的错误使用<br>把已知常量作为 equals 的调用方,避免 NPE<br>Object.equals(1,key)</p>
+<p>map.put &amp; map.putIfAbsent</p>
+<p>@requestParam 注解,会对字符串中的特殊字符进行转义，以确保它们不会被误解为其他含义。例如，如果字符串中包含“&amp;”或“=”，则这些字符将被转义为它们的 HTML 实体编码。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">mvn install -DskipTests #忽略测试用例直接build</span><br><span class="line">mvn -DskipTests=true</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h2 id="bean-的理解-amp-ComponentScan"><a href="#bean-的理解-amp-ComponentScan" class="headerlink" title="bean 的理解 &amp; @ComponentScan"></a>bean 的理解 &amp; @ComponentScan</h2><p>@bean 添加在 class 上和 function 上的区别</p>
+<p>当@bean 注解用于类上时，它表示该类将被注册为一个 bean，Spring 容器将负责创建该类的实例，并将其管理起来。这意味着你可以在其他类中使用@Autowired 等注解来自动装配该类的实例。</p>
+<p>当@bean 注解用于函数上时，它表示该函数将返回一个对象，该对象将被注册为一个 bean。这通常用于创建那些不能通过构造函数注入的对象，例如第三方库中的对象。在这种情况下，你可以使用@Bean 注解来告诉 Spring 容器如何创建该对象，并将其注册为一个 bean。</p>
+<h2 id="lombok-的构造函数注解"><a href="#lombok-的构造函数注解" class="headerlink" title="lombok 的构造函数注解"></a>lombok 的构造函数注解</h2><ul>
+<li>@AllArgsConstructor<br>会生成一个包含类中所有非静态、非 final 字段的构造函数</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@AllArgsConstructor</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Person</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> String name;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> age;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 手动实现</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Person</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> String name;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> age;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Person</span><span class="params">(String name, <span class="keyword">int</span> age)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.name = name;</span><br><span class="line">        <span class="keyword">this</span>.age = age;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>@RequiredArgsConstructor</li>
+</ul>
+<p>final 字段在 Java 里必须在对象创建时初始化，不能为 null<br>会生成一个包含类中所有 <code>final</code> 字段和用 <code>@NonNull</code> 注解标记的非 <code>final</code> 字段的构造函数。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@RequiredArgsConstructor</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Person</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">final</span> String name;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> age;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 手动实现</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Person</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> String name;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Person</span><span class="params">(String name)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.name = name;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>@NoArgsConstructor<br>会生成一个无参数的构造函数</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@NoArgsConstructor</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Person</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> String name;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> age;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 手动实现</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Person</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> String name;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> age;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Person</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>@Data</li>
+</ul>
+<p>这是一个组合注解，它相当于同时使用了 @ToString, @EqualsAndHashCode, @Getter on all non-final fields, @Setter on all non-final fields, and @RequiredArgsConstructor。通常用于实体类或者 DTOs。</p>
+<h2 id="Date-对象映射"><a href="#Date-对象映射" class="headerlink" title="Date 对象映射"></a>Date 对象映射</h2>
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/spring/" rel="tag"># spring</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2019/08/21/knowledge/java/springboot/" rel="prev" title="springboot">
+                  <i class="fa fa-chevron-left"></i> springboot
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2019/08/21/knowledge/java/redis/" rel="next" title="redis">
+                  redis <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    
+  
+  <div class="comments">
+    <script src="https://giscus.app/client.js"
+        data-repo="UniqueCrownClown/UniqueCrownClown.github.io" 
+        data-repo-id="MDEwOlJlcG9zaXRvcnkxMDQyODk2MzU=" 
+        data-category="General"
+        data-category-id="DIC_kwDOBjdVY84CQXdS"
+        data-mapping="pathname" 
+        data-reactions-enabled="1" 
+        data-emit-metadata="1" 
+        data-theme="light"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        data-input-position="bottom"
+        data-loading="lazy"
+        async>
+    </script>
+  </div>
+  
+  
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2025</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">clown</span>
+</div>
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_uv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+    </div>
+  </footer>
+
+  
+  <script size="90" alpha="0.6" zIndex="-1" src="https://unpkg.com/ribbon.js@1.0.2/dist/ribbon.min.js"></script>
+  <script src="https://unpkg.com/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/jquery@3.6.0/dist/jquery.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script>
+
+  
+<script src="https://unpkg.com/hexo-generator-searchdb@1.4.0/dist/search.js" integrity="sha256-vXZMYLEqsROAXkEw93GGIvaB2ab+QW6w3+1ahD9nXXA=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
+
+
+
+  <script src="/js/third-party/fancybox.js"></script>
+
+
+  
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+
+</body>
+</html>
